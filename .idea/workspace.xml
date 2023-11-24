@@ -5,15 +5,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fbf8b445-f4fb-402b-900d-c28ac74ebb6f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/backend/helpers/Logger.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/backend/models/Order.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/backend/services/PizzeriaManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/backend/interfaces/IPizza.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/backend/interfaces/IPizzeriaCreationStrategy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/backend/models/Checkout.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/backend/models/Pizzaiolo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/backend/models/Pizzeria.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/backend/services/GrowthPizzeriaCreationStrategy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/backend/services/OrderGenerator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/backend/services/RushHourPizzeriaCreationStrategy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/backend/services/UniformDistributionPizzeriaCreationStrategy.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/backend/helpers/Logger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/backend/helpers/Logger.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/backend/models/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/backend/models/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/backend/services/PizzeriaManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/backend/services/PizzeriaManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -41,26 +59,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "add-backend-folders",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Pizzeria Proj/pizzaria-simulator/pizzaria-simulator",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "MavenSettings",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Pizzeria Proj/pizzaria-simulator/pizzaria-simulator&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Pizzeria Proj\pizzaria-simulator\pizzaria-simulator\src\main\backend\helpers" />
       <recent name="C:\Pizzeria Proj\pizzaria-simulator\pizzaria-simulator\src\main\java" />
       <recent name="C:\Pizzeria Proj\pizzaria-simulator\pizzaria-simulator\src\main\backend\services" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="services" />
     </key>
   </component>
   <component name="RunManager">
