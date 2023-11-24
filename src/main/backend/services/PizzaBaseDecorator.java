@@ -1,10 +1,12 @@
+package services;
+import backend.interfaces.*;
 import java.time.Duration;
 import java.time.LocalTime;
 
-public class PizzaBaseDecorator implements Pizza{
-    private Pizza wrappee;
+public class PizzaBaseDecorator implements IPizza{
+    private IPizza wrappee;
 
-    public PizzaBaseDecorator(Pizza wrappee) {
+    public PizzaBaseDecorator(IPizza wrappee) {
         this.wrappee = wrappee;
     }
 
@@ -25,14 +27,14 @@ public class PizzaBaseDecorator implements Pizza{
     public void setNextTime(LocalTime nextTime){
         wrappee.setNextTime(nextTime);
     }
-    public void changeStatus(PizzaStatus status){
+    public void changeStatus(IPizzaStatus status){
         wrappee.changeStatus(status);
     }
-    public PizzaStatus getStoppedAtStatus() {
+    public IPizzaStatus getStoppedAtStatus() {
         return wrappee.getStoppedAtStatus();
     }
 
-    public void setStoppedAtStatus(PizzaStatus stoppedAtStatus) {
+    public void setStoppedAtStatus(IPizzaStatus stoppedAtStatus) {
         wrappee.setStoppedAtStatus(stoppedAtStatus);
     }
 

@@ -1,7 +1,9 @@
+package models;
+import backend.interfaces.*;
 import java.time.Duration;
 import java.time.LocalTime;
 
-public class SimplePizza implements Pizza, PizzaPrototype {
+public class SimplePizza implements IPizza, IPizzaPrototype {
     private String name;
     private double price;
     private String id;
@@ -34,7 +36,7 @@ public class SimplePizza implements Pizza, PizzaPrototype {
     }
 
     @Override
-    public PizzaPrototype clone() {
+    public IPizzaPrototype clone() {
         return new SimplePizza(
                 this.id,
                 this.name,
@@ -87,7 +89,7 @@ public class SimplePizza implements Pizza, PizzaPrototype {
     public LocalTime getNextTime() {
         return nextTime;
     }
-    public void changeStatus(PizzaStatus status) {
+    public void changeStatus(IPizzaStatus status) {
         this.status = status;
     }
 
@@ -96,13 +98,13 @@ public class SimplePizza implements Pizza, PizzaPrototype {
     // public List<Pizzaiolo> getPizzaioloList(){
     //  return pizzaioloList;
     //}
-    private PizzaStatus status;
+    private IPizzaStatus status;
 
-    public PizzaStatus getStoppedAtStatus() {
+    public IPizzaStatus getStoppedAtStatus() {
         return stoppedAtStatus;
     }
 
-    public void setStoppedAtStatus(PizzaStatus stoppedAtStatus) {
+    public void setStoppedAtStatus(IPizzaStatus stoppedAtStatus) {
         this.stoppedAtStatus = stoppedAtStatus;
     }
 
@@ -114,6 +116,6 @@ public class SimplePizza implements Pizza, PizzaPrototype {
         this.stoppedWithTimeLeft = stoppedWithTimeLeft;
     }
 
-    private PizzaStatus stoppedAtStatus;
+    private IPizzaStatus stoppedAtStatus;
     private Duration stoppedWithTimeLeft;
 }

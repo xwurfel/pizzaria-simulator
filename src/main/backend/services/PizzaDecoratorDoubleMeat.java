@@ -1,22 +1,23 @@
+package services;
+import backend.interfaces.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-
-public class PizzaDecoratorDoubleCheese extends PizzaBaseDecorator{
-    private double cheesePrice;
-    public PizzaDecoratorDoubleCheese(Pizza wrappee, double cheesePrice) {
+public class PizzaDecoratorDoubleMeat extends PizzaBaseDecorator{
+    private double meatPrice;
+    public PizzaDecoratorDoubleMeat(IPizza wrappee, double meatPrice) {
         super(wrappee);
-        this.cheesePrice = cheesePrice;
+        this.meatPrice = meatPrice;
     }
 
     @Override
     public double getPrice() {
-        return super.getPrice() + cheesePrice;
+        return super.getPrice() + meatPrice;
     }
 
     @Override
     public String getName() {
         String name = super.getName();
-        Pattern p = Pattern.compile("(?<=Cheese x)\\d+");
+        Pattern p = Pattern.compile("(?<=Meat x)\\d+");
         Matcher m = p.matcher(name);
         if(m.find()){
             String curentPortionStr = name.substring(m.start(), m.end());
@@ -24,7 +25,7 @@ public class PizzaDecoratorDoubleCheese extends PizzaBaseDecorator{
             ++curentPortion;
             return name.substring(0,m.start()) + String.valueOf(curentPortion) + name.substring(m.end());
         }else{
-            return super.getName() + " Cheese x2";
+            return super.getName() + " Meat x2";
         }
     }
 }

@@ -1,19 +1,21 @@
+package models;
+import backend.interfaces.*;
 import java.time.Duration;
 import java.time.LocalTime;
 import java.util.Random;
 
-public class Packaging implements PizzaStatus{
-    Pizza context;
+public class Packaging implements IPizzaStatus{
+    IPizza context;
     @Override
     public void next() {
-        PizzaStatus status = new Done();
+        IPizzaStatus status = new Done();
         status.setContext(context);
         context.changeStatus(status);
     }
 
     @Override
     public void stop() {
-        PizzaStatus status = new Waiting();
+        IPizzaStatus status = new Waiting();
         status.setContext(context);
         context.changeStatus(status);
         context.setStoppedAtStatus(this);
@@ -21,7 +23,7 @@ public class Packaging implements PizzaStatus{
     }
 
     @Override
-    public void setContext(Pizza p) {
+    public void setContext(IPizza p) {
         this.context = p;
     }
 

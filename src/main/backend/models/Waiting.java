@@ -1,13 +1,15 @@
+package models;
+import backend.interfaces.*;
 import java.time.Duration;
 import java.time.LocalTime;
 import java.util.Random;
 
-public class Waiting implements PizzaStatus{
-    Pizza context;
+public class Waiting implements IPizzaStatus{
+    IPizza context;
     @Override
     public void next() {
         if(context.getStoppedAtStatus() == null) {
-            PizzaStatus status = new DoughKneeding();
+            IPizzaStatus status = new DoughKneeding();
             status.setContext(context);
             context.changeStatus(status);
             Random r = new Random();
@@ -33,7 +35,7 @@ public class Waiting implements PizzaStatus{
     }
 
     @Override
-    public void setContext(Pizza p) {
+    public void setContext(IPizza p) {
         this.context = p;
     }
 

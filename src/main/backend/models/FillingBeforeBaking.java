@@ -1,12 +1,14 @@
+package models;
+import backend.interfaces.*;
 import java.time.Duration;
 import java.time.LocalTime;
 import java.util.Random;
 
-public class FillingBeforeBaking implements PizzaStatus{
-    Pizza context;
+public class FillingBeforeBaking implements IPizzaStatus{
+    IPizza context;
     @Override
     public void next() {
-        PizzaStatus status = new Baking();
+        IPizzaStatus status = new Baking();
         status.setContext(context);
         context.changeStatus(status);
         Random r = new Random();
@@ -20,7 +22,7 @@ public class FillingBeforeBaking implements PizzaStatus{
 
     @Override
     public void stop() {
-        PizzaStatus status = new Waiting();
+        IPizzaStatus status = new Waiting();
         status.setContext(context);
         context.changeStatus(status);
         context.setStoppedAtStatus(this);
@@ -28,12 +30,12 @@ public class FillingBeforeBaking implements PizzaStatus{
     }
 
     @Override
-    public void setContext(Pizza p) {
+    public void setContext(IPizza p) {
         this.context = p;
     }
 
     @Override
     public String getStatusName() {
-        return "FillingBeforeBaking";
+        return "Filling Before Baking";
     }
 }

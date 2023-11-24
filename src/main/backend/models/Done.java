@@ -1,5 +1,7 @@
-public class Done implements PizzaStatus{
-    Pizza context;
+package models;
+import backend.interfaces.*;
+public class Done implements IPizzaStatus{
+    IPizza context;
     @Override
     public void next() {
 
@@ -11,7 +13,7 @@ public class Done implements PizzaStatus{
     }
 
     @Override
-    public void setContext(Pizza p) {
+    public void setContext(IPizza p) {
         this.context = p;
     }
 
