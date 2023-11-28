@@ -1,19 +1,19 @@
-package models;
-import backend.interfaces.*;
+package com.teamworkcpp.pizzariasimulator.backend.models;
+import com.teamworkcpp.pizzariasimulator.backend.interfaces.*;
 import java.time.Duration;
 import java.time.LocalTime;
 import java.util.Random;
 
-public class FillingBeforeBaking implements IPizzaStatus{
+public class FillingAfterBaking implements IPizzaStatus{
     IPizza context;
     @Override
     public void next() {
-        IPizzaStatus status = new Baking();
+        IPizzaStatus status = new Packaging();
         status.setContext(context);
         context.changeStatus(status);
         Random r = new Random();
-        var timeAdd = r.nextInt(0, (int)context.getMinTimeBaking().toSeconds() / 5);
-        var time = Duration.ofSeconds(context.getMinTimeBaking().toSeconds() + timeAdd);
+        var timeAdd = r.nextInt(0, (int)context.getMinTimePackaging().toSeconds() / 5);
+        var time = Duration.ofSeconds(context.getMinTimePackaging().toSeconds() + timeAdd);
 
         context.setNextTime(
                 LocalTime.now().plus(time)
@@ -36,6 +36,6 @@ public class FillingBeforeBaking implements IPizzaStatus{
 
     @Override
     public String getStatusName() {
-        return "Filling Before Baking";
+        return "Filling After Baking";
     }
 }

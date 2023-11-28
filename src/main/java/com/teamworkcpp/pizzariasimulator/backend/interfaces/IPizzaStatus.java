@@ -1,4 +1,4 @@
-package interfaces;
+package com.teamworkcpp.pizzariasimulator.backend.interfaces;
 public interface IPizzaStatus {
     public void next();
     public void stop();

@@ -1,5 +1,5 @@
-package models;
-import backend.interfaces.*;
+package com.teamworkcpp.pizzariasimulator.backend.models;
+import com.teamworkcpp.pizzariasimulator.backend.interfaces.*;
 import java.time.Duration;
 import java.time.LocalTime;
 

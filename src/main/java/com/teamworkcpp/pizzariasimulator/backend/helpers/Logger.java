@@ -1,4 +1,4 @@
-package helpers;
+package com.teamworkcpp.pizzariasimulator.backend.helpers;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;

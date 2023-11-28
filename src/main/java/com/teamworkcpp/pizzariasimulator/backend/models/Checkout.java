@@ -1,4 +1,4 @@
-package models;
+package com.teamworkcpp.pizzariasimulator.backend.models;
 
 public class Checkout {
     private int _id;

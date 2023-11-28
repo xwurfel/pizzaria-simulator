@@ -1,6 +1,6 @@
-package services;
+package com.teamworkcpp.pizzariasimulator.backend.services;
 
-import models.Order;
+import com.teamworkcpp.pizzariasimulator.backend.models.Order;
 
 public class OrderGenerator {
 

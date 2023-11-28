@@ -1,9 +1,9 @@
-package services;
+package com.teamworkcpp.pizzariasimulator.backend.services;
 
-import interfaces.IPizzeriaCreationStrategy;
-import models.Checkout;
-import models.Pizzaiolo;
-import models.Pizzeria;
+import com.teamworkcpp.pizzariasimulator.backend.interfaces.IPizzeriaCreationStrategy;
+import com.teamworkcpp.pizzariasimulator.backend.models.Checkout;
+import com.teamworkcpp.pizzariasimulator.backend.models.Pizzaiolo;
+import com.teamworkcpp.pizzariasimulator.backend.models.Pizzeria;
 
 import java.time.Duration;
 import java.util.List;

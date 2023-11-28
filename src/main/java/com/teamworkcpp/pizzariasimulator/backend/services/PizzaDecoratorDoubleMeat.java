@@ -1,5 +1,5 @@
-package services;
-import backend.interfaces.*;
+package com.teamworkcpp.pizzariasimulator.backend.services;
+import com.teamworkcpp.pizzariasimulator.backend.interfaces.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 public class PizzaDecoratorDoubleMeat extends PizzaBaseDecorator{

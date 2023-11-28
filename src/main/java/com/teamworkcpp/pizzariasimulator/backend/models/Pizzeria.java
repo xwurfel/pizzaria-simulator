@@ -1,8 +1,8 @@
-package models;
+package com.teamworkcpp.pizzariasimulator.backend.models;
 
-import interfaces.IPizzeriaCreationStrategy;
-import services.OrderGenerator;
-import services.UniformDistributionPizzeriaCreationStrategy;
+import com.teamworkcpp.pizzariasimulator.backend.interfaces.IPizzeriaCreationStrategy;
+import com.teamworkcpp.pizzariasimulator.backend.services.OrderGenerator;
+import com.teamworkcpp.pizzariasimulator.backend.services.UniformDistributionPizzeriaCreationStrategy;
 
 import java.time.Duration;
 import java.util.List;

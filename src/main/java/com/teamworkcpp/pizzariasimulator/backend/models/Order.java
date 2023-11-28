@@ -1,5 +1,5 @@
-package models;
-import interfaces.IPizza;
+package com.teamworkcpp.pizzariasimulator.backend.models;
+import com.teamworkcpp.pizzariasimulator.backend.interfaces.IPizza;
 
 import java.util.List;
 
