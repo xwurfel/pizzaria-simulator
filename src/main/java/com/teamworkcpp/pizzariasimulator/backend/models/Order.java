@@ -1,11 +1,12 @@
 package com.teamworkcpp.pizzariasimulator.backend.models;
+import com.teamworkcpp.pizzariasimulator.backend.enums.OrderStatus;
 import com.teamworkcpp.pizzariasimulator.backend.interfaces.IPizza;
 
 import java.util.List;
 
 public class Order {
-    private int _id;
-    private List<IPizza> _pizzas;
+    private final int _id;
+    private final List<IPizza> _pizzas;
     private OrderStatus _orderStatus;
     private boolean _isDone;
     private int _checkoutId;
@@ -41,8 +42,4 @@ public class Order {
     public void setDone(boolean done) {
         _isDone = done;
     }
-}
-enum OrderStatus {
-    NEW,
-    DONE
 }

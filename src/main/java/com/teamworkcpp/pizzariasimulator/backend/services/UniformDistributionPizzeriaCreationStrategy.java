@@ -1,30 +1,24 @@
 package com.teamworkcpp.pizzariasimulator.backend.services;
 
 import com.teamworkcpp.pizzariasimulator.backend.interfaces.IPizzeriaCreationStrategy;
-import com.teamworkcpp.pizzariasimulator.backend.models.Checkout;
 import com.teamworkcpp.pizzariasimulator.backend.models.Pizzaiolo;
 import com.teamworkcpp.pizzariasimulator.backend.models.Pizzeria;
 
 import java.time.Duration;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
 public class UniformDistributionPizzeriaCreationStrategy implements IPizzeriaCreationStrategy {
-    private List<Checkout> _checkouts;
-    private List<Pizzaiolo> _pizzaiolos;
-    private OrderGenerator _orderGenerator;
-    private Duration _simulateDuration;
+    private final List<Checkout> _checkouts;
+    private final List<Pizzaiolo> _pizzaiolos;
+    private final Duration _simulateDuration;
+    private int pizzaId = 0;
 
-    public UniformDistributionPizzeriaCreationStrategy()
-    {
-
-    }
     public UniformDistributionPizzeriaCreationStrategy(List<Checkout> checkouts,
                                                        List<Pizzaiolo> pizzaiolos,
-                                                       OrderGenerator orderGenerator,
                                                        Duration simulateDuration)
     {
-        this._orderGenerator = orderGenerator;
         this._checkouts = checkouts;
         this._pizzaiolos = pizzaiolos;
         this._simulateDuration = simulateDuration;
@@ -33,26 +27,44 @@ public class UniformDistributionPizzeriaCreationStrategy implements IPizzeriaCre
     public Pizzeria createPizzeria() {
         return new Pizzeria(_checkouts,
                 _pizzaiolos,
-                _orderGenerator,
                 _simulateDuration,
                 this );
     }
 
     @Override
-    public void generateOrdersWithDelay(Pizzeria pizzeria, long startTime, long endTime, OrderGenerator orderGenerator) {
+    public void generateOrdersWithDelay(Pizzeria pizzeria, long startTime, long endTime) {
         Random random = new Random();
 
-        while (System.currentTimeMillis() < endTime) {
-            orderGenerator.Generate(); // Припускається, що OrderGenerator має статичний метод generate()
+        List<Thread> checkoutThreads = new ArrayList<>();
 
-            long delayMillis = random.nextInt((int) (10000 - 5000 + 1)) + 5000; // Випадкова затримка від 5 до 10 секунд
+        for (Checkout checkout : _checkouts) {
+            Thread checkoutThread = new Thread(() -> {
+                while (System.currentTimeMillis() < endTime) {
+                    long delayMillis = random.nextInt((int) (30000 - 25000 + 1)) + 25000;
 
+                    pizzeria.AddOrder(checkout.Generate(pizzaId++));
+
+                    try {
+                        Thread.sleep(delayMillis);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                }
+            });
+
+            checkoutThreads.add(checkoutThread);
+            checkoutThread.start();
+        }
+
+            // Чекаємо, поки всі потоки завершаться
+        for (Thread thread : checkoutThreads) {
             try {
-                Thread.sleep(delayMillis);
+                thread.join();
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
         }
     }
-
 }
+
+

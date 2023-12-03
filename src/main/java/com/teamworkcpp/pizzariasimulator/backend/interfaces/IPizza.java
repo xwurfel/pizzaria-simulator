@@ -1,6 +1,9 @@
 package com.teamworkcpp.pizzariasimulator.backend.interfaces;
+import com.teamworkcpp.pizzariasimulator.backend.models.Pizzaiolo;
+
 import java.time.Duration;
 import java.time.LocalTime;
+import java.util.List;
 
 public interface IPizza {
     public String getName();
@@ -21,4 +24,7 @@ public interface IPizza {
     // public List<Pizzaiolo> getPizzaioloList();
     public void doNextCookingStage();
     public void stopCookingStage();
+    public IPizzaStatus getCurrentStatus();
+    public List<Pizzaiolo> getPizzaioloList();
+    public void addPizzaiolo(Pizzaiolo pizzaiolo);
 }

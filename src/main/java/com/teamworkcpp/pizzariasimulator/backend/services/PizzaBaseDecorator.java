@@ -1,7 +1,10 @@
 package com.teamworkcpp.pizzariasimulator.backend.services;
 import com.teamworkcpp.pizzariasimulator.backend.interfaces.*;
+import com.teamworkcpp.pizzariasimulator.backend.models.Pizzaiolo;
+
 import java.time.Duration;
 import java.time.LocalTime;
+import java.util.List;
 
 public class PizzaBaseDecorator implements IPizza{
     private IPizza wrappee;
@@ -70,6 +73,20 @@ public class PizzaBaseDecorator implements IPizza{
     }
     public void stopCookingStage(){
         wrappee.stopCookingStage();
+    }
+
+    public List<Pizzaiolo> getPizzaioloList(){
+        return wrappee.getPizzaioloList();
+    }
+
+    @Override
+    public void addPizzaiolo(Pizzaiolo pizzaiolo) {
+        return;
+    }
+
+    @Override
+    public IPizzaStatus getCurrentStatus() {
+        return null;
     }
     // public List<Pizzaiolo> getPizzaioloList(){
     //  return wrappee.getPizzaioloList();

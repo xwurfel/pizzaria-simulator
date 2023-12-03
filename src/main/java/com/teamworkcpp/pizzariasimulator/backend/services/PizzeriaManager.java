@@ -1,6 +1,6 @@
 package com.teamworkcpp.pizzariasimulator.backend.services;
 
-import com.teamworkcpp.pizzariasimulator.backend.models.Checkout;
+import com.teamworkcpp.pizzariasimulator.backend.enums.SimulationMode;
 import com.teamworkcpp.pizzariasimulator.backend.models.Pizzaiolo;
 import com.teamworkcpp.pizzariasimulator.backend.models.Pizzeria;
 
@@ -18,7 +18,9 @@ public class PizzeriaManager
     private Duration _minimalCookingTime;
     private Duration _simulationDuration;
     private Pizzeria _pizzeria;
-    private OrderGenerator _orderGenerator;
+    private int _maxPizzaCountInOrder;
+
+    public void AddMaxPizzaCountInOrder(int count) {_maxPizzaCountInOrder = count;}
 
     public void AddCheckoutCount(int count)
     {
@@ -44,6 +46,7 @@ public class PizzeriaManager
     {
         _minimalCookingTime = duration;
     }
+
     public void AddSimulationDuration(Duration duration)
     {
         _simulationDuration = duration;
@@ -59,7 +62,6 @@ public class PizzeriaManager
                 _pizzeria = new UniformDistributionPizzeriaCreationStrategy(
                     BuildCheckouts(_checkoutCount),
                     BuildPizzaiolos(_pizzaioloCount),
-                    BuildOrderGenerator(),
                     _simulationDuration
                 ).createPizzeria();
                 break;
@@ -68,7 +70,6 @@ public class PizzeriaManager
                 _pizzeria = new GrowthPizzeriaCreationStrategy(
                         BuildCheckouts(_checkoutCount),
                         BuildPizzaiolos(_pizzaioloCount),
-                        BuildOrderGenerator(),
                         _simulationDuration
                 ).createPizzeria();
                 break;
@@ -77,7 +78,6 @@ public class PizzeriaManager
                 _pizzeria = new RushHourPizzeriaCreationStrategy(
                         BuildCheckouts(_checkoutCount),
                         BuildPizzaiolos(_pizzaioloCount),
-                        BuildOrderGenerator(),
                         _simulationDuration
                 ).createPizzeria();
                 break;
@@ -105,24 +105,21 @@ public class PizzeriaManager
     private List<Checkout> BuildCheckouts(int count)
     {
         List<Checkout> checkouts = new ArrayList<>();
-
+        OrderFiller orderFiller = BuildOrderFiller();
         for(int i = 1; i <= count; i++)
         {
-            Checkout checkout = new Checkout(i);
+            Checkout checkout = new Checkout(i, _maxPizzaCountInOrder, orderFiller);
             checkouts.add(checkout);
         }
 
         return  checkouts;
     }
-    private OrderGenerator BuildOrderGenerator() throws Exception
+
+    private OrderFiller BuildOrderFiller()
     {
-        throw new Exception("Not implemented");
+        // return new OrderFiller(params)
+        return null;
     }
+
 }
 
-enum SimulationMode
-{
-    UNIFORM_DISTRIBUTION,
-    GROWTH,
-    RUSH_HOUR
-}

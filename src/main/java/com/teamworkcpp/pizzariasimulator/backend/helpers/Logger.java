@@ -9,14 +9,16 @@ import java.util.Date;
 
 public class Logger {
     private static final String LOG_FILE_PATH = "log.txt";
+    private static final Object lock = new Object();
 
-    public static void log(String data) throws IOException {
-        try (PrintWriter writer = new PrintWriter(new BufferedWriter(new FileWriter(LOG_FILE_PATH, true)))) {
-
-            String timestamp = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date());
-            writer.println(timestamp + " - " + data);
+    public static synchronized void log(String data) throws IOException {
+        synchronized (lock) {
+            try (PrintWriter writer = new PrintWriter(new BufferedWriter(new FileWriter(LOG_FILE_PATH, true))))
+            {
+                String timestamp = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date());
+                System.out.println("[" + timestamp + "] " + data);
+                writer.println("[" + timestamp + "] " + data);
+            }
         }
     }
 }
-
-
