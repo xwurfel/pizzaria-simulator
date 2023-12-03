@@ -1,9 +1,13 @@
 package com.teamworkcpp.pizzariasimulator.backend.services;
 
+import com.teamworkcpp.pizzariasimulator.backend.enums.CookingMode;
 import com.teamworkcpp.pizzariasimulator.backend.enums.SimulationMode;
+import com.teamworkcpp.pizzariasimulator.backend.helpers.Logger;
+import com.teamworkcpp.pizzariasimulator.backend.helpers.SimulationState;
 import com.teamworkcpp.pizzariasimulator.backend.models.Pizzaiolo;
 import com.teamworkcpp.pizzariasimulator.backend.models.Pizzeria;
 
+import java.io.IOException;
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
@@ -13,12 +17,13 @@ public class PizzeriaManager
 {
     private int _checkoutCount;
     private int _pizzaioloCount;
-    private int _pizzaCount;
     private SimulationMode _simulationMode;
-    private Duration _minimalCookingTime;
     private Duration _simulationDuration;
     private Pizzeria _pizzeria;
     private int _maxPizzaCountInOrder;
+    private CookingMode _cookingMode;
+
+    public PizzeriaManager(){}
 
     public void AddMaxPizzaCountInOrder(int count) {_maxPizzaCountInOrder = count;}
 
@@ -32,19 +37,9 @@ public class PizzeriaManager
         _pizzaioloCount = count;
     }
 
-    public void AddPizzaCount(int count)
-    {
-        _pizzaCount = count;
-    }
-
     public void AddLevel(SimulationMode level)
     {
         _simulationMode = level;
-    }
-
-    public void AddMininalCookindTime(Duration duration)
-    {
-        _minimalCookingTime = duration;
     }
 
     public void AddSimulationDuration(Duration duration)
@@ -52,40 +47,12 @@ public class PizzeriaManager
         _simulationDuration = duration;
     }
 
-    public void Build() throws Exception {
-
-        ///Add implementation for building OrderGenerator, PizzaPrototypeRegistry,
-
-        switch(_simulationMode)
-        {
-            case SimulationMode.UNIFORM_DISTRIBUTION:
-                _pizzeria = new UniformDistributionPizzeriaCreationStrategy(
-                    BuildCheckouts(_checkoutCount),
-                    BuildPizzaiolos(_pizzaioloCount),
-                    _simulationDuration
-                ).createPizzeria();
-                break;
-
-            case SimulationMode.GROWTH:
-                _pizzeria = new GrowthPizzeriaCreationStrategy(
-                        BuildCheckouts(_checkoutCount),
-                        BuildPizzaiolos(_pizzaioloCount),
-                        _simulationDuration
-                ).createPizzeria();
-                break;
-
-            case SimulationMode.RUSH_HOUR:
-                _pizzeria = new RushHourPizzeriaCreationStrategy(
-                        BuildCheckouts(_checkoutCount),
-                        BuildPizzaiolos(_pizzaioloCount),
-                        _simulationDuration
-                ).createPizzeria();
-                break;
-
-            default:
-                throw new Exception("Invalid simulation mode");
-        }
+    public void AddCookingMode(CookingMode cookingMode)
+    {
+        _cookingMode = cookingMode;
     }
+
+    public SimulationState getCurrentSimulationState() { return _pizzeria.getSimulationState(); }
 
     private List<Pizzaiolo> BuildPizzaiolos(int count)
     {
@@ -97,6 +64,12 @@ public class PizzeriaManager
                     Duration.ofSeconds(ThreadLocalRandom.current().nextInt(20, 36)));
 
             pizzaiolos.add(pizzaiolo);
+        }
+
+        try {
+            Logger.log(" BUILDER: Pizzaiolos were built");
+        } catch (IOException e) {
+            throw new RuntimeException(e);
         }
 
         return pizzaiolos;
@@ -112,6 +85,12 @@ public class PizzeriaManager
             checkouts.add(checkout);
         }
 
+        try {
+            Logger.log(" BUILDER: Checkouts were built");
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
         return  checkouts;
     }
 
@@ -121,5 +100,54 @@ public class PizzeriaManager
         return null;
     }
 
+    public void Build() throws Exception {
+
+        switch(_simulationMode)
+        {
+            case SimulationMode.UNIFORM_DISTRIBUTION:
+                _pizzeria = new UniformDistributionPizzeriaCreationStrategy(
+                        BuildCheckouts(_checkoutCount),
+                        BuildPizzaiolos(_pizzaioloCount),
+                        _simulationDuration
+                ).createPizzeria();
+                _pizzeria.setCookingMode(_cookingMode);
+                break;
+
+            case SimulationMode.GROWTH:
+                _pizzeria = new GrowthPizzeriaCreationStrategy(
+                        BuildCheckouts(_checkoutCount),
+                        BuildPizzaiolos(_pizzaioloCount),
+                        _simulationDuration
+                ).createPizzeria();
+                _pizzeria.setCookingMode(_cookingMode);
+                break;
+
+            case SimulationMode.RUSH_HOUR:
+                _pizzeria = new RushHourPizzeriaCreationStrategy(
+                        BuildCheckouts(_checkoutCount),
+                        BuildPizzaiolos(_pizzaioloCount),
+                        _simulationDuration
+                ).createPizzeria();
+                _pizzeria.setCookingMode(_cookingMode);
+                break;
+
+            default:
+                try {
+                    Logger.log(" BUILDER: Error while building pizzeria");
+                } catch (IOException e) {
+                    throw new RuntimeException(e);
+                }
+                throw new Exception("Invalid simulation mode");
+        }
+
+        try {
+            Logger.log(" BUILDER: Pizzeria were built" +
+                    "\n BUILDER: Starting new simulation.");
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
+        _pizzeria.start();
+    }
 }
 

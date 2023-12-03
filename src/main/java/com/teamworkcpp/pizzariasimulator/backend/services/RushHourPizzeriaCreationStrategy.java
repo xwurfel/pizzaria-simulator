@@ -14,7 +14,7 @@ public class RushHourPizzeriaCreationStrategy implements IPizzeriaCreationStrate
     private final List<Pizzaiolo> _pizzaiolos;
     private final Duration _simulateDuration;
     private int pizzaId = 0;
-
+    private final  long SPREAD_GENERATION_TIME = 10000;
     public RushHourPizzeriaCreationStrategy(List<Checkout> checkouts,
                                                        List<Pizzaiolo> pizzaiolos,
                                                         Duration _simulateDuration)
@@ -49,11 +49,11 @@ public class RushHourPizzeriaCreationStrategy implements IPizzeriaCreationStrate
 
                     long delayMillis;
                     if (currentTime < firstThreshold) {
-                        delayMillis = random.nextInt((int) (30000 - 25000 + 1)) + 25000;
+                        delayMillis = random.nextInt((int) (SPREAD_GENERATION_TIME)) + 30000;
                     } else if (currentTime < secondThreshold) {
-                        delayMillis = random.nextInt((int) (20000 - 13000 + 1)) + 13000;
+                        delayMillis = random.nextInt((int) (SPREAD_GENERATION_TIME)) + 15000;
                     } else {
-                        delayMillis = random.nextInt((int) (30000 - 25000 + 1)) + 25000;
+                        delayMillis = random.nextInt((int) (SPREAD_GENERATION_TIME)) + 30000;
                     }
 
                     try {
