@@ -8,14 +8,12 @@ public class Order {
     private final int _id;
     private final List<IPizza> _pizzas;
     private OrderStatus _orderStatus;
-    private boolean _isDone;
     private int _checkoutId;
 
-    public Order(int id, List<IPizza> pizzas, OrderStatus orderStatus, boolean isDone, int checkoutId) {
+    public Order(int id, List<IPizza> pizzas, OrderStatus orderStatus, int checkoutId) {
         this._id = id;
         this._pizzas = pizzas;
         this._orderStatus = orderStatus;
-        this._isDone = isDone;
         this._checkoutId = checkoutId;
     }
 
@@ -27,19 +25,13 @@ public class Order {
         return _pizzas;
     }
 
-    public OrderStatus getOrderStatus() {
+    public OrderStatus getStatus() {
         return _orderStatus;
     }
 
+    public int getcheckoutId() {return _checkoutId; }
+
     public void setOrderStatus(OrderStatus orderStatus) {
         this._orderStatus = orderStatus;
-    }
-
-    public boolean isDone() {
-        return _isDone;
-    }
-
-    public void setDone(boolean done) {
-        _isDone = done;
     }
 }

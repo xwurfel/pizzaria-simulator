@@ -34,7 +34,6 @@ public class Checkout {
         return new Order(id,
                 pizzas,
                 OrderStatus.NEW,
-                false,
                 id);
     }
 }

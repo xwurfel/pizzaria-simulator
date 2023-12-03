@@ -13,7 +13,9 @@ public class GrowthPizzeriaCreationStrategy implements IPizzeriaCreationStrategy
     private final List<Checkout> _checkouts;
     private final List<Pizzaiolo> _pizzaiolos;
     private final Duration _simulateDuration;
-    private int pizzaId = 0;
+    private int orderId = 0;
+    private final  long SPREAD_GENERATION_TIME = 10000;
+
 
     public GrowthPizzeriaCreationStrategy(List<Checkout> checkouts,
                                             List<Pizzaiolo> pizzaiolos,
@@ -47,17 +49,17 @@ public class GrowthPizzeriaCreationStrategy implements IPizzeriaCreationStrategy
                 while (System.currentTimeMillis() < endTime) {
                     long currentTime = System.currentTimeMillis();
 
-                    pizzeria.AddOrder(checkout.Generate(pizzaId++));
+                    pizzeria.AddOrder(checkout.Generate(orderId++));
 
                     long delayMillis;
                     if (currentTime < firstThreshold) {
-                        delayMillis = random.nextInt((int) (30000 - 25000 + 1)) + 25000;
+                        delayMillis = random.nextInt((int) (SPREAD_GENERATION_TIME)) + 35000;
                     } else if (currentTime < secondThreshold) {
-                        delayMillis = random.nextInt((int) (25000 - 22000 + 1)) + 22000;
+                        delayMillis = random.nextInt((int) (SPREAD_GENERATION_TIME)) + 30000;
                     } else if (currentTime < thirdThreshold) {
-                        delayMillis = random.nextInt((int) (20000 - 18000 + 1)) + 18000;
+                        delayMillis = random.nextInt((int) (SPREAD_GENERATION_TIME)) + 27000;
                     } else {
-                        delayMillis = random.nextInt((int) (14000 - 13000 + 1)) + 13000;
+                        delayMillis = random.nextInt((int) (SPREAD_GENERATION_TIME)) + 25000;
                     }
 
                     try {

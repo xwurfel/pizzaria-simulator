@@ -14,6 +14,7 @@ public class UniformDistributionPizzeriaCreationStrategy implements IPizzeriaCre
     private final List<Pizzaiolo> _pizzaiolos;
     private final Duration _simulateDuration;
     private int pizzaId = 0;
+    private final  long SPREAD_GENERATION_TIME = 10000;
 
     public UniformDistributionPizzeriaCreationStrategy(List<Checkout> checkouts,
                                                        List<Pizzaiolo> pizzaiolos,
@@ -40,7 +41,7 @@ public class UniformDistributionPizzeriaCreationStrategy implements IPizzeriaCre
         for (Checkout checkout : _checkouts) {
             Thread checkoutThread = new Thread(() -> {
                 while (System.currentTimeMillis() < endTime) {
-                    long delayMillis = random.nextInt((int) (30000 - 25000 + 1)) + 25000;
+                    long delayMillis = random.nextInt((int) (SPREAD_GENERATION_TIME)) + 25000;
 
                     pizzeria.AddOrder(checkout.Generate(pizzaId++));
 
