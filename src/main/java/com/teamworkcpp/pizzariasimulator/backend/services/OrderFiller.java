@@ -1,9 +1,10 @@
 package com.teamworkcpp.pizzariasimulator.backend.services;
 
+import com.teamworkcpp.pizzariasimulator.backend.interfaces.IPizza;
 import com.teamworkcpp.pizzariasimulator.backend.models.Order;
 
 public class OrderFiller {
-    private OrderGenerator _instance;
+    private OrderFiller _instance;
 
     //configuration field
 
@@ -11,14 +12,14 @@ public class OrderFiller {
 
     }
 
-    public OrderGenerator getInstance() {
+    public OrderFiller getInstance() {
         if (_instance == null) {
-            _instance = new OrderGenerator();
+            _instance = new OrderFiller();
         }
         return _instance;
     }
 
-    public Order GenerateOrder() {
-        return _instance.Generate();
+    public IPizza GenerateOrder() {
+        return null;
     }
 }

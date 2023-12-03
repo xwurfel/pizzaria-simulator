@@ -2,6 +2,7 @@ package com.teamworkcpp.pizzariasimulator.backend.models;
 import com.teamworkcpp.pizzariasimulator.backend.interfaces.*;
 import java.time.Duration;
 import java.time.LocalTime;
+import java.util.List;
 
 public class SimplePizza implements IPizza, IPizzaPrototype {
     private String name;
@@ -94,16 +95,19 @@ public class SimplePizza implements IPizza, IPizzaPrototype {
     }
 
     private LocalTime nextTime;
-    // private List<Pizzaiolo> pizzaioloList = new ArrayList<Pizzaiolo>();
-    // public List<Pizzaiolo> getPizzaioloList(){
-    //  return pizzaioloList;
-    //}
     private IPizzaStatus status;
 
+    public IPizzaStatus getCurrentStatus() {return status;}
     public IPizzaStatus getStoppedAtStatus() {
         return stoppedAtStatus;
     }
 
+     private List<Pizzaiolo> pizzaioloList;
+     public List<Pizzaiolo> getPizzaioloList(){
+         return pizzaioloList;
+     }
+
+     public void addPizzaiolo(Pizzaiolo pizzaiolo) {pizzaioloList.add(pizzaiolo);}
     public void setStoppedAtStatus(IPizzaStatus stoppedAtStatus) {
         this.stoppedAtStatus = stoppedAtStatus;
     }

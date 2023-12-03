@@ -9,7 +9,7 @@ import java.util.stream.Collectors;
 
 public class PizzaPrototypeRegistry {
     private PizzaPrototypeRegistry _instance;
-    private List<IPizzaPrototype> _pizzaPrototypes = new ArrayList<>();
+    private final List<IPizzaPrototype> _pizzaPrototypes = new ArrayList<>();
 
     private PizzaPrototypeRegistry() {
 
