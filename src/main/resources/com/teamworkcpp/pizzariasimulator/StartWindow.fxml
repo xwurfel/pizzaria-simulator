@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" prefHeight="539.0" prefWidth="951.0" spacing="20.0" style="-fx-background-color: #fff;" stylesheets="@style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.teamworkcpp.pizzariasimulator.HelloController">
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+   <children>
+      <Pane prefHeight="498.0" prefWidth="939.0" style="-fx-background-color: #ffffff;">
+         <children>
+            <Button id="button_Start" fx:id="button_start" layoutX="141.0" layoutY="249.0" mnemonicParsing="false" onAction="#Start_button_click" prefHeight="101.0" prefWidth="629.0" style="-fx-background-color: E76F51;" text="Почати симуляцію" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman Bold" size="36.0" />
+               </font>
+            </Button>
+            <Button id="button_Settings" fx:id="button_settings" layoutX="252.0" layoutY="121.0" mnemonicParsing="false" onAction="#Setting_button_click" prefHeight="84.0" prefWidth="407.0" style="-fx-background-color: E9C46A;" text="Налаштувати симуляцію" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman" size="24.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+   </children>
+</VBox>

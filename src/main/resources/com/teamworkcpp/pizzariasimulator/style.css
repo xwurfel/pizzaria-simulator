@@ -1,0 +1,76 @@
+/* style.css */
+
+/* Apply styles to the entire application background */
+.root {
+    -fx-background-color: #fff;
+    -fx-font-family: 'Times New Roman', Times, serif;
+    -fx-font-weight: bold;
+}
+
+/* Apply styles to the VBox */
+.vbox {
+    -fx-spacing: 20.0;
+    -fx-padding: 20.0;
+}
+
+/* Apply styles to the Pane inside the VBox */
+.pane {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 10.0; /* Rounded corners for the pane */
+}
+
+/* Apply styles to the Button elements */
+.button {
+    -fx-background-color: #F4A261;
+    -fx-text-fill: black; /* Set text color to black */
+    -fx-background-radius: 10.0; /* Rounded corners for the buttons */
+}
+
+/* Apply styles to the Label elements */
+.label {
+    -fx-font-size: 18.0; /* Increased font size */
+    -fx-text-fill: black; /* Set text color to black */
+}
+
+/* Apply styles to the TabPane and its Tabs */
+.tab-pane {
+    -fx-tab-min-width: 150;
+    -fx-tab-max-width: 150;
+    -fx-tab-min-height: 40;
+    -fx-tab-max-height: 40;
+}
+
+/* Apply styles to the selected Tab in the TabPane */
+.tab:selected {
+    -fx-background-color: #E9C46A; /* Color for selected tab */
+}
+
+.tab-header-area {
+    -fx-padding: 0.0 0.0 0.0 0.0;
+    -fx-alignment: CENTER;
+    -fx-font-size: 20.0;
+}
+
+/* Apply styles to the ComboBox elements */
+.combo-box {
+    -fx-pref-width: 200.0; /* Increased width */
+    -fx-pref-height: 40.0; /* Increased height */
+    -fx-background-radius: 10.0; /* Rounded corners for the combobox */
+    -fx-alignment: center; /* Center align text within the combobox */
+    -fx-background-color: #E9C46A;
+}
+
+.combo-box .arrow-button {
+    -fx-background-color: #E9C46A; /* Color for the ComboBox button */
+}
+
+/* Apply styles to the RadioButton elements */
+.radio-button {
+    -fx-pref-width: 150.0;
+    -fx-pref-height: 40.0;
+}
+
+/* Apply styles to the AnchorPane inside the TabPane content */
+.tab-content-pane {
+    -fx-padding: 20.0;
+}

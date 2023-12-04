@@ -1,0 +1,4 @@
+[2023-12-04 13:51:49]  BUILDER: Checkouts were built
+[2023-12-04 13:51:49]  BUILDER: Pizzaiolos were built
+[2023-12-04 13:51:49]  BUILDER: Pizzeria were built
+ BUILDER: Starting new simulation.
