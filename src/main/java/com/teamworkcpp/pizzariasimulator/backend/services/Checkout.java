@@ -28,7 +28,7 @@ public class Checkout {
 
         for(int i = 0; i < random.nextInt(1, _maxPizzaCount); ++i)
         {
-            pizzas.add(_orderFiller.GenerateOrder());
+            pizzas.add(_orderFiller.generatePizza());
         }
 
         return new Order(id,
