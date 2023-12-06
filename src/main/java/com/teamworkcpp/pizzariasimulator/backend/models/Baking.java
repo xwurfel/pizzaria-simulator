@@ -6,6 +6,7 @@ import java.util.Random;
 
 public class Baking implements IPizzaStatus{
     IPizza context;
+
     @Override
     public void next() {
         IPizzaStatus status = new FillingAfterBaking();
