@@ -25,7 +25,7 @@ public class PizzaPrototypeRegistry {
 
     public Optional<IPizzaPrototype> getRandomPizza() {
         Random random = new Random();
-        return Optional.ofNullable(_pizzaPrototypes.get(random.nextInt(_pizzaPrototypes.size())));
+        return Optional.ofNullable(_pizzaPrototypes.get(random.nextInt(_pizzaPrototypes.size())).clone());
     }
     public List<String> getItemsNames() {
         return _pizzaPrototypes.stream().map(IPizzaPrototype::getName).collect(Collectors.toList());
