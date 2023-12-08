@@ -43,43 +43,46 @@ public class GrowthPizzeriaCreationStrategy implements IPizzeriaCreationStrategy
         Random random = new Random();
 
         List<Thread> checkoutThreads = new ArrayList<>();
+        Thread generationThread = new Thread(() ->
+        {
+            for (Checkout checkout : _checkouts) {
+                Thread checkoutThread = new Thread(() -> {
+                    while (System.currentTimeMillis() < endTime) {
+                        long currentTime = System.currentTimeMillis();
 
-        for (Checkout checkout : _checkouts) {
-            Thread checkoutThread = new Thread(() -> {
-                while (System.currentTimeMillis() < endTime) {
-                    long currentTime = System.currentTimeMillis();
+                        pizzeria.AddOrder(checkout.Generate(orderId++));
 
-                    pizzeria.AddOrder(checkout.Generate(orderId++));
+                        long delayMillis;
+                        if (currentTime < firstThreshold) {
+                            delayMillis = random.nextInt((int) (SPREAD_GENERATION_TIME)) + 35000;
+                        } else if (currentTime < secondThreshold) {
+                            delayMillis = random.nextInt((int) (SPREAD_GENERATION_TIME)) + 30000;
+                        } else if (currentTime < thirdThreshold) {
+                            delayMillis = random.nextInt((int) (SPREAD_GENERATION_TIME)) + 27000;
+                        } else {
+                            delayMillis = random.nextInt((int) (SPREAD_GENERATION_TIME)) + 25000;
+                        }
 
-                    long delayMillis;
-                    if (currentTime < firstThreshold) {
-                        delayMillis = random.nextInt((int) (SPREAD_GENERATION_TIME)) + 35000;
-                    } else if (currentTime < secondThreshold) {
-                        delayMillis = random.nextInt((int) (SPREAD_GENERATION_TIME)) + 30000;
-                    } else if (currentTime < thirdThreshold) {
-                        delayMillis = random.nextInt((int) (SPREAD_GENERATION_TIME)) + 27000;
-                    } else {
-                        delayMillis = random.nextInt((int) (SPREAD_GENERATION_TIME)) + 25000;
+                        try {
+                            Thread.sleep(delayMillis);
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        }
                     }
+                });
 
-                    try {
-                        Thread.sleep(delayMillis);
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-                    }
-                }
-            });
-
-            checkoutThreads.add(checkoutThread);
-            checkoutThread.start();
-        }
-
-        for (Thread thread : checkoutThreads) {
-            try {
-                thread.join();
-            } catch (InterruptedException e) {
-                e.printStackTrace();
+                checkoutThreads.add(checkoutThread);
+                checkoutThread.start();
             }
-        }
+
+            for (Thread thread : checkoutThreads) {
+                try {
+                    thread.join();
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+        generationThread.start();
     }
 }

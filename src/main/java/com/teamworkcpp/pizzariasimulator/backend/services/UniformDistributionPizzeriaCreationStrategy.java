@@ -7,6 +7,7 @@ import com.teamworkcpp.pizzariasimulator.backend.models.Pizzeria;
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 import java.util.Random;
 
 public class UniformDistributionPizzeriaCreationStrategy implements IPizzeriaCreationStrategy {
@@ -14,58 +15,61 @@ public class UniformDistributionPizzeriaCreationStrategy implements IPizzeriaCre
     private final List<Pizzaiolo> _pizzaiolos;
     private final Duration _simulateDuration;
     private int pizzaId = 0;
-    private final  long SPREAD_GENERATION_TIME = 10000;
+    private final long SPREAD_GENERATION_TIME = 10000;
+    private static final Object lock = new Object();
 
     public UniformDistributionPizzeriaCreationStrategy(List<Checkout> checkouts,
                                                        List<Pizzaiolo> pizzaiolos,
-                                                       Duration simulateDuration)
-    {
+                                                       Duration simulateDuration) {
         this._checkouts = checkouts;
         this._pizzaiolos = pizzaiolos;
         this._simulateDuration = simulateDuration;
     }
+
     @Override
     public Pizzeria createPizzeria() {
         return new Pizzeria(_checkouts,
                 _pizzaiolos,
                 _simulateDuration,
-                this );
+                this);
     }
 
     @Override
     public void generateOrdersWithDelay(Pizzeria pizzeria, long startTime, long endTime) {
         Random random = new Random();
-
         List<Thread> checkoutThreads = new ArrayList<>();
+        Thread generationThread = new Thread(() ->
+        {
+            for (Checkout checkout : _checkouts) {
+                Thread checkoutThread = new Thread(() -> {
+                    while (System.currentTimeMillis() < endTime) {
+                        long delayMillis = random.nextInt((int) (SPREAD_GENERATION_TIME)) + 25000;
 
-        for (Checkout checkout : _checkouts) {
-            Thread checkoutThread = new Thread(() -> {
-                while (System.currentTimeMillis() < endTime) {
-                    long delayMillis = random.nextInt((int) (SPREAD_GENERATION_TIME)) + 25000;
+                            pizzeria.AddOrder(checkout.Generate(pizzaId++));
 
-                    pizzeria.AddOrder(checkout.Generate(pizzaId++));
-
-                    try {
-                        Thread.sleep(delayMillis);
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
+                        try {
+                            Thread.sleep(delayMillis);
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        }
                     }
-                }
-            });
+                });
 
-            checkoutThreads.add(checkoutThread);
-            checkoutThread.start();
-        }
+                checkoutThreads.add(checkoutThread);
+                checkoutThread.start();
+            }
 
             // Чекаємо, поки всі потоки завершаться
-        for (Thread thread : checkoutThreads) {
-            try {
-                thread.join();
-            } catch (InterruptedException e) {
-                e.printStackTrace();
+            for (Thread thread : checkoutThreads) {
+                try {
+                    thread.join();
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
             }
-        }
+
+        });
+        generationThread.start();
     }
 }
-
 

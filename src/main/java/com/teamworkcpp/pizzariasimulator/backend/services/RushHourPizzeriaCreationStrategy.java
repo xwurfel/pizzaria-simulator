@@ -15,6 +15,7 @@ public class RushHourPizzeriaCreationStrategy implements IPizzeriaCreationStrate
     private final Duration _simulateDuration;
     private int pizzaId = 0;
     private final  long SPREAD_GENERATION_TIME = 10000;
+    RushHourPizzeriaCreationStrategy strategy;
     public RushHourPizzeriaCreationStrategy(List<Checkout> checkouts,
                                                        List<Pizzaiolo> pizzaiolos,
                                                         Duration _simulateDuration)
@@ -23,13 +24,14 @@ public class RushHourPizzeriaCreationStrategy implements IPizzeriaCreationStrate
         this._checkouts = checkouts;
         this._pizzaiolos = pizzaiolos;
         this._simulateDuration = _simulateDuration;
+        this.strategy = this;
     }
     @Override
     public Pizzeria createPizzeria() {
         return new Pizzeria(_checkouts,
                 _pizzaiolos,
                 _simulateDuration,
-                this );
+                strategy );
     }
 
     @Override
@@ -40,42 +42,45 @@ public class RushHourPizzeriaCreationStrategy implements IPizzeriaCreationStrate
 
         List<Thread> checkoutThreads = new ArrayList<>();
         Random random = new Random();
-        for (Checkout checkout : _checkouts) {
-            Thread checkoutThread = new Thread(() -> {
-                while (System.currentTimeMillis() < endTime) {
-                    long currentTime = System.currentTimeMillis();
+        Thread generationThread = new Thread(() ->
+        {
+            for (Checkout checkout : _checkouts) {
+                Thread checkoutThread = new Thread(() -> {
+                    while (System.currentTimeMillis() < endTime) {
+                        long currentTime = System.currentTimeMillis();
 
-                    pizzeria.AddOrder(checkout.Generate(pizzaId++));
+                        pizzeria.AddOrder(checkout.Generate(pizzaId++));
 
-                    long delayMillis;
-                    if (currentTime < firstThreshold) {
-                        delayMillis = random.nextInt((int) (SPREAD_GENERATION_TIME)) + 30000;
-                    } else if (currentTime < secondThreshold) {
-                        delayMillis = random.nextInt((int) (SPREAD_GENERATION_TIME)) + 15000;
-                    } else {
-                        delayMillis = random.nextInt((int) (SPREAD_GENERATION_TIME)) + 30000;
+                        long delayMillis;
+                        if (currentTime < firstThreshold) {
+                            delayMillis = random.nextInt((int) (SPREAD_GENERATION_TIME)) + 30000;
+                        } else if (currentTime < secondThreshold) {
+                            delayMillis = random.nextInt((int) (SPREAD_GENERATION_TIME)) + 15000;
+                        } else {
+                            delayMillis = random.nextInt((int) (SPREAD_GENERATION_TIME)) + 30000;
+                        }
+
+                        try {
+                            Thread.sleep(delayMillis);
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        }
                     }
+                });
 
-                    try {
-                        Thread.sleep(delayMillis);
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-                    }
-                }
-            });
-
-            checkoutThreads.add(checkoutThread);
-            checkoutThread.start();
-        }
-
-        for (Thread thread : checkoutThreads) {
-            try {
-                thread.join();
-            } catch (InterruptedException e) {
-                e.printStackTrace();
+                checkoutThreads.add(checkoutThread);
+                checkoutThread.start();
             }
-        }
 
+            for (Thread thread : checkoutThreads) {
+                try {
+                    thread.join();
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+        generationThread.start();
     }
 }
 
