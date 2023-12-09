@@ -45,10 +45,10 @@ public class UniformDistributionPizzeriaCreationStrategy implements IPizzeriaCre
                     while (System.currentTimeMillis() < endTime) {
                         long delayMillis = random.nextInt((int) (SPREAD_GENERATION_TIME)) + 25000;
 
-                            pizzeria.AddOrder(checkout.Generate(pizzaId++));
+                        pizzeria.AddOrder(checkout.Generate(pizzaId++));
 
                         try {
-                            Thread.sleep(delayMillis);
+                            Thread.sleep(delayMillis+ 20000);
                         } catch (InterruptedException e) {
                             e.printStackTrace();
                         }

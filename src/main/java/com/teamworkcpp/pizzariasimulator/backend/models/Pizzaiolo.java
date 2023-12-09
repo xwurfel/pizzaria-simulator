@@ -103,15 +103,42 @@ public class Pizzaiolo {
         }
     }
 
-    public void ReservePizzaiolo(long duration)
+    public void ReservePizzaiolo()
     {
+
+        switch (pizza.getCurrentStatus().getStatusName())
+        {
+            case "Dough Kneeding":
+                SetReserve(pizza.getMinTimeDoughKneeding());
+                break;
+            case "Filling After Baking":
+                SetReserve(pizza.getMinTimeFillingAfterBaking());
+                break;
+            case "Filling Before Baking":
+                SetReserve(pizza.getMinTimeFillingBeforeBaking());
+                break;
+            case "Packaging":
+                SetReserve(pizza.getMinTimePackaging());
+                break;
+            case "Baking":
+                SetReserve(pizza.getMinTimeBaking());
+                break;
+            default:
+                SetReserve(Duration.ofMillis(5000));
+        }
+
         try {
             Logger.log("Pizziolo " + _id + " reserved");
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-        _delay = Duration.ofMillis(duration);
-        _availableTime = LocalTime.now().plusSeconds(duration / 1000);
+
+    }
+
+    private void SetReserve(Duration duration)
+    {
+        _delay = duration;
+        _availableTime = LocalTime.now().plus(duration);
         _isAvailable = false;
     }
 

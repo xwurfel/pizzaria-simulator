@@ -11,6 +11,7 @@ import com.teamworkcpp.pizzariasimulator.backend.services.Checkout;
 import java.io.IOException;
 import java.time.Duration;
 import java.time.LocalDate;
+import java.time.LocalTime;
 import java.time.ZoneId;
 import java.util.*;
 import java.util.concurrent.CopyOnWriteArrayList;
@@ -23,6 +24,7 @@ public class Pizzeria {
     private CookingMode cookingMode;
     private final List<Order> _orders = new CopyOnWriteArrayList<>();
     private boolean _simulationEnded;
+    private long _endTime;
 
     public Pizzeria(List<Checkout> checkouts,
                     List<Pizzaiolo> pizzaiolos,
@@ -35,6 +37,7 @@ public class Pizzeria {
         this._simulationTime = simulationTime;
         this._pizzeriaCreationStrategy = creationStrategy;
         this._simulationEnded = false;
+        this._endTime = System.currentTimeMillis() + _simulationTime.toMillis();
     }
 
     public SimulationState getSimulationState()
@@ -118,11 +121,17 @@ public class Pizzeria {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+
         Thread simulationThread = new Thread(() -> {
             while (true) {
 
                 boolean allOrdersDone = _orders.stream().allMatch(order ->
                         Objects.equals(order.getStatus(), OrderStatus.DONE));
+
+                if(System.currentTimeMillis() > _endTime)
+                {
+                    allOrdersDone = true;
+                }
 
                 if(allOrdersDone)
                 {
@@ -152,7 +161,6 @@ public class Pizzeria {
                 Iterator<Order> iterator = _orders.iterator();
                 while(iterator.hasNext()) {
                     Order order;
-
                     order = iterator.next();
 
                     if(order.getStatus() == OrderStatus.DONE)
@@ -173,7 +181,6 @@ public class Pizzeria {
                         } catch (IOException e) {
                             throw new RuntimeException(e);
                         }
-
                         continue;
                     }
 
@@ -220,7 +227,7 @@ public class Pizzeria {
                                 }
 
                                 pizzaiolo.setPizza(pizza);
-                                pizzaiolo.ReservePizzaiolo(5000);
+                                pizzaiolo.ReservePizzaiolo();
 
                                 pizza.addPizzaiolo(pizzaiolo);
                                 pizzaiolo.cook(pizza);
@@ -259,14 +266,19 @@ public class Pizzeria {
                             continue;
                         }
 
+                        Pizzaiolo pizzaiolo = pizza.getPizzaioloList().getFirst();
+                        pizzaiolo.setPizza(pizza);
+                        pizzaiolo.ReservePizzaiolo();
 
+                        pizza.addPizzaiolo(pizzaiolo);
+                        pizzaiolo.cook(pizza);
 
-                        pizza.getPizzaioloList().getFirst().cook(pizza);
                         try {
                             Logger.log("Pizza: " + pizza.getId() + " set pizzaiolo "+ pizza.getPizzaioloList().getFirst().GetId());
                         } catch (IOException e) {
                             throw new RuntimeException(e);
                         }
+
                         try {
                             Logger.log("Pizza: " + pizza.getId() + " set status "+ pizza.getCurrentStatus().getStatusName());
                         } catch (IOException e) {
@@ -299,6 +311,11 @@ public class Pizzeria {
                 boolean allOrdersDone = _orders.stream().allMatch(order ->
                         Objects.equals(order.getStatus(), OrderStatus.DONE));
 
+                if(System.currentTimeMillis() > _endTime)
+                {
+                    allOrdersDone = true;
+                }
+
                 if(allOrdersDone)
                 {
                     int pizzasDone = 0;
@@ -330,6 +347,11 @@ public class Pizzeria {
                 {
                     Order order = iterator.next();
 
+                    if(order.getStatus() == OrderStatus.DONE)
+                    {
+                        continue;
+                    }
+
                     if (order.getPizzas().stream().allMatch(pizza -> Objects.equals(pizza
                             .getCurrentStatus()
                             .getStatusName(), "Done")))
@@ -352,11 +374,6 @@ public class Pizzeria {
                                  .getCurrentStatus()
                                  .getStatusName(), "Done"))
                          {
-                             try {
-                                 Logger.log("Pizza: " + pizza.getId() + " is ready");
-                             } catch (IOException e) {
-                                 throw new RuntimeException(e);
-                             }
                              continue;
                          }
 
@@ -383,7 +400,7 @@ public class Pizzeria {
                                  }
 
                                  pizzaiolo.setPizza(pizza);
-                                 pizzaiolo.ReservePizzaiolo(5000);
+                                 pizzaiolo.ReservePizzaiolo();
 
                                  pizza.addPizzaiolo(pizzaiolo);
                                  pizzaiolo.cook(pizza);
@@ -439,7 +456,7 @@ public class Pizzeria {
                          }
 
                         missingPizzaiolo.setPizza(pizza);
-                        missingPizzaiolo.ReservePizzaiolo(5000);
+                        missingPizzaiolo.ReservePizzaiolo();
 
                         pizza.addPizzaiolo(missingPizzaiolo);
                         missingPizzaiolo.cook(pizza);

@@ -104,25 +104,26 @@ public class PizzeriaManager
     {
         Random r = new Random();
 
-     /*   long maxKnittingTime = (long) (cookingTime.toMillis() * 0.9);
+        long maxKnittingTime = (long) (cookingTime.toMillis() * 0.2);
         long randomKnittingTime = r.nextInt((int) maxKnittingTime) + 1;
-        Duration knittingTime = Duration.ofMillis(Math.max(randomKnittingTime, (long) (0.1 * cookingTime.toMillis())));
-        Duration fillingTime = Duration.ofMillis(r.nextInt((int) (cookingTime.toMillis() * 0.9)) + 1);
-        Duration bakingTime = Duration.ofMillis(r.nextInt((int) (cookingTime.toMillis() * 0.9)) + 1);
-        Duration afterBakingTime = Duration.ofMillis(r.nextInt((int) (cookingTime.toMillis() * 0.9)) + 1);
-        Duration packagingTime = Duration.ofMillis(r.nextInt((int) (cookingTime.toMillis() * 0.9)) + 1);
-*/
-        Duration knittingTime = Duration.ofMillis(5000);
-        Duration fillingTime = Duration.ofMillis(5000);
-        Duration bakingTime = Duration.ofMillis(5000);
-        Duration afterBakingTime = Duration.ofMillis(5000);
-        Duration packagingTime = Duration.ofMillis(5000);
+        Duration knittingTime = Duration.ofMillis(Math.max(randomKnittingTime, (long) (0.2 * cookingTime.toMillis())) + 5000);
+        Duration fillingTime = Duration.ofMillis(r.nextInt((int) (cookingTime.toMillis() * 0.2)) + + 5000);
+        Duration bakingTime = Duration.ofMillis(r.nextInt((int) (cookingTime.toMillis() * 0.2)) + 5000);
+        Duration afterBakingTime = Duration.ofMillis(r.nextInt((int) (cookingTime.toMillis() * 0.2)) + 5000);
+        Duration packagingTime = Duration.ofMillis(r.nextInt((int) (cookingTime.toMillis() * 0.2)) + 5000);
+
+
 
         PizzaPrototypeRegistry.getInstance().addItem(new SimplePizza(name, price, knittingTime,
                 fillingTime, bakingTime, afterBakingTime, packagingTime));
 
         try {
-            Logger.log(" BUILDER: Pizza added: "+ "name: "+ name + "price: "+ price + "cookingTime"+cookingTime);
+            Logger.log(" BUILDER: Pizza added: "+ "name: "+ name + "price: "+ price + "cookingTime"+cookingTime +
+                    "\nknittingTime: " + knittingTime.toMillis()+
+                    "\nfillingTime: " + fillingTime.toMillis()+
+                    "\nbakingTime: " + bakingTime.toMillis()+
+                    "\nafterTime: " + afterBakingTime.toMillis()+
+                    "\npackagingTime: " + packagingTime.toMillis());
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
@@ -169,8 +170,8 @@ public class PizzeriaManager
         }
 
         try {
-            Logger.log(" BUILDER: Pizzeria were built" +
-                    "\n BUILDER: Starting new simulation.");
+            Logger.log(" BUILDER: Pizzeria were built");
+            Logger.log("BUILDER: Starting new simulation.");
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

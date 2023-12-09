@@ -15,6 +15,7 @@ public class PizzaBaseDecorator implements IPizza{
 
     @Override
     public void setId(String id) {
+        wrappee.setId(id);
     }
 
     public String getName() {
@@ -90,12 +91,12 @@ public class PizzaBaseDecorator implements IPizza{
 
     @Override
     public boolean isCookingNow() {
-        return false;
+        return wrappee.isCookingNow();
     }
 
     @Override
     public void setCookingNow(boolean isCookingNow) {
-
+        wrappee.setCookingNow(isCookingNow);
     }
 
     @Override
