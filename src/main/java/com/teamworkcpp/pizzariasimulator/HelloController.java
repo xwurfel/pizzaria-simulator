@@ -50,6 +50,7 @@ public class HelloController {
         pizzeriaManager.AddPizzaioloCount(numberOfCooks);
         pizzeriaManager.AddLevel(simulationMode);
         pizzeriaManager.AddCookingMode(cookingMode);
+        pizzeriaManager.AddPizza("Margarita", 32, Duration.ofMinutes(1));
         try {
             pizzeriaManager.Build();
         } catch (Exception e) {

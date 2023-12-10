@@ -2,6 +2,7 @@ package com.teamworkcpp.pizzariasimulator.backend.models;
 import com.teamworkcpp.pizzariasimulator.backend.interfaces.*;
 import java.time.Duration;
 import java.time.LocalTime;
+import java.util.ArrayList;
 import java.util.List;
 
 public class SimplePizza implements IPizza, IPizzaPrototype {
@@ -17,13 +18,13 @@ public class SimplePizza implements IPizza, IPizzaPrototype {
     private Duration stoppedWithTimeLeft;
     private LocalTime nextTime;
     private IPizzaStatus status;
-    private List<Pizzaiolo> pizzaioloList;
+    private List<Pizzaiolo> pizzaioloList = new ArrayList<>();
+    private boolean isCookingNow = false;
 
-    public SimplePizza(String id, String name, double price, Duration minTimeDoughKneeding,
+    public SimplePizza(String name, double price, Duration minTimeDoughKneeding,
                        Duration minTimeFillingBeforeBaking, Duration minTimeBaking,
                        Duration minTimeFeelingAfterBaking, Duration minTimePackaging) {
         this.name = name;
-        this.id = id;
         this.price = price;
         this.minTimeDoughKneeding = minTimeDoughKneeding;
         this.minTimeFillingBeforeBaking = minTimeFillingBeforeBaking;
@@ -41,6 +42,14 @@ public class SimplePizza implements IPizza, IPizzaPrototype {
 
     public void stopCookingStage(){
         this.status.stop();
+    }
+
+    public boolean isCookingNow() {return this.isCookingNow;}
+
+    public void setCookingNow(boolean isCookingNow) {this.isCookingNow = isCookingNow;}
+    @Override
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getName() {
@@ -114,7 +123,6 @@ public class SimplePizza implements IPizza, IPizzaPrototype {
     @Override
     public IPizzaPrototype clone() {
         return new SimplePizza(
-                this.id,
                 this.name,
                 this.price,
                 this.minTimeDoughKneeding,

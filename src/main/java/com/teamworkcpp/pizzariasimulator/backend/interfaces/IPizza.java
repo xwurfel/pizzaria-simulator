@@ -6,6 +6,7 @@ import java.time.LocalTime;
 import java.util.List;
 
 public interface IPizza {
+    public void setId(String id);
     public String getName();
 
     public double getPrice();
@@ -45,4 +46,8 @@ public interface IPizza {
     public List<Pizzaiolo> getPizzaioloList();
 
     public void addPizzaiolo(Pizzaiolo pizzaiolo);
+
+    public boolean isCookingNow();
+
+    public void setCookingNow(boolean isCookingNow);
 }
