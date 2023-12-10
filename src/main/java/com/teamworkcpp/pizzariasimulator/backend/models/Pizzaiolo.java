@@ -10,6 +10,7 @@ import java.time.LocalTime;
 import java.time.ZoneId;
 import java.time.temporal.ChronoUnit;
 import java.util.Random;
+import java.util.concurrent.ThreadLocalRandom;
 
 public class Pizzaiolo {
     private final int _id;
@@ -18,11 +19,18 @@ public class Pizzaiolo {
     private LocalTime _availableTime = LocalTime.now();
     private boolean _isOnTechnicalStop = false;
     private IPizza pizza;
-
+    private final Random r;
     public Pizzaiolo(int id, boolean isAvailable, Duration delay) {
         this._id = id;
         this._isAvailable = isAvailable;
         this._delay = delay;
+        r =  new Random((long) LocalTime.now().getNano() % 1000 + _id * 120L);
+
+        try {
+            Thread.sleep(20);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     public void setPizza(IPizza pizza)
@@ -48,10 +56,10 @@ public class Pizzaiolo {
 
     public void CheckAvailable()
     {
-        Random r =  new Random();
         if(_isAvailable)
         {
-            /*if(r.nextInt(1000) == 1)
+
+            if(r.nextInt(1000) == r.nextInt(100))
             {
 
                 try {
@@ -62,11 +70,11 @@ public class Pizzaiolo {
 
                 _delay = Duration.ofMillis(0);
                 _delay = _delay.plusMillis(r.nextInt(15000) + 15000);
-                _availableTime = LocalTime.now().plus(_delay.getSeconds(), ChronoUnit.SECONDS);
+                _availableTime = LocalTime.now().plusSeconds(_delay.getSeconds());
 
                 _isAvailable = false;
                 _isOnTechnicalStop = true;
-            }*/
+            }
             return;
         }
 
@@ -86,20 +94,20 @@ public class Pizzaiolo {
         }
 
         if (!_isOnTechnicalStop) {
-          /*  if(r.nextInt(1000) == 1)
+            if(r.nextInt(1000) == r.nextInt(100))
             {
                 try {
-                    Logger.log("Pizziolo " + _id + " on technical stop 2");
+                    Logger.log("Pizzaiolo " + _id + " on technical stop 2");
                 } catch (IOException e) {
                     throw new RuntimeException(e);
                 }
                 _delay = Duration.ofMillis(0);
                 _delay = _delay.plusMillis(r.nextInt(15000) + 15000);
-                _availableTime = LocalTime.now().plus(_delay.getSeconds(), ChronoUnit.SECONDS);
+                _availableTime = LocalTime.now().plusSeconds(_delay.getSeconds());
 
                 _isAvailable = false;
                 _isOnTechnicalStop = true;
-            }*/
+            }
         }
     }
 
