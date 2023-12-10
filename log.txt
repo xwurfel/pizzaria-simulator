@@ -2,3 +2,106 @@
 [2023-12-04 13:51:49]  BUILDER: Pizzaiolos were built
 [2023-12-04 13:51:49]  BUILDER: Pizzeria were built
  BUILDER: Starting new simulation.
+[2023-12-09 15:47:36]  BUILDER: Checkouts were built
+[2023-12-09 15:47:36]  BUILDER: Pizzaiolos were built
+[2023-12-09 15:47:36]  BUILDER: Pizzeria were built
+ BUILDER: Starting new simulation.
+[2023-12-09 16:16:36]  BUILDER: Checkouts were built
+[2023-12-09 16:16:36]  BUILDER: Pizzaiolos were built
+[2023-12-09 16:16:36]  BUILDER: Pizzeria were built
+ BUILDER: Starting new simulation.
+[2023-12-09 16:16:51] New simulation started, simulation mode: CONVEYOR
+[2023-12-09 16:16:51] Simulation ended
+orders done: 0money earned: 0.0
+[2023-12-09 16:17:09]  BUILDER: Checkouts were built
+[2023-12-09 16:17:09]  BUILDER: Pizzaiolos were built
+[2023-12-09 16:17:09]  BUILDER: Pizzeria were built
+ BUILDER: Starting new simulation.
+[2023-12-09 16:17:24] New simulation started, simulation mode: CONVEYOR
+[2023-12-09 16:17:24] Simulation ended
+orders done: 0money earned: 0.0
+[2023-12-09 16:19:00]  BUILDER: Checkouts were built
+[2023-12-09 16:19:00]  BUILDER: Pizzaiolos were built
+[2023-12-09 16:19:00]  BUILDER: Pizzeria were built
+ BUILDER: Starting new simulation.
+[2023-12-09 16:19:15] New simulation started, simulation mode: SINGLE
+[2023-12-09 16:19:15] Simulation ended
+orders done: 0money earned: 0.0
+[2023-12-09 17:01:51]  BUILDER: Checkouts were built
+[2023-12-09 17:01:51]  BUILDER: Pizzaiolos were built
+[2023-12-09 17:01:51]  BUILDER: Pizzeria were built
+ BUILDER: Starting new simulation.
+[2023-12-09 17:02:06] New simulation started, simulation mode: CONVEYOR
+[2023-12-09 17:02:06] Simulation ended
+orders done: 0money earned: 0.0
+[2023-12-10 02:05:57]  BUILDER: Checkouts were built
+[2023-12-10 02:05:57]  BUILDER: Pizzaiolos were built
+[2023-12-10 02:05:57]  BUILDER: Pizzeria were built
+ BUILDER: Starting new simulation.
+[2023-12-10 02:06:25]  BUILDER: Checkouts were built
+[2023-12-10 02:06:25]  BUILDER: Pizzaiolos were built
+[2023-12-10 02:06:25]  BUILDER: Pizzeria were built
+ BUILDER: Starting new simulation.
+[2023-12-10 02:06:40] New simulation started, simulation mode: SINGLE
+[2023-12-10 02:06:40] Simulation ended
+orders done: 0money earned: 0.0
+[2023-12-10 02:41:12]  BUILDER: Checkouts were built
+[2023-12-10 02:41:12]  BUILDER: Pizzaiolos were built
+[2023-12-10 02:41:12]  BUILDER: Pizzeria were built
+ BUILDER: Starting new simulation.
+[2023-12-10 02:41:27] New simulation started, simulation mode: CONVEYOR
+[2023-12-10 02:41:27] Simulation ended
+orders done: 0money earned: 0.0
+[2023-12-10 02:43:47]  BUILDER: Checkouts were built
+[2023-12-10 02:43:47]  BUILDER: Pizzaiolos were built
+[2023-12-10 02:43:47]  BUILDER: Pizzeria were built
+ BUILDER: Starting new simulation.
+[2023-12-10 02:44:02] New simulation started, simulation mode: SINGLE
+[2023-12-10 02:44:02] Simulation ended
+orders done: 0money earned: 0.0
+[2023-12-10 02:44:33]  BUILDER: Checkouts were built
+[2023-12-10 02:44:33]  BUILDER: Pizzaiolos were built
+[2023-12-10 02:44:33]  BUILDER: Pizzeria were built
+ BUILDER: Starting new simulation.
+[2023-12-10 02:44:48] New simulation started, simulation mode: SINGLE
+[2023-12-10 02:44:48] Simulation ended
+orders done: 0money earned: 0.0
+[2023-12-10 03:14:28]  BUILDER: Checkouts were built
+[2023-12-10 03:14:28]  BUILDER: Pizzaiolos were built
+[2023-12-10 03:14:28]  BUILDER: Pizzeria were built
+ BUILDER: Starting new simulation.
+[2023-12-10 03:14:43] New simulation started, simulation mode: CONVEYOR
+[2023-12-10 03:14:43] Simulation ended
+orders done: 0money earned: 0.0
+[2023-12-10 17:33:31]  BUILDER: Checkouts were built
+[2023-12-10 17:33:31]  BUILDER: Pizzaiolos were built
+[2023-12-10 17:33:31]  BUILDER: Pizzeria were built
+ BUILDER: Starting new simulation.
+[2023-12-10 17:33:46] New simulation started, simulation mode: SINGLE
+[2023-12-10 17:33:46] Simulation ended
+orders done: 0money earned: 0.0
+[2023-12-10 17:38:44]  BUILDER: Checkouts were built
+[2023-12-10 17:38:44]  BUILDER: Pizzaiolos were built
+[2023-12-10 17:38:44]  BUILDER: Pizzeria were built
+ BUILDER: Starting new simulation.
+[2023-12-10 17:38:59] New simulation started, simulation mode: CONVEYOR
+[2023-12-10 17:38:59] Simulation ended
+orders done: 0money earned: 0.0
+[2023-12-10 17:43:21]  BUILDER: Checkouts were built
+[2023-12-10 17:43:21]  BUILDER: Pizzaiolos were built
+[2023-12-10 17:43:21]  BUILDER: Pizzeria were built
+ BUILDER: Starting new simulation.
+[2023-12-10 17:43:36] New simulation started, simulation mode: CONVEYOR
+[2023-12-10 17:43:36] Simulation ended
+orders done: 0money earned: 0.0
+[2023-12-10 17:46:42]  BUILDER: Checkouts were built
+[2023-12-10 17:46:42]  BUILDER: Pizzaiolos were built
+[2023-12-10 17:46:42]  BUILDER: Pizzeria were built
+ BUILDER: Starting new simulation.
+[2023-12-10 17:47:00]  BUILDER: Checkouts were built
+[2023-12-10 17:47:00]  BUILDER: Pizzaiolos were built
+[2023-12-10 17:47:00]  BUILDER: Pizzeria were built
+ BUILDER: Starting new simulation.
+[2023-12-10 17:47:15] New simulation started, simulation mode: SINGLE
+[2023-12-10 17:47:15] Simulation ended
+orders done: 0money earned: 0.0

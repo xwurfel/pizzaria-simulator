@@ -43,19 +43,40 @@ public class HelloController {
 
     @FXML
     void Start_button_click(ActionEvent event) {
-        System.out.println("Start with settings: " + simulationDuration + ", " + numberOfCashiers + ", " + numberOfCooks + ", " + simulationMode);
-        pizzeriaManager = new PizzeriaManager();
-        pizzeriaManager.AddSimulationDuration(Duration.ofMinutes(simulationDuration));
-        pizzeriaManager.AddCheckoutCount(numberOfCashiers);
-        pizzeriaManager.AddPizzaioloCount(numberOfCooks);
-        pizzeriaManager.AddLevel(simulationMode);
-        pizzeriaManager.AddCookingMode(cookingMode);
+        int var10001 = this.simulationDuration;
+        System.out.println("Start with settings: " + var10001 + ", " + this.numberOfCashiers + ", " + this.numberOfCooks + ", " + String.valueOf(this.simulationMode));
+        this.pizzeriaManager = new PizzeriaManager();
+        this.pizzeriaManager.AddSimulationDuration(Duration.ofMinutes((long)this.simulationDuration));
+        this.pizzeriaManager.AddCheckoutCount(this.numberOfCashiers);
+        this.pizzeriaManager.AddPizzaioloCount(this.numberOfCooks);
+        this.pizzeriaManager.AddLevel(this.simulationMode);
+        this.pizzeriaManager.AddCookingMode(this.cookingMode);
+
         try {
-            pizzeriaManager.Build();
-        } catch (Exception e) {
-            e.printStackTrace();
+            this.pizzeriaManager.Build();
+
+            // Створюємо нове вікно для відображення результатів
+            FXMLLoader simulationLoader = new FXMLLoader(this.getClass().getResource("SimulationWindow.fxml"));
+            Parent resultRoot = (Parent) simulationLoader.load();
+            SimulationController simulationController = (SimulationController) simulationLoader.getController();
+            simulationController.init(this.pizzeriaManager);
+
+            // Закриваємо поточне вікно
+            Stage currentStage = (Stage) button_start.getScene().getWindow();
+            currentStage.close();
+
+            // Відображаємо нове вікно
+            Stage resultStage = new Stage();
+            resultStage.initModality(Modality.APPLICATION_MODAL);
+            resultStage.setTitle("Результати симуляції");
+            resultStage.setScene(new Scene(resultRoot));
+            resultStage.showAndWait();
+
+        } catch (Exception var3) {
+            var3.printStackTrace();
         }
     }
+
 
     private void openSettingsWindow() {
         try {
