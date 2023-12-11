@@ -99,7 +99,6 @@ public class PizzeriaManager
         return  checkouts;
     }
 
-
     public void AddPizza(String name, double price, Duration cookingTime)
     {
         Random r = new Random();

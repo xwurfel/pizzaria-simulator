@@ -89,7 +89,7 @@ public class SimulationStateController {
             this.orderTime = order.getCreated().toString();  // Adjust based on your 'created' property type
             this.pizzasInOrder = calculatePizzasInOrder(order.getPizzas());
             this.orderStatus = order.getStatus().toString();  // Adjust based on your 'orderStatus' property type
-            this.checkoutId = order.getCheckoutId();
+            this.checkoutId = order.getСheckoutId();
             this.isOrderCompleted = order.getStatus() == OrderStatus.DONE;
             this.orderAmount = calculateOrderAmount(order.getPizzas());
         }
