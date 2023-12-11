@@ -23,6 +23,7 @@ public class SettingsController {
     @FXML
     public ComboBox<String> combobox_cooking_mode;
     public TextField pizzaTime;
+    public ComboBox<String> combobox_count;
 
     @FXML
     private TextField pizzaName;
@@ -127,14 +128,16 @@ public class SettingsController {
             int numberOfCashiers = Integer.parseInt(combobox_checkouts.getValue());
             int numberOfCooks = Integer.parseInt(combobox_pizzaiolos.getValue());
             int cookingMode = Integer.parseInt(combobox_cooking_mode.getValue());
+            int maxPizzaCount = Integer.parseInt(combobox_count.getValue());
+
 
             if (simulationDuration <= 0 || numberOfCashiers <= 0 || numberOfCooks <= 0) {
                 showAlert("Invalid input", "Будь ласка, заповніть поля коректними значеннями.");
                 return;
             }
 
-            if (numberOfCashiers > 10 || numberOfCooks > 15) {
-                showAlert("Value too large", "Кількість кас не повинна перевищувати 10, кількість кухарів не повинна перевищувати 15.");
+            if (numberOfCashiers > 10 || numberOfCooks < 10) {
+                showAlert("Value too large", "Кількість кас не повинна перевищувати 10, кількість кухарів повинна бути ≥10.");
                 return;
             }
 
@@ -150,7 +153,7 @@ public class SettingsController {
             else if (cookingMode == 2){
                 cMode = CookingMode.ONE_PIZZAIOLO_MODE;
             }
-            helloController.setSimulationSettings(simulationDuration, numberOfCashiers, numberOfCooks, simulationMode, cMode);
+            helloController.setSimulationSettings(simulationDuration, numberOfCashiers, numberOfCooks, simulationMode, cMode, maxPizzaCount);
             helloController.setPizzasToAdd(pizzasToAdd);
             closeSettingsWindow();
         } catch (NumberFormatException e) {

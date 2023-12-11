@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane prefHeight="400.0" prefWidth="420.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.teamworkcpp.pizzariasimulator.PizzaioloInfoController">
+    <center>
+        <TableView fx:id="pizzaioloTableView" prefHeight="400.0" prefWidth="251.0">
+            <columns>
+                <TableColumn fx:id="pizzaioloIdColumn" prefWidth="90.40000915527344" text="ID" />
+                <TableColumn fx:id="availabilityColumn" prefWidth="157.5999755859375" text="Доступність" />
+                <TableColumn fx:id="technicalStopColumn" minWidth="6.0" prefWidth="173.80003356933594" text="Технічна зупинка" />
+            </columns>
+        </TableView>
+    </center>
+</BorderPane>

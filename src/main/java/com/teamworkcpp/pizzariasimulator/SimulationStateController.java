@@ -15,7 +15,12 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.util.Duration;
 
+import java.time.Instant;
+import java.time.LocalDateTime;
+import java.time.ZoneId;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 public class SimulationStateController {
@@ -56,6 +61,7 @@ public class SimulationStateController {
         orderStatusColumn.setCellValueFactory(new PropertyValueFactory<>("orderStatus"));
         checkoutIdColumn.setCellValueFactory(new PropertyValueFactory<>("checkoutId"));
 
+
         updateTimeline.setCycleCount(Timeline.INDEFINITE);
         updateTimeline.play();
     }
@@ -68,6 +74,10 @@ public class SimulationStateController {
         }
 
         tableView.setItems(items);
+        tableView.getSortOrder().add(orderIdColumn);
+        orderIdColumn.setSortType(TableColumn.SortType.ASCENDING);
+        tableView.sort();
+
     }
 
     public void setPizzeriaManager(PizzeriaManager pizzeriaManager) {
@@ -86,21 +96,41 @@ public class SimulationStateController {
 
         public OrderViewModel(Order order) {
             this.orderId = order.getId();
-            this.orderTime = order.getCreated().toString();  // Adjust based on your 'created' property type
+            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm:ss");
+            this.orderTime = order.getCreated().format(formatter);
             this.pizzasInOrder = calculatePizzasInOrder(order.getPizzas());
-            this.orderStatus = order.getStatus().toString();  // Adjust based on your 'orderStatus' property type
+            this.orderStatus = translateOrderStatus(order.getStatus());
             this.checkoutId = order.getСheckoutId();
             this.isOrderCompleted = order.getStatus() == OrderStatus.DONE;
             this.orderAmount = calculateOrderAmount(order.getPizzas());
         }
 
-        // Implement methods to calculate 'pizzasInOrder' and 'orderAmount' based on the pizzas list
         private String calculatePizzasInOrder(List<IPizza> pizzas) {
-            return pizzas.stream().map(IPizza::getName).collect(Collectors.joining(", "));
+            // Group pizzas by name and count occurrences
+            Map<String, Long> pizzaCount = pizzas.stream()
+                    .collect(Collectors.groupingBy(IPizza::getName, Collectors.counting()));
+
+            // Format the pizzas for display
+            return pizzaCount.entrySet().stream()
+                    .map(entry -> entry.getKey() + " " + entry.getValue() + " шт.")
+                    .collect(Collectors.joining("\n"));
         }
 
         private double calculateOrderAmount(List<IPizza> pizzas) {
             return pizzas.stream().mapToDouble(IPizza::getPrice).sum();
+        }
+
+        private String translateOrderStatus(OrderStatus status) {
+            switch (status) {
+                case NEW:
+                    return "Новий";
+                case IN_PROGRESS:
+                    return "В процесі";
+                case DONE:
+                    return "Готово";
+                default:
+                    return "Невідомий статус";
+            }
         }
 
         public int getOrderId() {
