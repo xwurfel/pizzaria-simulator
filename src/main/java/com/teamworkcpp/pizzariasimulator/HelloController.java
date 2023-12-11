@@ -2,6 +2,8 @@ package com.teamworkcpp.pizzariasimulator;
 
 import com.teamworkcpp.pizzariasimulator.backend.enums.CookingMode;
 import com.teamworkcpp.pizzariasimulator.backend.enums.SimulationMode;
+import com.teamworkcpp.pizzariasimulator.backend.models.Order;
+import com.teamworkcpp.pizzariasimulator.backend.models.SimplePizza;
 import com.teamworkcpp.pizzariasimulator.backend.services.PizzeriaManager;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -14,9 +16,12 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.time.Duration;
+import java.util.List;
+import java.util.Map;
 
 public class HelloController {
 
+    public Button button_state;
     @FXML
     private Button button_settings;
 
@@ -29,7 +34,8 @@ public class HelloController {
     private SimulationMode simulationMode;
     private CookingMode cookingMode;
 
-    private PizzeriaManager pizzeriaManager;
+    PizzeriaManager pizzeriaManager = new PizzeriaManager();
+    private List<Map<String, Object>> pizzasToAdd;
 
     @FXML
     void initialize() {
@@ -44,12 +50,24 @@ public class HelloController {
     @FXML
     void Start_button_click(ActionEvent event) {
         System.out.println("Start with settings: " + simulationDuration + ", " + numberOfCashiers + ", " + numberOfCooks + ", " + simulationMode);
-        pizzeriaManager = new PizzeriaManager();
         pizzeriaManager.AddSimulationDuration(Duration.ofMinutes(simulationDuration));
         pizzeriaManager.AddCheckoutCount(numberOfCashiers);
         pizzeriaManager.AddPizzaioloCount(numberOfCooks);
         pizzeriaManager.AddLevel(simulationMode);
         pizzeriaManager.AddCookingMode(cookingMode);
+<<<<<<< Updated upstream
+=======
+        pizzeriaManager.AddPizza("Margarita", 32, Duration.ofMinutes(1));
+        for (Map<String, Object> pizzaData : pizzasToAdd) {
+            pizzeriaManager.AddPizza(
+                    (String) pizzaData.get("name"),
+                    (Double) pizzaData.get("price"),
+                    (Duration) pizzaData.get("cookingTime")
+            );
+        }
+
+
+>>>>>>> Stashed changes
         try {
             pizzeriaManager.Build();
         } catch (Exception e) {
@@ -86,5 +104,37 @@ public class HelloController {
         numberOfCooks = cooks;
         simulationMode = mode;
         cookingMode = cmode;
+    }
+
+    public void setPizzasToAdd(List<Map<String, Object>> pizzasToAdd) {
+        this.pizzasToAdd = pizzasToAdd;
+    }
+
+
+
+    void openSimulationStateWindow() {
+
+    }
+
+    public void State_button_click(ActionEvent actionEvent) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("SimulationState.fxml"));
+            Parent root = loader.load();
+
+            SimulationStateController stateController = loader.getController();
+            stateController.setPizzeriaManager(pizzeriaManager);
+
+            List<Order> orders = pizzeriaManager.getCurrentSimulationState().orders;
+            stateController.updateTable(orders);
+
+            Stage stateStage = new Stage();
+            stateStage.initModality(Modality.APPLICATION_MODAL);
+            stateStage.setTitle("Стан симуляції");
+            stateStage.setScene(new Scene(root));
+
+            stateStage.showAndWait();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }

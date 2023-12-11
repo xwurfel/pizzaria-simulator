@@ -96,8 +96,36 @@ public class PizzeriaManager
 
     private OrderFiller BuildOrderFiller()
     {
+<<<<<<< Updated upstream
         // return new OrderFiller(params)
         return null;
+=======
+        Random r = new Random();
+
+        long maxKnittingTime = (long) (cookingTime.toMillis() * 0.2);
+        long randomKnittingTime = r.nextInt((int) maxKnittingTime) + 1;
+        Duration knittingTime = Duration.ofMillis(Math.max(randomKnittingTime, (long) (0.2 * cookingTime.toMillis())) + 5000);
+        Duration fillingTime = Duration.ofMillis(r.nextInt((int) (cookingTime.toMillis() * 0.2)) + + 5000);
+        Duration bakingTime = Duration.ofMillis(r.nextInt((int) (cookingTime.toMillis() * 0.2)) + 5000);
+        Duration afterBakingTime = Duration.ofMillis(r.nextInt((int) (cookingTime.toMillis() * 0.2)) + 5000);
+        Duration packagingTime = Duration.ofMillis(r.nextInt((int) (cookingTime.toMillis() * 0.2)) + 5000);
+
+
+
+        PizzaPrototypeRegistry.getInstance().addItem(new SimplePizza(name, price, knittingTime,
+                fillingTime, bakingTime, afterBakingTime, packagingTime));
+
+        try {
+            Logger.log(" BUILDER: Pizza added: "+ "name: "+ name + " price: "+ price + " cookingTime"+cookingTime +
+                    "\nknittingTime: " + knittingTime.toMillis()+
+                    "\nfillingTime: " + fillingTime.toMillis()+
+                    "\nbakingTime: " + bakingTime.toMillis()+
+                    "\nafterTime: " + afterBakingTime.toMillis()+
+                    "\npackagingTime: " + packagingTime.toMillis());
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+>>>>>>> Stashed changes
     }
 
     public void Build() throws Exception {

@@ -74,3 +74,36 @@
 .tab-content-pane {
     -fx-padding: 20.0;
 }
+
+#tableView {
+    -fx-table-cell-border-color: derive(#E9C46A, 20%); /* Border color for table cells */
+}
+
+/* Apply styles to the TableColumn elements */
+#orderIdColumn,
+#orderTimeColumn,
+#orderAmountColumn,
+#pizzasInOrderColumn,
+#orderStatusColumn,
+#checkoutIdColumn {
+    -fx-alignment: CENTER; /* Center align text in table columns */
+    -fx-font-size: 16.0; /* Font size for table columns */
+}
+
+/* Apply alternating row colors to the TableView */
+#tableView .table-row-cell:odd {
+    -fx-background-color: derive(#f1e0b6, 10%); /* Alternating row color */
+}
+
+/* Apply hover effect to the TableView rows */
+#tableView .table-row-cell:hover {
+    -fx-background-color: derive(#E9C46A, 20%); /* Hover color */
+}
+
+/* Apply styles to the TableView header */
+#tableView .column-header {
+    -fx-font-size: 15.0; /* Font size for table header */
+    -fx-font-weight: bold; /* Bold font for table header */
+    -fx-background-color: #F4A261; /* Header background color */
+    -fx-text-fill: black; /* Header text color */
+}

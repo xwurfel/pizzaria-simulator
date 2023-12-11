@@ -29,9 +29,14 @@ public class Order {
         return _orderStatus;
     }
 
+<<<<<<< Updated upstream
     public int getcheckoutId() {return _checkoutId; }
+=======
+    public int getCheckoutId() {return checkoutId; }
+>>>>>>> Stashed changes
 
     public void setOrderStatus(OrderStatus orderStatus) {
         this._orderStatus = orderStatus;
     }
+
 }

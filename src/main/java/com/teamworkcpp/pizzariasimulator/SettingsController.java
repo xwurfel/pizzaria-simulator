@@ -2,6 +2,7 @@ package com.teamworkcpp.pizzariasimulator;
 
 import com.teamworkcpp.pizzariasimulator.backend.enums.CookingMode;
 import com.teamworkcpp.pizzariasimulator.backend.enums.SimulationMode;
+import com.teamworkcpp.pizzariasimulator.backend.models.SimplePizza;
 import com.teamworkcpp.pizzariasimulator.backend.services.PizzaPrototypeRegistry;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
@@ -11,13 +12,20 @@ import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
+<<<<<<< Updated upstream
+=======
+import java.time.Duration;
+import java.util.ArrayList;
+>>>>>>> Stashed changes
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class SettingsController {
 
     @FXML
     public ComboBox<String> combobox_cooking_mode;
+    public TextField pizzaTime;
 
     @FXML
     private TextField pizzaName;
@@ -58,6 +66,8 @@ public class SettingsController {
 
     private Map<RadioButton, SimulationMode> strategyMapping;
 
+    private List<Map<String, Object>> pizzasToAdd = new ArrayList<>();
+
     public void init(HelloController helloController) {
         this.helloController = helloController;
 
@@ -87,24 +97,44 @@ public class SettingsController {
         menuTable.setItems(PizzaPrototypeRegistry.getInstance().getPizzas());*/
     }
 
+    @FXML
     void addPizza() {
         try {
             String name = pizzaName.getText();
             double price = Double.parseDouble(pizzaPrice.getText());
+            Duration cookingTime = Duration.ofMinutes(Integer.parseInt(pizzaTime.getText()));
 
+            if (price <= 0 || cookingTime.isNegative()) {
+                showAlert("Invalid input", "Будь ласка, введіть коректні значення для піци.");
+                return;
+            }
+
+            Map<String, Object> pizzaData = new HashMap<>();
+            pizzaData.put("name", name);
+            pizzaData.put("price", price);
+            pizzaData.put("cookingTime", cookingTime);
+
+            pizzasToAdd.add(pizzaData);
+
+<<<<<<< Updated upstream
             // Зберегти піцу в меню
             //PizzaPrototypeRegistry.getInstance().addItem(name, price, minTimeDough, minTimeFillingBefore,
             //        minTimeBake, minTimeFillingAfter, minTimePackage);
 
+=======
+
+            // Очищення полів вводу
+>>>>>>> Stashed changes
             clearInputFields();
         } catch (NumberFormatException e) {
-            e.printStackTrace();
+            showAlert("Invalid input", "Будь ласка, введіть коректні числові значення.");
         }
     }
 
     private void clearInputFields() {
         pizzaName.clear();
         pizzaPrice.clear();
+        pizzaTime.clear();
     }
 
     private ImageView createImageView(String imagePath, double fitWidth, double fitHeight) {
@@ -146,7 +176,7 @@ public class SettingsController {
                 cMode = CookingMode.ONE_PIZZAIOLO_MODE;
             }
             helloController.setSimulationSettings(simulationDuration, numberOfCashiers, numberOfCooks, simulationMode, cMode);
-
+            helloController.setPizzasToAdd(pizzasToAdd);
             closeSettingsWindow();
         } catch (NumberFormatException e) {
             showAlert("Invalid input", "Будь ласка, введіть коректні числові значення.");
