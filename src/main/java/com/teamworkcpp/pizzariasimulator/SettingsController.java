@@ -3,6 +3,7 @@ package com.teamworkcpp.pizzariasimulator;
 import com.teamworkcpp.pizzariasimulator.backend.enums.CookingMode;
 import com.teamworkcpp.pizzariasimulator.backend.enums.SimulationMode;
 import com.teamworkcpp.pizzariasimulator.backend.services.PizzaPrototypeRegistry;
+import com.teamworkcpp.pizzariasimulator.backend.services.PizzeriaManager;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -11,6 +12,7 @@ import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
+import java.time.Duration;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -92,9 +94,7 @@ public class SettingsController {
             String name = pizzaName.getText();
             double price = Double.parseDouble(pizzaPrice.getText());
 
-            // Зберегти піцу в меню
-            //PizzaPrototypeRegistry.getInstance().addItem(name, price, minTimeDough, minTimeFillingBefore,
-            //        minTimeBake, minTimeFillingAfter, minTimePackage);
+
 
             clearInputFields();
         } catch (NumberFormatException e) {

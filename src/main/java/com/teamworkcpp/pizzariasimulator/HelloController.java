@@ -51,6 +51,7 @@ public class HelloController {
         this.pizzeriaManager.AddPizzaioloCount(this.numberOfCooks);
         this.pizzeriaManager.AddLevel(this.simulationMode);
         this.pizzeriaManager.AddCookingMode(this.cookingMode);
+        pizzeriaManager.AddPizza("Margarita", 32, Duration.ofMinutes(1));
 
         try {
             this.pizzeriaManager.Build();

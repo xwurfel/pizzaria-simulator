@@ -6,53 +6,58 @@ import com.teamworkcpp.pizzariasimulator.backend.helpers.Logger;
 import com.teamworkcpp.pizzariasimulator.backend.helpers.SimulationState;
 import com.teamworkcpp.pizzariasimulator.backend.models.Pizzaiolo;
 import com.teamworkcpp.pizzariasimulator.backend.models.Pizzeria;
+import com.teamworkcpp.pizzariasimulator.backend.models.SimplePizza;
 
 import java.io.IOException;
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class PizzeriaManager
 {
-    private int _checkoutCount;
-    private int _pizzaioloCount;
-    private SimulationMode _simulationMode;
-    private Duration _simulationDuration;
-    private Pizzeria _pizzeria;
-    private int _maxPizzaCountInOrder;
-    private CookingMode _cookingMode;
+    private int checkoutCount;
+    private int pizzaioloCount;
+    private SimulationMode simulationMode;
+    private Duration simulationDuration;
+    private Pizzeria pizzeria;
+    private int maxPizzaCountInOrder = 2;
+    private CookingMode cookingMode;
+    private OrderFiller orderFiller;
 
     public PizzeriaManager(){}
 
-    public void AddMaxPizzaCountInOrder(int count) {_maxPizzaCountInOrder = count;}
+    public void AddMaxPizzaCountInOrder(int count) {
+        maxPizzaCountInOrder = count;
+    }
 
     public void AddCheckoutCount(int count)
     {
-        _checkoutCount = count;
+        checkoutCount = count;
     }
 
     public void AddPizzaioloCount(int count)
     {
-        _pizzaioloCount = count;
+        pizzaioloCount = count;
     }
 
     public void AddLevel(SimulationMode level)
     {
-        _simulationMode = level;
+        simulationMode = level;
     }
 
     public void AddSimulationDuration(Duration duration)
     {
-        _simulationDuration = duration;
+        simulationDuration = duration;
     }
 
     public void AddCookingMode(CookingMode cookingMode)
     {
-        _cookingMode = cookingMode;
+        this.cookingMode = cookingMode;
     }
 
-    public SimulationState getCurrentSimulationState() { return _pizzeria.getSimulationState(); }
+    public SimulationState getCurrentSimulationState() { return pizzeria.getSimulationState(); }
 
     private List<Pizzaiolo> BuildPizzaiolos(int count)
     {
@@ -61,7 +66,7 @@ public class PizzeriaManager
         for (int i = 1; i <= count; i++) {
             Pizzaiolo pizzaiolo = new Pizzaiolo(i,
                     true,
-                    Duration.ofSeconds(ThreadLocalRandom.current().nextInt(20, 36)));
+                    Duration.ofSeconds(0));
 
             pizzaiolos.add(pizzaiolo);
         }
@@ -78,10 +83,10 @@ public class PizzeriaManager
     private List<Checkout> BuildCheckouts(int count)
     {
         List<Checkout> checkouts = new ArrayList<>();
-        OrderFiller orderFiller = BuildOrderFiller();
+
         for(int i = 1; i <= count; i++)
         {
-            Checkout checkout = new Checkout(i, _maxPizzaCountInOrder, orderFiller);
+            Checkout checkout = new Checkout(i, maxPizzaCountInOrder);
             checkouts.add(checkout);
         }
 
@@ -94,41 +99,65 @@ public class PizzeriaManager
         return  checkouts;
     }
 
-    private OrderFiller BuildOrderFiller()
+
+    public void AddPizza(String name, double price, Duration cookingTime)
     {
-        // return new OrderFiller(params)
-        return null;
+        Random r = new Random();
+
+        long maxKnittingTime = (long) (cookingTime.toMillis() * 0.2);
+        long randomKnittingTime = r.nextInt((int) maxKnittingTime) + 1;
+        Duration knittingTime = Duration.ofMillis(Math.max(randomKnittingTime, (long) (0.2 * cookingTime.toMillis())) + 5000);
+        Duration fillingTime = Duration.ofMillis(r.nextInt((int) (cookingTime.toMillis() * 0.2)) + + 5000);
+        Duration bakingTime = Duration.ofMillis(r.nextInt((int) (cookingTime.toMillis() * 0.2)) + 5000);
+        Duration afterBakingTime = Duration.ofMillis(r.nextInt((int) (cookingTime.toMillis() * 0.2)) + 5000);
+        Duration packagingTime = Duration.ofMillis(r.nextInt((int) (cookingTime.toMillis() * 0.2)) + 5000);
+
+
+
+        PizzaPrototypeRegistry.getInstance().addItem(new SimplePizza(name, price, knittingTime,
+                fillingTime, bakingTime, afterBakingTime, packagingTime));
+
+        try {
+            Logger.log(" BUILDER: Pizza added: "+ "name: "+ name + "price: "+ price + "cookingTime"+cookingTime +
+                    "\nknittingTime: " + knittingTime.toMillis()+
+                    "\nfillingTime: " + fillingTime.toMillis()+
+                    "\nbakingTime: " + bakingTime.toMillis()+
+                    "\nafterTime: " + afterBakingTime.toMillis()+
+                    "\npackagingTime: " + packagingTime.toMillis());
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     public void Build() throws Exception {
 
-        switch(_simulationMode)
+        switch(simulationMode)
         {
             case SimulationMode.UNIFORM_DISTRIBUTION:
-                _pizzeria = new UniformDistributionPizzeriaCreationStrategy(
-                        BuildCheckouts(_checkoutCount),
-                        BuildPizzaiolos(_pizzaioloCount),
-                        _simulationDuration
+                pizzeria = new UniformDistributionPizzeriaCreationStrategy(
+                        BuildCheckouts(checkoutCount),
+                        BuildPizzaiolos(pizzaioloCount),
+                        simulationDuration
                 ).createPizzeria();
-                _pizzeria.setCookingMode(_cookingMode);
+                pizzeria.setCookingMode(cookingMode);
                 break;
 
             case SimulationMode.GROWTH:
-                _pizzeria = new GrowthPizzeriaCreationStrategy(
-                        BuildCheckouts(_checkoutCount),
-                        BuildPizzaiolos(_pizzaioloCount),
-                        _simulationDuration
+                pizzeria = new GrowthPizzeriaCreationStrategy(
+                        BuildCheckouts(checkoutCount),
+                        BuildPizzaiolos(pizzaioloCount),
+                        simulationDuration
                 ).createPizzeria();
-                _pizzeria.setCookingMode(_cookingMode);
+                pizzeria.setCookingMode(cookingMode);
                 break;
 
             case SimulationMode.RUSH_HOUR:
-                _pizzeria = new RushHourPizzeriaCreationStrategy(
-                        BuildCheckouts(_checkoutCount),
-                        BuildPizzaiolos(_pizzaioloCount),
-                        _simulationDuration
+                pizzeria = new RushHourPizzeriaCreationStrategy(
+                        BuildCheckouts(checkoutCount),
+                        BuildPizzaiolos(pizzaioloCount),
+                        simulationDuration
                 ).createPizzeria();
-                _pizzeria.setCookingMode(_cookingMode);
+                pizzeria.setCookingMode(cookingMode);
                 break;
 
             default:
@@ -141,13 +170,13 @@ public class PizzeriaManager
         }
 
         try {
-            Logger.log(" BUILDER: Pizzeria were built" +
-                    "\n BUILDER: Starting new simulation.");
+            Logger.log(" BUILDER: Pizzeria were built");
+            Logger.log("BUILDER: Starting new simulation.");
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
 
-        _pizzeria.start();
+        pizzeria.start();
     }
 }
 

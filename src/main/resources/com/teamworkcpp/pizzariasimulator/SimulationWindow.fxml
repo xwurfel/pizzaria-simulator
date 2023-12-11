@@ -8,177 +8,180 @@
 <?import javafx.scene.text.*?>
 
 <AnchorPane prefHeight="539.0" prefWidth="951.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.teamworkcpp.pizzariasimulator.SimulationController">
-<HBox prefHeight="539.0" prefWidth="951.0">
-   <VBox alignment="CENTER" prefHeight="445.0" prefWidth="326.0" spacing="20.0">
-      <HBox spacing="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0">
-         <Label style="-fx-font-size: 14.0; -fx-font-weight: bold;" text="00:00:00">
+    <HBox prefHeight="539.0" prefWidth="951.0">
+        <VBox alignment="CENTER" prefHeight="445.0" prefWidth="326.0" spacing="20.0">
+            <HBox spacing="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0">
+                <Label style="-fx-font-size: 14.0; -fx-font-weight: bold;" text="00:00:00">
+                    <padding>
+                        <Insets left="40.0" top="10.0" />
+                    </padding>
+                </Label>
+                <VBox.margin>
+                    <Insets />
+                </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" spacing="20.0" style="-fx-padding: 0 0 0 40;">
+                <Group>
+                    <Circle fill="DODGERBLUE" radius="25.0" stroke="BLACK" strokeType="INSIDE" />
+                    <Circle fill="DODGERBLUE" layoutX="30" layoutY="-30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                    <Circle fill="DODGERBLUE" layoutX="30" layoutY="30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                    <Circle fill="DODGERBLUE" layoutX="-30" layoutY="30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                    <Circle fill="DODGERBLUE" layoutX="-30" layoutY="-30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                </Group>
+                <Group>
+                    <Circle fill="DODGERBLUE" radius="25.0" stroke="BLACK" strokeType="INSIDE" />
+                    <Circle fill="DODGERBLUE" layoutX="30" layoutY="-30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                    <Circle fill="DODGERBLUE" layoutX="30" layoutY="30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                    <Circle fill="DODGERBLUE" layoutX="-30" layoutY="30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                    <Circle fill="DODGERBLUE" layoutX="-30" layoutY="-30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                </Group>
+                <Group>
+                    <Circle fill="DODGERBLUE" radius="25.0" stroke="BLACK" strokeType="INSIDE" />
+                    <Circle fill="DODGERBLUE" layoutX="30" layoutY="-30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                    <Circle fill="DODGERBLUE" layoutX="30" layoutY="30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                    <Circle fill="DODGERBLUE" layoutX="-30" layoutY="30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                    <Circle fill="DODGERBLUE" layoutX="-30" layoutY="-30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                </Group>
+                <VBox.margin>
+                    <Insets top="15.0" />
+                </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" spacing="20.0" style="-fx-padding: 0 0 0 40;">
+
+                <Group>
+                    <Circle fill="DODGERBLUE" radius="25.0" stroke="BLACK" strokeType="INSIDE" />
+
+                    <Circle fill="DODGERBLUE" layoutX="30" layoutY="-30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                    <Circle fill="DODGERBLUE" layoutX="30" layoutY="30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                    <Circle fill="DODGERBLUE" layoutX="-30" layoutY="30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                    <Circle fill="DODGERBLUE" layoutX="-30" layoutY="-30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                </Group>
+                <Group>
+                    <Circle fill="DODGERBLUE" radius="25.0" stroke="BLACK" strokeType="INSIDE" />
+
+                    <Circle fill="DODGERBLUE" layoutX="30" layoutY="-30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                    <Circle fill="DODGERBLUE" layoutX="30" layoutY="30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                    <Circle fill="DODGERBLUE" layoutX="-30" layoutY="30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                    <Circle fill="DODGERBLUE" layoutX="-30" layoutY="-30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                </Group>
+                <Group>
+                    <Circle fill="DODGERBLUE" radius="25.0" stroke="BLACK" strokeType="INSIDE" />
+
+                    <Circle fill="DODGERBLUE" layoutX="30" layoutY="-30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                    <Circle fill="DODGERBLUE" layoutX="30" layoutY="30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                    <Circle fill="DODGERBLUE" layoutX="-30" layoutY="30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                    <Circle fill="DODGERBLUE" layoutX="-30" layoutY="-30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                </Group>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" spacing="20.0" style="-fx-padding: 0 0 0 40;">
+
+                <Group>
+                    <Circle fill="DODGERBLUE" radius="25.0" stroke="BLACK" strokeType="INSIDE" />
+
+                    <Circle fill="DODGERBLUE" layoutX="30" layoutY="-30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                    <Circle fill="DODGERBLUE" layoutX="30" layoutY="30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                    <Circle fill="DODGERBLUE" layoutX="-30" layoutY="30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                    <Circle fill="DODGERBLUE" layoutX="-30" layoutY="-30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                </Group>
+                <Group>
+                    <Circle fill="DODGERBLUE" radius="25.0" stroke="BLACK" strokeType="INSIDE" />
+
+                    <Circle fill="DODGERBLUE" layoutX="30" layoutY="-30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                    <Circle fill="DODGERBLUE" layoutX="30" layoutY="30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                    <Circle fill="DODGERBLUE" layoutX="-30" layoutY="30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                    <Circle fill="DODGERBLUE" layoutX="-30" layoutY="-30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                </Group>
+                <Group>
+                    <Circle fill="DODGERBLUE" radius="25.0" stroke="BLACK" strokeType="INSIDE" />
+
+                    <Circle fill="DODGERBLUE" layoutX="30" layoutY="-30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                    <Circle fill="DODGERBLUE" layoutX="30" layoutY="30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                    <Circle fill="DODGERBLUE" layoutX="-30" layoutY="30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                    <Circle fill="DODGERBLUE" layoutX="-30" layoutY="-30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                </Group>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" spacing="20.0" style="-fx-padding: 0 0 0 40;">
+
+                <Group>
+                    <Circle fill="DODGERBLUE" radius="25.0" stroke="BLACK" strokeType="INSIDE" />
+
+                    <Circle fill="DODGERBLUE" layoutX="30" layoutY="-30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                    <Circle fill="DODGERBLUE" layoutX="30" layoutY="30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                    <Circle fill="DODGERBLUE" layoutX="-30" layoutY="30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                    <Circle fill="DODGERBLUE" layoutX="-30" layoutY="-30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                </Group>
+                <Group>
+                    <Circle fill="DODGERBLUE" radius="25.0" stroke="BLACK" strokeType="INSIDE" />
+
+                    <Circle fill="DODGERBLUE" layoutX="30" layoutY="-30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                    <Circle fill="DODGERBLUE" layoutX="30" layoutY="30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                    <Circle fill="DODGERBLUE" layoutX="-30" layoutY="30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                    <Circle fill="DODGERBLUE" layoutX="-30" layoutY="-30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                </Group>
+                <Group>
+                    <Circle fill="DODGERBLUE" radius="25.0" stroke="BLACK" strokeType="INSIDE" />
+
+                    <Circle fill="DODGERBLUE" layoutX="30" layoutY="-30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                    <Circle fill="DODGERBLUE" layoutX="30" layoutY="30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                    <Circle fill="DODGERBLUE" layoutX="-30" layoutY="30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                    <Circle fill="DODGERBLUE" layoutX="-30" layoutY="-30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                </Group>
+            </HBox>
+            <HBox.margin>
+                <Insets right="20.0" />
+            </HBox.margin>
             <padding>
-               <Insets left="40.0" top="10.0" />
+                <Insets bottom="50.0" />
             </padding>
-         </Label>
-            <VBox.margin>
-               <Insets />
-            </VBox.margin>
-      </HBox>
-      <HBox alignment="CENTER_LEFT" spacing="20.0" style="-fx-padding: 0 0 0 40;">
-         <Group>
-            <Circle fill="DODGERBLUE" radius="25.0" stroke="BLACK" strokeType="INSIDE" />
-            <Circle fill="DODGERBLUE" layoutX="30" layoutY="-30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
-            <Circle fill="DODGERBLUE" layoutX="30" layoutY="30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
-            <Circle fill="DODGERBLUE" layoutX="-30" layoutY="30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
-            <Circle fill="DODGERBLUE" layoutX="-30" layoutY="-30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
-         </Group>
-         <Group>
-            <Circle fill="DODGERBLUE" radius="25.0" stroke="BLACK" strokeType="INSIDE" />
-            <Circle fill="DODGERBLUE" layoutX="30" layoutY="-30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
-            <Circle fill="DODGERBLUE" layoutX="30" layoutY="30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
-            <Circle fill="DODGERBLUE" layoutX="-30" layoutY="30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
-            <Circle fill="DODGERBLUE" layoutX="-30" layoutY="-30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
-         </Group>
-         <Group>
-            <Circle fill="DODGERBLUE" radius="25.0" stroke="BLACK" strokeType="INSIDE" />
-            <Circle fill="DODGERBLUE" layoutX="30" layoutY="-30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
-            <Circle fill="DODGERBLUE" layoutX="30" layoutY="30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
-            <Circle fill="DODGERBLUE" layoutX="-30" layoutY="30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
-            <Circle fill="DODGERBLUE" layoutX="-30" layoutY="-30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
-         </Group>
-            <VBox.margin>
-               <Insets top="15.0" />
-            </VBox.margin>
-      </HBox>
-      <HBox alignment="CENTER_LEFT" spacing="20.0" style="-fx-padding: 0 0 0 40;">
-         
-         <Group>
-            <Circle fill="DODGERBLUE" radius="25.0" stroke="BLACK" strokeType="INSIDE" />
-            
-            <Circle fill="DODGERBLUE" layoutX="30" layoutY="-30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
-            <Circle fill="DODGERBLUE" layoutX="30" layoutY="30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
-            <Circle fill="DODGERBLUE" layoutX="-30" layoutY="30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
-            <Circle fill="DODGERBLUE" layoutX="-30" layoutY="-30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
-         </Group>
-         <Group>
-            <Circle fill="DODGERBLUE" radius="25.0" stroke="BLACK" strokeType="INSIDE" />
-            
-            <Circle fill="DODGERBLUE" layoutX="30" layoutY="-30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
-            <Circle fill="DODGERBLUE" layoutX="30" layoutY="30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
-            <Circle fill="DODGERBLUE" layoutX="-30" layoutY="30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
-            <Circle fill="DODGERBLUE" layoutX="-30" layoutY="-30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
-         </Group>
-         <Group>
-            <Circle fill="DODGERBLUE" radius="25.0" stroke="BLACK" strokeType="INSIDE" />
-            
-            <Circle fill="DODGERBLUE" layoutX="30" layoutY="-30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
-            <Circle fill="DODGERBLUE" layoutX="30" layoutY="30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
-            <Circle fill="DODGERBLUE" layoutX="-30" layoutY="30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
-            <Circle fill="DODGERBLUE" layoutX="-30" layoutY="-30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
-         </Group>
-      </HBox>
-      <HBox alignment="CENTER_LEFT" spacing="20.0" style="-fx-padding: 0 0 0 40;">
-         
-         <Group>
-            <Circle fill="DODGERBLUE" radius="25.0" stroke="BLACK" strokeType="INSIDE" />
-            
-            <Circle fill="DODGERBLUE" layoutX="30" layoutY="-30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
-            <Circle fill="DODGERBLUE" layoutX="30" layoutY="30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
-            <Circle fill="DODGERBLUE" layoutX="-30" layoutY="30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
-            <Circle fill="DODGERBLUE" layoutX="-30" layoutY="-30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
-         </Group>
-         <Group>
-            <Circle fill="DODGERBLUE" radius="25.0" stroke="BLACK" strokeType="INSIDE" />
-            
-            <Circle fill="DODGERBLUE" layoutX="30" layoutY="-30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
-            <Circle fill="DODGERBLUE" layoutX="30" layoutY="30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
-            <Circle fill="DODGERBLUE" layoutX="-30" layoutY="30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
-            <Circle fill="DODGERBLUE" layoutX="-30" layoutY="-30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
-         </Group>
-         <Group>
-            <Circle fill="DODGERBLUE" radius="25.0" stroke="BLACK" strokeType="INSIDE" />
-            
-            <Circle fill="DODGERBLUE" layoutX="30" layoutY="-30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
-            <Circle fill="DODGERBLUE" layoutX="30" layoutY="30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
-            <Circle fill="DODGERBLUE" layoutX="-30" layoutY="30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
-            <Circle fill="DODGERBLUE" layoutX="-30" layoutY="-30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
-         </Group>
-      </HBox>
-      <HBox alignment="CENTER_LEFT" spacing="20.0" style="-fx-padding: 0 0 0 40;">
-         
-         <Group>
-            <Circle fill="DODGERBLUE" radius="25.0" stroke="BLACK" strokeType="INSIDE" />
-            
-            <Circle fill="DODGERBLUE" layoutX="30" layoutY="-30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
-            <Circle fill="DODGERBLUE" layoutX="30" layoutY="30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
-            <Circle fill="DODGERBLUE" layoutX="-30" layoutY="30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
-            <Circle fill="DODGERBLUE" layoutX="-30" layoutY="-30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
-         </Group>
-         <Group>
-            <Circle fill="DODGERBLUE" radius="25.0" stroke="BLACK" strokeType="INSIDE" />
-            
-            <Circle fill="DODGERBLUE" layoutX="30" layoutY="-30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
-            <Circle fill="DODGERBLUE" layoutX="30" layoutY="30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
-            <Circle fill="DODGERBLUE" layoutX="-30" layoutY="30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
-            <Circle fill="DODGERBLUE" layoutX="-30" layoutY="-30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
-         </Group>
-         <Group>
-            <Circle fill="DODGERBLUE" radius="25.0" stroke="BLACK" strokeType="INSIDE" />
-            
-            <Circle fill="DODGERBLUE" layoutX="30" layoutY="-30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
-            <Circle fill="DODGERBLUE" layoutX="30" layoutY="30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
-            <Circle fill="DODGERBLUE" layoutX="-30" layoutY="30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
-            <Circle fill="DODGERBLUE" layoutX="-30" layoutY="-30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
-         </Group>
-      </HBox>
-         <HBox.margin>
-            <Insets right="20.0" />
-         </HBox.margin>
-         <padding>
-            <Insets bottom="50.0" />
-         </padding>
-   </VBox>
-   <VBox prefHeight="539.0" prefWidth="0.0" spacing="10.0" HBox.hgrow="ALWAYS">
-      <VBox alignment="CENTER" spacing="20.0">
-         <Label style="-fx-font-size: 18.0; -fx-font-weight: bold;" text="Вхід">
-            <VBox.margin>
-               <Insets />
-            </VBox.margin>
-         </Label>
-         <HBox alignment="CENTER">
-            <Circle fill="TURQUOISE" radius="10" />
-         </HBox>
-      </VBox>
-      <VBox alignment="CENTER_RIGHT" prefHeight="153.0" prefWidth="313.0" spacing="20.0" style="-fx-padding: 0 0 0 40;" VBox.vgrow="ALWAYS">
-         <Rectangle fill="DODGERBLUE" height="30" width="30" />
-         <Rectangle fill="DODGERBLUE" height="30" width="30" />
-         <Rectangle fill="DODGERBLUE" height="30" width="30" />
-         <Rectangle fill="DODGERBLUE" height="30" width="30" />
-         <Rectangle fill="DODGERBLUE" height="30" width="30" />
-            <VBox.margin>
-               <Insets bottom="80.0" right="20.0" />
-            </VBox.margin>
-      </VBox>
-   </VBox>
-   <VBox alignment="CENTER" prefHeight="539.0" prefWidth="0.0" spacing="10.0" style="-fx-background-color: LIGHTGRAY;" AnchorPane.rightAnchor="0.0" HBox.hgrow="ALWAYS">
-      <Label text="Кухня">
-         <font>
-            <Font size="24.0" />
-         </font>
-      </Label>
-      <Label fx:id="durationLabel" text="Тривалість симуляції">
-         <font>
-            <Font size="14.0" />
-         </font>
-      </Label>
-      <Label fx:id="cashierLabel" text="Кількість кас" textAlignment="CENTER">
-         <font>
-            <Font size="14.0" />
-         </font>
-      </Label>
-      <Label fx:id="chefLabel" text="Кількість кухарів" textAlignment="CENTER">
-         <font>
-            <Font size="14.0" />
-         </font>
-      </Label>
-      <Button text="Список замовлень" />
-      <Button text="Зупинити симуляцію" />
-   </VBox>
-</HBox>
+        </VBox>
+        <VBox spacing="10.0" HBox.hgrow="ALWAYS">
+            <VBox alignment="CENTER" spacing="20.0">
+                <Label style="-fx-font-size: 18.0; -fx-font-weight: bold;" text="Вхід">
+                    <VBox.margin>
+                        <Insets />
+                    </VBox.margin>
+                </Label>
+                <HBox alignment="CENTER">
+                    <Circle fill="TURQUOISE" radius="10" />
+                </HBox>
+            </VBox>
+            <VBox fx:id="checkoutBox" alignment="CENTER_RIGHT" prefHeight="153.0" prefWidth="313.0" spacing="20.0" style="-fx-padding: 0 0 0 40;" VBox.vgrow="ALWAYS">
+<!--                <HBox alignment="CENTER_RIGHT">-->
+<!--&lt;!&ndash;                    <Circle fill="TURQUOISE" radius="10">&ndash;&gt;-->
+<!--&lt;!&ndash;                        <HBox.margin>&ndash;&gt;-->
+<!--&lt;!&ndash;                            <Insets right="10.0"/>&ndash;&gt;-->
+<!--&lt;!&ndash;                        </HBox.margin>&ndash;&gt;-->
+<!--&lt;!&ndash;                    </Circle>&ndash;&gt;-->
+<!--                    <Rectangle fill="DODGERBLUE" height="30" width="30"/>-->
+<!--                </HBox>-->
+
+<!--                <Rectangle fill="DODGERBLUE" height="30" width="30"/>-->
+<!--                <Rectangle fill="DODGERBLUE" height="30" width="30"/>-->
+<!--                <Rectangle fill="DODGERBLUE" height="30" width="30"/>-->
+<!--                <Rectangle fill="DODGERBLUE" height="30" width="30"/>-->
+                <VBox.margin>
+                    <Insets bottom="80.0" right="20.0" />
+                </VBox.margin>
+            </VBox>
+        </VBox>
+        <VBox alignment="CENTER" prefHeight="539.0" prefWidth="184.0" spacing="10.0" style="-fx-background-color: LIGHTGRAY;" AnchorPane.rightAnchor="0.0" HBox.hgrow="ALWAYS">
+            <Label text="Кухня">
+                <font>
+                    <Font size="24.0" />
+                </font>
+            </Label>
+            <Label fx:id="cashierLabel" text="Кількість кас" textAlignment="CENTER">
+                <font>
+                    <Font size="14.0" />
+                </font>
+            </Label>
+            <Label fx:id="chefLabel" text="Кількість кухарів" textAlignment="CENTER">
+                <font>
+                    <Font size="14.0" />
+                </font>
+            </Label>
+            <Button text="Список замовлень" />
+            <Button text="Зупинити симуляцію" />
+        </VBox>
+    </HBox>
 </AnchorPane>
