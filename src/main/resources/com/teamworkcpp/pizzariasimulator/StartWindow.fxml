@@ -18,6 +18,11 @@
                   <Font name="Times New Roman Bold" size="36.0" />
                </font>
             </Button>
+            <Button id="button_Start" fx:id="button_state" layoutX="141.0" layoutY="359.0" mnemonicParsing="false" onAction="#State_button_click" prefHeight="101.0" prefWidth="629.0" style="-fx-background-color: E76F51;" text="STATE" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman Bold" size="36.0" />
+               </font>
+            </Button>
             <Button id="button_Settings" fx:id="button_settings" layoutX="252.0" layoutY="121.0" mnemonicParsing="false" onAction="#Setting_button_click" prefHeight="84.0" prefWidth="407.0" style="-fx-background-color: E9C46A;" text="Налаштувати симуляцію" textFill="WHITE">
                <font>
                   <Font name="Times New Roman" size="24.0" />

@@ -2,6 +2,7 @@ package com.teamworkcpp.pizzariasimulator;
 
 import com.teamworkcpp.pizzariasimulator.backend.enums.CookingMode;
 import com.teamworkcpp.pizzariasimulator.backend.enums.SimulationMode;
+import com.teamworkcpp.pizzariasimulator.backend.models.SimplePizza;
 import com.teamworkcpp.pizzariasimulator.backend.services.PizzaPrototypeRegistry;
 import com.teamworkcpp.pizzariasimulator.backend.services.PizzeriaManager;
 import javafx.fxml.FXML;
@@ -11,15 +12,17 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
-
 import java.time.Duration;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class SettingsController {
 
     @FXML
     public ComboBox<String> combobox_cooking_mode;
+    public TextField pizzaTime;
 
     @FXML
     private TextField pizzaName;
@@ -55,10 +58,9 @@ public class SettingsController {
 
     private HelloController helloController;
 
-    //@FXML
-    //private TableView<Pizza> menuTable;
-
     private Map<RadioButton, SimulationMode> strategyMapping;
+
+    private List<Map<String, Object>> pizzasToAdd = new ArrayList<>();
 
     public void init(HelloController helloController) {
         this.helloController = helloController;
@@ -77,34 +79,37 @@ public class SettingsController {
         radiobutton_strategy2.setGraphic(createImageView("file:images/strategy2.png", 150, 250));
         radiobutton_strategy3.setGraphic(createImageView("file:images/strategy3.png", 150, 250));
 
-        /*TableColumn<Pizza, String> nameColumn = new TableColumn<>("Назва");
-        nameColumn.setCellValueFactory(new PropertyValueFactory<>("name"));
-
-        TableColumn<Pizza, Double> priceColumn = new TableColumn<>("Вартість");
-        priceColumn.setCellValueFactory(new PropertyValueFactory<>("price"));
-
-        menuTable.getColumns().add(nameColumn);
-        menuTable.getColumns().add(priceColumn);
-
-        menuTable.setItems(PizzaPrototypeRegistry.getInstance().getPizzas());*/
     }
 
+    @FXML
     void addPizza() {
         try {
             String name = pizzaName.getText();
             double price = Double.parseDouble(pizzaPrice.getText());
+            Duration cookingTime = Duration.ofMinutes(Integer.parseInt(pizzaTime.getText()));
 
+            if (price <= 0 || cookingTime.isNegative()) {
+                showAlert("Invalid input", "Будь ласка, введіть коректні значення для піци.");
+                return;
+            }
 
+            Map<String, Object> pizzaData = new HashMap<>();
+            pizzaData.put("name", name);
+            pizzaData.put("price", price);
+            pizzaData.put("cookingTime", cookingTime);
+
+            pizzasToAdd.add(pizzaData);
 
             clearInputFields();
         } catch (NumberFormatException e) {
-            e.printStackTrace();
+            showAlert("Invalid input", "Будь ласка, введіть коректні числові значення.");
         }
     }
 
     private void clearInputFields() {
         pizzaName.clear();
         pizzaPrice.clear();
+        pizzaTime.clear();
     }
 
     private ImageView createImageView(String imagePath, double fitWidth, double fitHeight) {
@@ -146,7 +151,7 @@ public class SettingsController {
                 cMode = CookingMode.ONE_PIZZAIOLO_MODE;
             }
             helloController.setSimulationSettings(simulationDuration, numberOfCashiers, numberOfCooks, simulationMode, cMode);
-
+            helloController.setPizzasToAdd(pizzasToAdd);
             closeSettingsWindow();
         } catch (NumberFormatException e) {
             showAlert("Invalid input", "Будь ласка, введіть коректні числові значення.");

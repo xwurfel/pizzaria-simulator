@@ -118,7 +118,7 @@ public class PizzeriaManager
                 fillingTime, bakingTime, afterBakingTime, packagingTime));
 
         try {
-            Logger.log(" BUILDER: Pizza added: "+ "name: "+ name + "price: "+ price + "cookingTime"+cookingTime +
+            Logger.log(" BUILDER: Pizza added: "+ "name: "+ name + "price: "+ price + "cookingTime "+cookingTime +
                     "\nknittingTime: " + knittingTime.toMillis()+
                     "\nfillingTime: " + fillingTime.toMillis()+
                     "\nbakingTime: " + bakingTime.toMillis()+
