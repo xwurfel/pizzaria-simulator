@@ -70,11 +70,11 @@
                                         <Font size="14.0" />
                                     </font>
                                 </Label>
-                        <ComboBox fx:id="combobox_cooking_mode" editable="false" layoutX="165.0" layoutY="296.0" prefHeight="44.0" prefWidth="260.0" promptText="Який режим кухні?" value="1">
+                        <ComboBox fx:id="combobox_cooking_mode" editable="false" layoutX="165.0" layoutY="296.0" prefHeight="44.0" prefWidth="260.0" promptText="Який режим кухні?" value="1 кухар - 1 операція">
                            <items>
                               <FXCollections fx:factory="observableArrayList">
-                                 <String fx:value="1" />
-                                 <String fx:value="2" />
+                                 <String fx:value="1 кухар - 1 операція" />
+                                 <String fx:value="1 кухар - 1 піца" />
                               </FXCollections>
                            </items>
                         </ComboBox>

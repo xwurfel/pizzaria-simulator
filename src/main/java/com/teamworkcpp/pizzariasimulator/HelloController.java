@@ -51,7 +51,7 @@ public class HelloController {
 
     @FXML
     void Start_button_click(ActionEvent event) {
-        System.out.println("Start with settings: " + simulationDuration + ", " + numberOfCashiers + ", " + numberOfCooks + ", " + simulationMode + ", " + maxPizzaCount);
+        System.out.println("Start with settings: " + simulationDuration + ", " + numberOfCashiers + ", " + numberOfCooks + ", " + simulationMode + ", " + cookingMode + ", " + maxPizzaCount);
         pizzeriaManager.AddSimulationDuration(Duration.ofMinutes(simulationDuration));
         pizzeriaManager.AddCheckoutCount(numberOfCashiers);
         pizzeriaManager.AddPizzaioloCount(numberOfCooks);
