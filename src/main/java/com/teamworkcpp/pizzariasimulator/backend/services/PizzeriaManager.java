@@ -99,7 +99,6 @@ public class PizzeriaManager
         return  checkouts;
     }
 
-
     public void AddPizza(String name, double price, Duration cookingTime)
     {
         Random r = new Random();
@@ -118,7 +117,7 @@ public class PizzeriaManager
                 fillingTime, bakingTime, afterBakingTime, packagingTime));
 
         try {
-            Logger.log(" BUILDER: Pizza added: "+ "name: "+ name + "price: "+ price + "cookingTime"+cookingTime +
+            Logger.log(" BUILDER: Pizza added: "+ "name: "+ name + "price: "+ price + "cookingTime "+cookingTime +
                     "\nknittingTime: " + knittingTime.toMillis()+
                     "\nfillingTime: " + fillingTime.toMillis()+
                     "\nbakingTime: " + bakingTime.toMillis()+

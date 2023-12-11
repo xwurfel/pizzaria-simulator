@@ -164,8 +164,7 @@
                     <Font size="14.0" />
                 </font>
             </Label>
-            <Button text="Список замовлень" />
-            <Button text="Зупинити симуляцію" />
+            <Button text="Список замовлень" onAction="#State_button_click" />
         </VBox>
     </HBox>
 </AnchorPane>
