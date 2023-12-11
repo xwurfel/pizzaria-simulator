@@ -2,8 +2,6 @@ package com.teamworkcpp.pizzariasimulator;
 
 import com.teamworkcpp.pizzariasimulator.backend.enums.CookingMode;
 import com.teamworkcpp.pizzariasimulator.backend.enums.SimulationMode;
-import com.teamworkcpp.pizzariasimulator.backend.models.Order;
-import com.teamworkcpp.pizzariasimulator.backend.models.SimplePizza;
 import com.teamworkcpp.pizzariasimulator.backend.services.PizzeriaManager;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -20,9 +18,6 @@ import java.util.List;
 import java.util.Map;
 
 public class HelloController {
-
-    public Button button_state;
-    public Button button_pinfo;
     @FXML
     private Button button_settings;
 
@@ -71,9 +66,22 @@ public class HelloController {
         }
 
         try {
-            pizzeriaManager.Build();
-        } catch (Exception e) {
-            e.printStackTrace();
+            FXMLLoader simulationLoader = new FXMLLoader(this.getClass().getResource("SimulationWindow.fxml"));
+            Parent resultRoot = (Parent) simulationLoader.load();
+            SimulationController simulationController = (SimulationController) simulationLoader.getController();
+            simulationController.init(this.pizzeriaManager);
+
+            Stage currentStage = (Stage) button_start.getScene().getWindow();
+            currentStage.close();
+
+            Stage resultStage = new Stage();
+            resultStage.initModality(Modality.APPLICATION_MODAL);
+            resultStage.setTitle("Результати симуляції");
+            resultStage.setScene(new Scene(resultRoot));
+            resultStage.showAndWait();
+
+        } catch (Exception var3) {
+            var3.printStackTrace();
         }
     }
 
@@ -111,56 +119,5 @@ public class HelloController {
 
     public void setPizzasToAdd(List<Map<String, Object>> pizzasToAdd) {
         this.pizzasToAdd = pizzasToAdd;
-    }
-
-
-
-    void openSimulationStateWindow() {
-
-    }
-
-    void openPizzaioloInfoWindow() {
-        
-    }
-    public void State_button_click(ActionEvent actionEvent) {
-        try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("SimulationState.fxml"));
-            Parent root = loader.load();
-
-            SimulationStateController stateController = loader.getController();
-            stateController.setPizzeriaManager(pizzeriaManager);
-
-            List<Order> orders = pizzeriaManager.getCurrentSimulationState().orders;
-            stateController.updateTable(orders);
-
-            Stage stateStage = new Stage();
-            stateStage.initModality(Modality.APPLICATION_MODAL);
-            stateStage.setTitle("Стан симуляції");
-            stateStage.setScene(new Scene(root));
-
-            stateStage.showAndWait();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
-    public void Pinfo_button_click(ActionEvent actionEvent) {
-        try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("PizzaioloInfo.fxml"));
-            Parent root = loader.load();
-
-            PizzaioloInfoController pizzaioloInfoController = loader.getController();
-            pizzaioloInfoController.setPizzeriaManager(pizzeriaManager);
-            pizzaioloInfoController.updateTable(pizzeriaManager.getCurrentSimulationState().pizzaiolos);
-
-            Stage pizzaioloInfoStage = new Stage();
-            pizzaioloInfoStage.initModality(Modality.APPLICATION_MODAL);
-            pizzaioloInfoStage.setTitle("Інформація про кухарів");
-            pizzaioloInfoStage.setScene(new Scene(root));
-
-            pizzaioloInfoStage.showAndWait();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
     }
 }

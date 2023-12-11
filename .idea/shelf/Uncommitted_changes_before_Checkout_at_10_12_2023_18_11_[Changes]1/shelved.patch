@@ -1,0 +1,148 @@
+Index: src/main/java/com/teamworkcpp/pizzariasimulator/backend/services/OrderFiller.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.teamworkcpp.pizzariasimulator.backend.services;\r\n\r\nimport com.teamworkcpp.pizzariasimulator.backend.interfaces.IPizza;\r\nimport com.teamworkcpp.pizzariasimulator.backend.models.Order;\r\n\r\npublic class OrderFiller {\r\n    private OrderFiller _instance;\r\n\r\n    //configuration field\r\n\r\n    private OrderFiller() {\r\n\r\n    }\r\n\r\n    public OrderFiller getInstance() {\r\n        if (_instance == null) {\r\n            _instance = new OrderFiller();\r\n        }\r\n        return _instance;\r\n    }\r\n\r\n    public IPizza GenerateOrder() {\r\n        return null;\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/teamworkcpp/pizzariasimulator/backend/services/OrderFiller.java b/src/main/java/com/teamworkcpp/pizzariasimulator/backend/services/OrderFiller.java
+--- a/src/main/java/com/teamworkcpp/pizzariasimulator/backend/services/OrderFiller.java	
++++ b/src/main/java/com/teamworkcpp/pizzariasimulator/backend/services/OrderFiller.java	
+@@ -1,25 +1,30 @@
+ package com.teamworkcpp.pizzariasimulator.backend.services;
+ 
+ import com.teamworkcpp.pizzariasimulator.backend.interfaces.IPizza;
+-import com.teamworkcpp.pizzariasimulator.backend.models.Order;
++import com.teamworkcpp.pizzariasimulator.backend.interfaces.IPizzaPrototype;
++
++import java.util.Optional;
+ 
+ public class OrderFiller {
+-    private OrderFiller _instance;
+-
+-    //configuration field
++    private static OrderFiller _instance;
++    private final PizzaPrototypeRegistry prototypeRegistry;
+ 
+-    private OrderFiller() {
+-
++    private OrderFiller(PizzaPrototypeRegistry registry) {
++        this.prototypeRegistry = registry;
+     }
+ 
+-    public OrderFiller getInstance() {
++    public static OrderFiller getInstance() {
+         if (_instance == null) {
+-            _instance = new OrderFiller();
++            _instance = new OrderFiller(PizzaPrototypeRegistry.getInstance());
+         }
+         return _instance;
+     }
+ 
+-    public IPizza GenerateOrder() {
+-        return null;
++    public IPizza generatePizza() {
++        Optional<IPizzaPrototype> iPizza = prototypeRegistry.getRandomPizza();
++        if (iPizza.isEmpty()) {
++            throw new RuntimeException("Pizza doesn't exist ");
++        }
++        return (IPizza) iPizza.get();
+     }
+ }
+Index: src/main/java/com/teamworkcpp/pizzariasimulator/backend/services/Checkout.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.teamworkcpp.pizzariasimulator.backend.services;\r\n\r\nimport com.teamworkcpp.pizzariasimulator.backend.interfaces.IPizza;\r\nimport com.teamworkcpp.pizzariasimulator.backend.models.Order;\r\nimport com.teamworkcpp.pizzariasimulator.backend.enums.OrderStatus;\r\n\r\nimport java.util.ArrayList;\r\nimport java.util.List;\r\nimport java.util.Random;\r\n\r\npublic class Checkout {\r\n    // fields\r\n    public int id;\r\n    private final int _maxPizzaCount;\r\n    private final OrderFiller _orderFiller;\r\n\r\n    public Checkout(int id, int maxPizzaCount, OrderFiller orderFiller)\r\n    {\r\n        this.id = id;\r\n        this._maxPizzaCount = maxPizzaCount;\r\n        this._orderFiller = orderFiller;\r\n    }\r\n    public Order Generate(int id)\r\n    {\r\n        List<IPizza> pizzas = new ArrayList<>();\r\n\r\n        Random random = new Random();\r\n\r\n        for(int i = 0; i < random.nextInt(1, _maxPizzaCount); ++i)\r\n        {\r\n            pizzas.add(_orderFiller.GenerateOrder());\r\n        }\r\n\r\n        return new Order(id,\r\n                pizzas,\r\n                OrderStatus.NEW,\r\n                id);\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/teamworkcpp/pizzariasimulator/backend/services/Checkout.java b/src/main/java/com/teamworkcpp/pizzariasimulator/backend/services/Checkout.java
+--- a/src/main/java/com/teamworkcpp/pizzariasimulator/backend/services/Checkout.java	
++++ b/src/main/java/com/teamworkcpp/pizzariasimulator/backend/services/Checkout.java	
+@@ -1,9 +1,12 @@
+ package com.teamworkcpp.pizzariasimulator.backend.services;
+ 
++import com.teamworkcpp.pizzariasimulator.backend.helpers.Logger;
+ import com.teamworkcpp.pizzariasimulator.backend.interfaces.IPizza;
+ import com.teamworkcpp.pizzariasimulator.backend.models.Order;
+ import com.teamworkcpp.pizzariasimulator.backend.enums.OrderStatus;
++import com.teamworkcpp.pizzariasimulator.backend.models.SimplePizza;
+ 
++import java.io.IOException;
+ import java.util.ArrayList;
+ import java.util.List;
+ import java.util.Random;
+@@ -12,23 +15,30 @@
+     // fields
+     public int id;
+     private final int _maxPizzaCount;
+-    private final OrderFiller _orderFiller;
+ 
+-    public Checkout(int id, int maxPizzaCount, OrderFiller orderFiller)
++    public Checkout(int id, int maxPizzaCount)
+     {
+         this.id = id;
+         this._maxPizzaCount = maxPizzaCount;
+-        this._orderFiller = orderFiller;
+     }
+-    public Order Generate(int id)
++    public synchronized Order Generate(int id)
+     {
+         List<IPizza> pizzas = new ArrayList<>();
+ 
+         Random random = new Random();
+ 
+-        for(int i = 0; i < random.nextInt(1, _maxPizzaCount); ++i)
++        for(int i = 0; i < random.nextInt(_maxPizzaCount)+1; i++)
+         {
+-            pizzas.add(_orderFiller.GenerateOrder());
++            IPizza pizza = OrderFiller.getInstance().generatePizza();
++            pizza.setId(Integer.toString(id) + Integer.toString(i));
++
++            pizzas.add(pizza);
++        }
++
++        try {
++            Logger.log(" Order: "+ id + " generated/ pizza count: " + pizzas.size() + "/ pizza name: " + pizzas.getFirst().getName() + "/ checkout id: "+ this.id);
++        } catch (IOException e) {
++            throw new RuntimeException(e);
+         }
+ 
+         return new Order(id,
+Index: src/main/java/com/teamworkcpp/pizzariasimulator/SettingsController.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.teamworkcpp.pizzariasimulator;\r\n\r\nimport com.teamworkcpp.pizzariasimulator.backend.enums.CookingMode;\r\nimport com.teamworkcpp.pizzariasimulator.backend.enums.SimulationMode;\r\nimport com.teamworkcpp.pizzariasimulator.backend.services.PizzaPrototypeRegistry;\r\nimport javafx.fxml.FXML;\r\nimport javafx.scene.control.*;\r\nimport javafx.scene.control.cell.PropertyValueFactory;\r\nimport javafx.scene.image.Image;\r\nimport javafx.scene.image.ImageView;\r\nimport javafx.stage.Stage;\r\nimport javafx.stage.StageStyle;\r\n\r\nimport java.util.HashMap;\r\nimport java.util.Map;\r\n\r\npublic class SettingsController {\r\n\r\n    @FXML\r\n    public ComboBox<String> combobox_cooking_mode;\r\n\r\n    @FXML\r\n    private TextField pizzaName;\r\n\r\n    @FXML\r\n    private TextField pizzaPrice;\r\n\r\n    @FXML\r\n    private Button button_addPizza;\r\n\r\n    @FXML\r\n    private Button button_apply;\r\n\r\n    @FXML\r\n    private ComboBox<String> combobox_duration;\r\n\r\n    @FXML\r\n    private ComboBox<String> combobox_checkouts;\r\n\r\n    @FXML\r\n    private ComboBox<String> combobox_pizzaiolos;\r\n\r\n    @FXML\r\n    private RadioButton radiobutton_strategy1;\r\n\r\n    @FXML\r\n    private RadioButton radiobutton_strategy2;\r\n\r\n    @FXML\r\n    private RadioButton radiobutton_strategy3;\r\n\r\n    private ToggleGroup strategyToggleGroup;\r\n\r\n    private HelloController helloController;\r\n\r\n    //@FXML\r\n    //private TableView<Pizza> menuTable;\r\n\r\n    private Map<RadioButton, SimulationMode> strategyMapping;\r\n\r\n    public void init(HelloController helloController) {\r\n        this.helloController = helloController;\r\n\r\n        strategyMapping = new HashMap<>();\r\n        strategyMapping.put(radiobutton_strategy1, SimulationMode.UNIFORM_DISTRIBUTION);\r\n        strategyMapping.put(radiobutton_strategy2, SimulationMode.GROWTH);\r\n        strategyMapping.put(radiobutton_strategy3, SimulationMode.RUSH_HOUR);\r\n\r\n        strategyToggleGroup = new ToggleGroup();\r\n        radiobutton_strategy1.setToggleGroup(strategyToggleGroup);\r\n        radiobutton_strategy2.setToggleGroup(strategyToggleGroup);\r\n        radiobutton_strategy3.setToggleGroup(strategyToggleGroup);\r\n\r\n        radiobutton_strategy1.setGraphic(createImageView(\"file:images/strategy1.png\", 150, 250));\r\n        radiobutton_strategy2.setGraphic(createImageView(\"file:images/strategy2.png\", 150, 250));\r\n        radiobutton_strategy3.setGraphic(createImageView(\"file:images/strategy3.png\", 150, 250));\r\n\r\n        /*TableColumn<Pizza, String> nameColumn = new TableColumn<>(\"Назва\");\r\n        nameColumn.setCellValueFactory(new PropertyValueFactory<>(\"name\"));\r\n\r\n        TableColumn<Pizza, Double> priceColumn = new TableColumn<>(\"Вартість\");\r\n        priceColumn.setCellValueFactory(new PropertyValueFactory<>(\"price\"));\r\n\r\n        menuTable.getColumns().add(nameColumn);\r\n        menuTable.getColumns().add(priceColumn);\r\n\r\n        menuTable.setItems(PizzaPrototypeRegistry.getInstance().getPizzas());*/\r\n    }\r\n\r\n    void addPizza() {\r\n        try {\r\n            String name = pizzaName.getText();\r\n            double price = Double.parseDouble(pizzaPrice.getText());\r\n\r\n            // Зберегти піцу в меню\r\n            //PizzaPrototypeRegistry.getInstance().addItem(name, price, minTimeDough, minTimeFillingBefore,\r\n            //        minTimeBake, minTimeFillingAfter, minTimePackage);\r\n\r\n            clearInputFields();\r\n        } catch (NumberFormatException e) {\r\n            e.printStackTrace();\r\n        }\r\n    }\r\n\r\n    private void clearInputFields() {\r\n        pizzaName.clear();\r\n        pizzaPrice.clear();\r\n    }\r\n\r\n    private ImageView createImageView(String imagePath, double fitWidth, double fitHeight) {\r\n        Image image = new Image(imagePath);\r\n        ImageView imageView = new ImageView(image);\r\n        imageView.setFitWidth(fitWidth);\r\n        imageView.setFitHeight(fitHeight);\r\n        return imageView;\r\n    }\r\n\r\n    @FXML\r\n    void Apply_button_click() {\r\n        try {\r\n            int simulationDuration = Integer.parseInt(combobox_duration.getValue());\r\n            int numberOfCashiers = Integer.parseInt(combobox_checkouts.getValue());\r\n            int numberOfCooks = Integer.parseInt(combobox_pizzaiolos.getValue());\r\n            int cookingMode = Integer.parseInt(combobox_cooking_mode.getValue());\r\n\r\n            if (simulationDuration <= 0 || numberOfCashiers <= 0 || numberOfCooks <= 0) {\r\n                showAlert(\"Invalid input\", \"Будь ласка, заповніть поля коректними значеннями.\");\r\n                return;\r\n            }\r\n\r\n            if (numberOfCashiers > 10 || numberOfCooks > 15) {\r\n                showAlert(\"Value too large\", \"Кількість кас не повинна перевищувати 10, кількість кухарів не повинна перевищувати 15.\");\r\n                return;\r\n            }\r\n\r\n            RadioButton selectedRadioButton = (RadioButton) strategyToggleGroup.getSelectedToggle();\r\n\r\n            SimulationMode simulationMode = strategyMapping.get(selectedRadioButton);\r\n\r\n            CookingMode cMode = null;\r\n\r\n            if (cookingMode == 1){\r\n                cMode = CookingMode.CONVEYOR_MODE;\r\n            }\r\n            else if (cookingMode == 2){\r\n                cMode = CookingMode.ONE_PIZZAIOLO_MODE;\r\n            }\r\n            helloController.setSimulationSettings(simulationDuration, numberOfCashiers, numberOfCooks, simulationMode, cMode);\r\n\r\n            closeSettingsWindow();\r\n        } catch (NumberFormatException e) {\r\n            showAlert(\"Invalid input\", \"Будь ласка, введіть коректні числові значення.\");\r\n        }\r\n    }\r\n\r\n    private void showAlert(String title, String content) {\r\n        Alert alert = new Alert(Alert.AlertType.ERROR);\r\n        alert.initStyle(StageStyle.UTILITY);\r\n        alert.setTitle(title);\r\n        alert.setHeaderText(null);\r\n        alert.setContentText(content);\r\n        alert.showAndWait();\r\n    }\r\n\r\n    @FXML\r\n    void closeSettingsWindow() {\r\n        ((Stage) button_apply.getScene().getWindow()).close();\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/teamworkcpp/pizzariasimulator/SettingsController.java b/src/main/java/com/teamworkcpp/pizzariasimulator/SettingsController.java
+--- a/src/main/java/com/teamworkcpp/pizzariasimulator/SettingsController.java	
++++ b/src/main/java/com/teamworkcpp/pizzariasimulator/SettingsController.java	
+@@ -3,6 +3,7 @@
+ import com.teamworkcpp.pizzariasimulator.backend.enums.CookingMode;
+ import com.teamworkcpp.pizzariasimulator.backend.enums.SimulationMode;
+ import com.teamworkcpp.pizzariasimulator.backend.services.PizzaPrototypeRegistry;
++import com.teamworkcpp.pizzariasimulator.backend.services.PizzeriaManager;
+ import javafx.fxml.FXML;
+ import javafx.scene.control.*;
+ import javafx.scene.control.cell.PropertyValueFactory;
+@@ -11,6 +12,7 @@
+ import javafx.stage.Stage;
+ import javafx.stage.StageStyle;
+ 
++import java.time.Duration;
+ import java.util.HashMap;
+ import java.util.Map;
+ 
+@@ -92,9 +94,7 @@
+             String name = pizzaName.getText();
+             double price = Double.parseDouble(pizzaPrice.getText());
+ 
+-            // Зберегти піцу в меню
+-            //PizzaPrototypeRegistry.getInstance().addItem(name, price, minTimeDough, minTimeFillingBefore,
+-            //        minTimeBake, minTimeFillingAfter, minTimePackage);
++
+ 
+             clearInputFields();
+         } catch (NumberFormatException e) {
