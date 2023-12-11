@@ -2,8 +2,6 @@ package com.teamworkcpp.pizzariasimulator;
 
 import com.teamworkcpp.pizzariasimulator.backend.enums.CookingMode;
 import com.teamworkcpp.pizzariasimulator.backend.enums.SimulationMode;
-import com.teamworkcpp.pizzariasimulator.backend.models.Order;
-import com.teamworkcpp.pizzariasimulator.backend.models.SimplePizza;
 import com.teamworkcpp.pizzariasimulator.backend.services.PizzeriaManager;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -20,7 +18,6 @@ import java.util.List;
 import java.util.Map;
 
 public class HelloController {
-
     @FXML
     private Button button_settings;
 
@@ -32,6 +29,7 @@ public class HelloController {
     private int numberOfCooks;
     private SimulationMode simulationMode;
     private CookingMode cookingMode;
+    private int maxPizzaCount;
 
     PizzeriaManager pizzeriaManager = new PizzeriaManager();
     private List<Map<String, Object>> pizzasToAdd;
@@ -48,13 +46,17 @@ public class HelloController {
 
     @FXML
     void Start_button_click(ActionEvent event) {
-        System.out.println("Start with settings: " + simulationDuration + ", " + numberOfCashiers + ", " + numberOfCooks + ", " + simulationMode);
+        System.out.println("Start with settings: " + simulationDuration + ", " + numberOfCashiers + ", " + numberOfCooks + ", " + simulationMode + ", " + cookingMode + ", " + maxPizzaCount);
         pizzeriaManager.AddSimulationDuration(Duration.ofMinutes(simulationDuration));
         pizzeriaManager.AddCheckoutCount(numberOfCashiers);
         pizzeriaManager.AddPizzaioloCount(numberOfCooks);
         pizzeriaManager.AddLevel(simulationMode);
         pizzeriaManager.AddCookingMode(cookingMode);
-        pizzeriaManager.AddPizza("Margarita", 32, Duration.ofMinutes(1));
+        pizzeriaManager.AddMaxPizzaCountInOrder(maxPizzaCount);
+        pizzeriaManager.AddPizza("Маргарита", 32, Duration.ofMinutes(1));
+        pizzeriaManager.AddPizza("Пепероні", 35, Duration.ofMinutes(2));
+        pizzeriaManager.AddPizza("Гавайська", 40, Duration.ofMinutes(1));
+        pizzeriaManager.AddPizza("Чотири сири", 38, Duration.ofMinutes(2));
         for (Map<String, Object> pizzaData : pizzasToAdd) {
             pizzeriaManager.AddPizza(
                     (String) pizzaData.get("name"),
@@ -106,12 +108,13 @@ public class HelloController {
         }
     }
 
-    public void setSimulationSettings(int duration, int cashiers, int cooks, SimulationMode mode, CookingMode cmode) {
+    public void setSimulationSettings(int duration, int cashiers, int cooks, SimulationMode mode, CookingMode cmode, int count) {
         simulationDuration = duration;
         numberOfCashiers = cashiers;
         numberOfCooks = cooks;
         simulationMode = mode;
         cookingMode = cmode;
+        maxPizzaCount = count;
     }
 
     public void setPizzasToAdd(List<Map<String, Object>> pizzasToAdd) {

@@ -5,11 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fbf8b445-f4fb-402b-900d-c28ac74ebb6f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/teamworkcpp/pizzariasimulator/PizzaioloInfoController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/teamworkcpp/pizzariasimulator/PizzaioloInfo.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/teamworkcpp/pizzariasimulator/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/teamworkcpp/pizzariasimulator/HelloController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/teamworkcpp/pizzariasimulator/SettingsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/teamworkcpp/pizzariasimulator/SettingsController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/teamworkcpp/pizzariasimulator/SimulationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/teamworkcpp/pizzariasimulator/SimulationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/teamworkcpp/pizzariasimulator/StartWindow.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/teamworkcpp/pizzariasimulator/StartWindow.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/teamworkcpp/pizzariasimulator/SimulationStateController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/teamworkcpp/pizzariasimulator/SimulationStateController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/teamworkcpp/pizzariasimulator/SettingsWindow.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/teamworkcpp/pizzariasimulator/SettingsWindow.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/teamworkcpp/pizzariasimulator/SimulationState.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/teamworkcpp/pizzariasimulator/SimulationState.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/teamworkcpp/pizzariasimulator/SimulationWindow.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/teamworkcpp/pizzariasimulator/SimulationWindow.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/teamworkcpp/pizzariasimulator/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/teamworkcpp/pizzariasimulator/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,7 +63,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "simulation",
+    "git-widget-placeholder": "Merging simulation",
     "ignore.virus.scanning.warn.message": "true",
     "last_opened_file_path": "D:/Univer/5 сем/КПП/kpp_lab_778_яшз",
     "node.js.detected.package.eslint": "true",

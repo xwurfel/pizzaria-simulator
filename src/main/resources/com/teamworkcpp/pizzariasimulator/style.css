@@ -107,3 +107,29 @@
     -fx-background-color: #F4A261; /* Header background color */
     -fx-text-fill: black; /* Header text color */
 }
+
+#pizzaioloTableView {
+    -fx-table-cell-border-color: derive(#E9C46A, 20%); /* Border color for table cells */
+}
+
+#pizzaioloIdColumn,
+#availabilityColumn,
+#technicalStopColumn {
+    -fx-alignment: CENTER; /* Center align text in table columns */
+    -fx-font-size: 16.0; /* Font size for table columns */
+}
+
+#pizzaioloTableView .table-row-cell:odd {
+    -fx-background-color: derive(#f1e0b6, 10%); /* Alternating row color */
+}
+
+#pizzaioloTableView .table-row-cell:hover {
+    -fx-background-color: derive(#E9C46A, 20%); /* Hover color */
+}
+
+#pizzaioloTableView .column-header {
+    -fx-font-size: 15.0; /* Font size for table header */
+    -fx-font-weight: bold; /* Bold font for table header */
+    -fx-background-color: #F4A261; /* Header background color */
+    -fx-text-fill: black; /* Header text color */
+}
