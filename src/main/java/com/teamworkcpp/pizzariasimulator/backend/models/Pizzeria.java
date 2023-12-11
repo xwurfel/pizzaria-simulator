@@ -11,10 +11,10 @@ import com.teamworkcpp.pizzariasimulator.backend.services.Checkout;
 import java.io.IOException;
 import java.time.Duration;
 import java.time.LocalDate;
+import java.time.LocalTime;
 import java.time.ZoneId;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Objects;
+import java.util.*;
+import java.util.concurrent.CopyOnWriteArrayList;
 
 public class Pizzeria {
     private final List<Checkout> _checkouts;
@@ -22,8 +22,9 @@ public class Pizzeria {
     private final Duration _simulationTime;
     private final IPizzeriaCreationStrategy _pizzeriaCreationStrategy;
     private CookingMode cookingMode;
-    private List<Order> _orders;
+    private final List<Order> _orders = new CopyOnWriteArrayList<>();
     private boolean _simulationEnded;
+    private long _endTime;
 
     public Pizzeria(List<Checkout> checkouts,
                     List<Pizzaiolo> pizzaiolos,
@@ -36,7 +37,7 @@ public class Pizzeria {
         this._simulationTime = simulationTime;
         this._pizzeriaCreationStrategy = creationStrategy;
         this._simulationEnded = false;
-        this._orders = new ArrayList<>();
+        this._endTime = System.currentTimeMillis() + _simulationTime.toMillis();
     }
 
     public SimulationState getSimulationState()
@@ -67,7 +68,9 @@ public class Pizzeria {
 
     public void AddOrder(Order order)
     {
-        _orders.add(order);
+        synchronized (_orders) {
+            _orders.add(order);
+        }
     }
 
     private void generateOrdersWithDelay(IPizzeriaCreationStrategy creationStrategy, Duration simulationDuration) throws InterruptedException {
@@ -118,11 +121,17 @@ public class Pizzeria {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+
         Thread simulationThread = new Thread(() -> {
             while (true) {
 
                 boolean allOrdersDone = _orders.stream().allMatch(order ->
                         Objects.equals(order.getStatus(), OrderStatus.DONE));
+
+                if(System.currentTimeMillis() > _endTime)
+                {
+                    allOrdersDone = true;
+                }
 
                 if(allOrdersDone)
                 {
@@ -149,7 +158,22 @@ public class Pizzeria {
                 }
 
                 RefreshPizzaioloDelays();
-                for (Order order : _orders) {
+                Iterator<Order> iterator = _orders.iterator();
+                while(iterator.hasNext()) {
+
+                    Order order;
+                    order = iterator.next();
+
+                    if (LocalTime.now().isBefore(order.getCreated().plusSeconds(10)))
+                    {
+                        continue;
+                    }
+
+                    if(order.getStatus() == OrderStatus.DONE)
+                    {
+                        continue;
+                    }
+
                     boolean allPizzasDone = order.getPizzas().stream().allMatch(pizza -> Objects.equals(pizza
                             .getCurrentStatus()
                             .getStatusName(), "Done"));
@@ -159,16 +183,21 @@ public class Pizzeria {
                         order.setOrderStatus(OrderStatus.DONE);
 
                         try {
-                            Logger.log("Order: " + order.getId() + " is ready");
+                             Logger.log("Order: " + order.getId() + " is ready");
                         } catch (IOException e) {
                             throw new RuntimeException(e);
                         }
-
                         continue;
                     }
 
+
                     for(IPizza pizza : order.getPizzas())
                     {
+                        if(pizza.isCookingNow())
+                        {
+                            continue;
+                        }
+
                         if(Objects.equals(pizza
                                 .getCurrentStatus()
                                 .getStatusName(), "Done"))
@@ -181,45 +210,36 @@ public class Pizzeria {
                             continue;
                         }
 
+
                         if(Objects.equals(pizza.getCurrentStatus().getStatusName(), "Waiting"))
                         {
                             RefreshPizzaioloDelays();
 
                             for(Pizzaiolo pizzaiolo : _pizzaiolos)
                             {
-                                if(pizzaiolo.isAvailable())
+                                if(!pizzaiolo.isAvailable())
                                 {
-                                    if(Objects.equals(order.getStatus(), OrderStatus.NEW))
-                                    {
-                                        order.setOrderStatus(OrderStatus.IN_PROGRESS);
-                                        try {
-                                            Logger.log("Order: " + order.getId() + "set status: " + "In progress");
-                                        } catch (IOException e) {
-                                            throw new RuntimeException(e);
-                                        }
-                                    }
-
-                                    pizzaiolo.ReservePizzaiolo(10000);
-                                    pizza.addPizzaiolo(pizzaiolo);
-                                    pizzaiolo.cook(pizza);
-                                    break;
+                                    continue;
                                 }
+
+                                if(Objects.equals(order.getStatus(), OrderStatus.NEW))
+                                {
+                                    order.setOrderStatus(OrderStatus.IN_PROGRESS);
+                                    try {
+                                        Logger.log("Order: " + order.getId() + "set status: " + "In progress");
+                                    } catch (IOException e) {
+                                        throw new RuntimeException(e);
+                                    }
+                                }
+
+                                pizzaiolo.setPizza(pizza);
+                                pizzaiolo.ReservePizzaiolo();
+
+                                pizza.addPizzaiolo(pizzaiolo);
+                                pizzaiolo.cook(pizza);
+
+                                break;
                             }
-                        }
-
-                        RefreshPizzaioloDelays();
-
-                        if(pizza.getPizzaioloList().getFirst().isOnTechnicalStop())
-                        {
-                            pizza.getPizzaioloList().clear();
-                            pizza.stopCookingStage();
-
-                            try {
-                                Logger.log("Pizza: " + pizza.getId() + "pizzaiolo is on technical stop, searching available pizzaiolo ");
-                            } catch (IOException e) {
-                                throw new RuntimeException(e);
-                            }
-
                             continue;
                         }
 
@@ -231,7 +251,22 @@ public class Pizzeria {
                             continue;
                         }
 
-                        pizza.getPizzaioloList().getFirst().cook(pizza);
+                        RefreshPizzaioloDelays();
+
+                        if(pizza.getPizzaioloList().getFirst().isOnTechnicalStop() && !(pizza.getPizzaioloList().isEmpty()))
+                        {
+                            pizza.getPizzaioloList().clear();
+                            pizza.stopCookingStage();
+
+                            continue;
+                        }
+
+                        Pizzaiolo pizzaiolo = pizza.getPizzaioloList().getFirst();
+                        pizzaiolo.setPizza(pizza);
+                        pizzaiolo.ReservePizzaiolo();
+
+                        pizza.addPizzaiolo(pizzaiolo);
+                        pizzaiolo.cook(pizza);
 
                         try {
                             Logger.log("Pizza: " + pizza.getId() + " set status "+ pizza.getCurrentStatus().getStatusName());
@@ -265,6 +300,11 @@ public class Pizzeria {
                 boolean allOrdersDone = _orders.stream().allMatch(order ->
                         Objects.equals(order.getStatus(), OrderStatus.DONE));
 
+                if(System.currentTimeMillis() > _endTime)
+                {
+                    allOrdersDone = true;
+                }
+
                 if(allOrdersDone)
                 {
                     int pizzasDone = 0;
@@ -291,8 +331,21 @@ public class Pizzeria {
                 }
 
                 RefreshPizzaioloDelays();
-                for (Order order : _orders)
+                Iterator<Order> iterator = _orders.iterator();
+                while (iterator.hasNext())
                 {
+                    Order order = iterator.next();
+
+                    if (LocalTime.now().isBefore(order.getCreated().plusSeconds(10)))
+                    {
+                        continue;
+                    }
+
+                    if(order.getStatus() == OrderStatus.DONE)
+                    {
+                        continue;
+                    }
+
                     if (order.getPizzas().stream().allMatch(pizza -> Objects.equals(pizza
                             .getCurrentStatus()
                             .getStatusName(), "Done")))
@@ -315,11 +368,6 @@ public class Pizzeria {
                                  .getCurrentStatus()
                                  .getStatusName(), "Done"))
                          {
-                             try {
-                                 Logger.log("Pizza: " + pizza.getId() + " is ready");
-                             } catch (IOException e) {
-                                 throw new RuntimeException(e);
-                             }
                              continue;
                          }
 
@@ -329,47 +377,45 @@ public class Pizzeria {
 
                              for(Pizzaiolo pizzaiolo : _pizzaiolos)
                              {
-                                 if(pizzaiolo.isAvailable())
+                                 if(!pizzaiolo.isAvailable())
                                  {
-                                     if(Objects.equals(order.getStatus(), OrderStatus.NEW))
-                                     {
-                                         order.setOrderStatus(OrderStatus.IN_PROGRESS);
+                                     continue;
+                                 }
 
-                                         try {
-                                             Logger.log("Order: " + order.getId() + "set status: " + "In progress");
-                                         } catch (IOException e) {
-                                             throw new RuntimeException(e);
-                                         }
-                                     }
-
-                                     pizzaiolo.ReservePizzaiolo(10000);
-                                     pizza.addPizzaiolo(pizzaiolo);
-                                     pizzaiolo.cook(pizza);
+                                 if(Objects.equals(order.getStatus(), OrderStatus.NEW))
+                                 {
+                                     order.setOrderStatus(OrderStatus.IN_PROGRESS);
 
                                      try {
-                                         Logger.log("Pizza: " + pizza.getId() + "cooking by pizzaiolo: " + pizzaiolo.GetId());
+                                         Logger.log("Order: " + order.getId() + "set status: " + "In progress");
                                      } catch (IOException e) {
                                          throw new RuntimeException(e);
                                      }
-
-                                     break;
                                  }
+
+                                 pizzaiolo.setPizza(pizza);
+                                 pizzaiolo.ReservePizzaiolo();
+
+                                 pizza.addPizzaiolo(pizzaiolo);
+                                 pizzaiolo.cook(pizza);
+
+                                 try {
+                                     Logger.log("Pizza: " + pizza.getId() + "cooking by pizzaiolo: " + pizzaiolo.GetId());
+                                 } catch (IOException e) {
+                                     throw new RuntimeException(e);
+                                 }
+                                 break;
                              }
+                             continue;
                          }
 
                          RefreshPizzaioloDelays();
 
-                         if(pizza.getPizzaioloList().getLast().isOnTechnicalStop())
+                         if(!pizza.getPizzaioloList().isEmpty()
+                         &&pizza.getPizzaioloList().getLast().isOnTechnicalStop())
                          {
                              pizza.getPizzaioloList().removeLast();
                              pizza.stopCookingStage();
-
-                             try {
-                                 Logger.log("Pizza: " + pizza.getId() + "pizzaiolo is on technical stop, searching available pizzaiolo ");
-                             } catch (IOException e) {
-                                 throw new RuntimeException(e);
-                             }
-
                              continue;
                          }
 
@@ -388,16 +434,14 @@ public class Pizzeria {
                          if(missingPizzaiolo == null)
                          {
                              pizza.stopCookingStage();
-                             try {
-                                 Logger.log("Pizza: " + pizza.getId() + " no pizzaiolo available");
-                             } catch (IOException e) {
-                                 throw new RuntimeException(e);
-                             }
                             continue;
                          }
 
-                         missingPizzaiolo.ReservePizzaiolo(10000);
-                         missingPizzaiolo.cook(pizza);
+                        missingPizzaiolo.setPizza(pizza);
+                        missingPizzaiolo.ReservePizzaiolo();
+
+                        pizza.addPizzaiolo(missingPizzaiolo);
+                        missingPizzaiolo.cook(pizza);
 
                          try {
                              Logger.log("Pizza: " + pizza.getId() + " set status "+ pizza.getCurrentStatus().getStatusName());

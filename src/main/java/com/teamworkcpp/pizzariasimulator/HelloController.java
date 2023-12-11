@@ -55,8 +55,6 @@ public class HelloController {
         pizzeriaManager.AddPizzaioloCount(numberOfCooks);
         pizzeriaManager.AddLevel(simulationMode);
         pizzeriaManager.AddCookingMode(cookingMode);
-<<<<<<< Updated upstream
-=======
         pizzeriaManager.AddPizza("Margarita", 32, Duration.ofMinutes(1));
         for (Map<String, Object> pizzaData : pizzasToAdd) {
             pizzeriaManager.AddPizza(
@@ -66,8 +64,6 @@ public class HelloController {
             );
         }
 
-
->>>>>>> Stashed changes
         try {
             pizzeriaManager.Build();
         } catch (Exception e) {

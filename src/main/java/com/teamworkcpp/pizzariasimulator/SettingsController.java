@@ -4,6 +4,7 @@ import com.teamworkcpp.pizzariasimulator.backend.enums.CookingMode;
 import com.teamworkcpp.pizzariasimulator.backend.enums.SimulationMode;
 import com.teamworkcpp.pizzariasimulator.backend.models.SimplePizza;
 import com.teamworkcpp.pizzariasimulator.backend.services.PizzaPrototypeRegistry;
+import com.teamworkcpp.pizzariasimulator.backend.services.PizzeriaManager;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -11,12 +12,8 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
-
-<<<<<<< Updated upstream
-=======
 import java.time.Duration;
 import java.util.ArrayList;
->>>>>>> Stashed changes
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -61,9 +58,6 @@ public class SettingsController {
 
     private HelloController helloController;
 
-    //@FXML
-    //private TableView<Pizza> menuTable;
-
     private Map<RadioButton, SimulationMode> strategyMapping;
 
     private List<Map<String, Object>> pizzasToAdd = new ArrayList<>();
@@ -85,16 +79,6 @@ public class SettingsController {
         radiobutton_strategy2.setGraphic(createImageView("file:images/strategy2.png", 150, 250));
         radiobutton_strategy3.setGraphic(createImageView("file:images/strategy3.png", 150, 250));
 
-        /*TableColumn<Pizza, String> nameColumn = new TableColumn<>("Назва");
-        nameColumn.setCellValueFactory(new PropertyValueFactory<>("name"));
-
-        TableColumn<Pizza, Double> priceColumn = new TableColumn<>("Вартість");
-        priceColumn.setCellValueFactory(new PropertyValueFactory<>("price"));
-
-        menuTable.getColumns().add(nameColumn);
-        menuTable.getColumns().add(priceColumn);
-
-        menuTable.setItems(PizzaPrototypeRegistry.getInstance().getPizzas());*/
     }
 
     @FXML
@@ -116,15 +100,6 @@ public class SettingsController {
 
             pizzasToAdd.add(pizzaData);
 
-<<<<<<< Updated upstream
-            // Зберегти піцу в меню
-            //PizzaPrototypeRegistry.getInstance().addItem(name, price, minTimeDough, minTimeFillingBefore,
-            //        minTimeBake, minTimeFillingAfter, minTimePackage);
-
-=======
-
-            // Очищення полів вводу
->>>>>>> Stashed changes
             clearInputFields();
         } catch (NumberFormatException e) {
             showAlert("Invalid input", "Будь ласка, введіть коректні числові значення.");

@@ -2,41 +2,44 @@ package com.teamworkcpp.pizzariasimulator.backend.models;
 import com.teamworkcpp.pizzariasimulator.backend.enums.OrderStatus;
 import com.teamworkcpp.pizzariasimulator.backend.interfaces.IPizza;
 
+import java.time.LocalTime;
 import java.util.List;
 
 public class Order {
-    private final int _id;
-    private final List<IPizza> _pizzas;
-    private OrderStatus _orderStatus;
-    private int _checkoutId;
+    private final int id;
+    private final List<IPizza> pizzas;
+    private OrderStatus orderStatus;
+    private final int checkoutId;
+    private LocalTime created;
 
-    public Order(int id, List<IPizza> pizzas, OrderStatus orderStatus, int checkoutId) {
-        this._id = id;
-        this._pizzas = pizzas;
-        this._orderStatus = orderStatus;
-        this._checkoutId = checkoutId;
+    public Order(int id, List<IPizza> pizzas, OrderStatus orderStatus, int checkoutId, LocalTime created) {
+        this.id = id;
+        this.pizzas = pizzas;
+        this.orderStatus = orderStatus;
+        this.checkoutId = checkoutId;
+        this.created = created;
     }
 
     public int getId() {
-        return _id;
+        return id;
     }
 
     public List<IPizza> getPizzas() {
-        return _pizzas;
+        return pizzas;
+    }
+
+    public LocalTime getCreated() {
+        return created;
     }
 
     public OrderStatus getStatus() {
-        return _orderStatus;
+        return orderStatus;
     }
 
-<<<<<<< Updated upstream
-    public int getcheckoutId() {return _checkoutId; }
-=======
-    public int getCheckoutId() {return checkoutId; }
->>>>>>> Stashed changes
+    public int getСheckoutId() {return checkoutId; }
 
     public void setOrderStatus(OrderStatus orderStatus) {
-        this._orderStatus = orderStatus;
+        this.orderStatus = orderStatus;
     }
 
 }

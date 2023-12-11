@@ -13,6 +13,11 @@ public class PizzaBaseDecorator implements IPizza{
         this.wrappee = wrappee;
     }
 
+    @Override
+    public void setId(String id) {
+        wrappee.setId(id);
+    }
+
     public String getName() {
         return wrappee.getName();
     }
@@ -85,10 +90,18 @@ public class PizzaBaseDecorator implements IPizza{
     }
 
     @Override
+    public boolean isCookingNow() {
+        return wrappee.isCookingNow();
+    }
+
+    @Override
+    public void setCookingNow(boolean isCookingNow) {
+        wrappee.setCookingNow(isCookingNow);
+    }
+
+    @Override
     public IPizzaStatus getCurrentStatus() {
         return null;
     }
-    // public List<Pizzaiolo> getPizzaioloList(){
-    //  return wrappee.getPizzaioloList();
-    //}
+
 }

@@ -1,25 +1,30 @@
 package com.teamworkcpp.pizzariasimulator.backend.services;
 
 import com.teamworkcpp.pizzariasimulator.backend.interfaces.IPizza;
-import com.teamworkcpp.pizzariasimulator.backend.models.Order;
+import com.teamworkcpp.pizzariasimulator.backend.interfaces.IPizzaPrototype;
+
+import java.util.Optional;
 
 public class OrderFiller {
-    private OrderFiller _instance;
+    private static OrderFiller _instance;
+    private final PizzaPrototypeRegistry prototypeRegistry;
 
-    //configuration field
-
-    private OrderFiller() {
-
+    private OrderFiller(PizzaPrototypeRegistry registry) {
+        this.prototypeRegistry = registry;
     }
 
-    public OrderFiller getInstance() {
+    public static OrderFiller getInstance() {
         if (_instance == null) {
-            _instance = new OrderFiller();
+            _instance = new OrderFiller(PizzaPrototypeRegistry.getInstance());
         }
         return _instance;
     }
 
-    public IPizza GenerateOrder() {
-        return null;
+    public IPizza generatePizza() {
+        Optional<IPizzaPrototype> iPizza = prototypeRegistry.getRandomPizza();
+        if (iPizza.isEmpty()) {
+            throw new RuntimeException("Pizza doesn't exist ");
+        }
+        return (IPizza) iPizza.get();
     }
 }
