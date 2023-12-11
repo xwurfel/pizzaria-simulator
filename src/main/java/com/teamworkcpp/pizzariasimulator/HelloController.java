@@ -54,19 +54,14 @@ public class HelloController {
         pizzeriaManager.AddPizza("Margarita", 32, Duration.ofMinutes(1));
 
         try {
-            this.pizzeriaManager.Build();
-
-            // Створюємо нове вікно для відображення результатів
             FXMLLoader simulationLoader = new FXMLLoader(this.getClass().getResource("SimulationWindow.fxml"));
             Parent resultRoot = (Parent) simulationLoader.load();
             SimulationController simulationController = (SimulationController) simulationLoader.getController();
             simulationController.init(this.pizzeriaManager);
 
-            // Закриваємо поточне вікно
             Stage currentStage = (Stage) button_start.getScene().getWindow();
             currentStage.close();
 
-            // Відображаємо нове вікно
             Stage resultStage = new Stage();
             resultStage.initModality(Modality.APPLICATION_MODAL);
             resultStage.setTitle("Результати симуляції");

@@ -89,7 +89,7 @@ public class Pizzeria {
         }
 
         try {
-            Thread.sleep(10000);
+            Thread.sleep(1500);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -160,8 +160,14 @@ public class Pizzeria {
                 RefreshPizzaioloDelays();
                 Iterator<Order> iterator = _orders.iterator();
                 while(iterator.hasNext()) {
+
                     Order order;
                     order = iterator.next();
+
+                    if (LocalTime.now().isBefore(order.getCreated().plusSeconds(10)))
+                    {
+                        continue;
+                    }
 
                     if(order.getStatus() == OrderStatus.DONE)
                     {
@@ -232,11 +238,6 @@ public class Pizzeria {
                                 pizza.addPizzaiolo(pizzaiolo);
                                 pizzaiolo.cook(pizza);
 
-                                try {
-                                    Logger.log("Pizza: " + pizza.getId() + " set pizzaiolo "+ pizzaiolo.GetId());
-                                } catch (IOException e) {
-                                    throw new RuntimeException(e);
-                                }
                                 break;
                             }
                             continue;
@@ -257,12 +258,6 @@ public class Pizzeria {
                             pizza.getPizzaioloList().clear();
                             pizza.stopCookingStage();
 
-                            try {
-                                Logger.log("Pizza: " + pizza.getId() + "pizzaiolo is on technical stop, searching available pizzaiolo ");
-                            } catch (IOException e) {
-                                throw new RuntimeException(e);
-                            }
-
                             continue;
                         }
 
@@ -272,12 +267,6 @@ public class Pizzeria {
 
                         pizza.addPizzaiolo(pizzaiolo);
                         pizzaiolo.cook(pizza);
-
-                        try {
-                            Logger.log("Pizza: " + pizza.getId() + " set pizzaiolo "+ pizza.getPizzaioloList().getFirst().GetId());
-                        } catch (IOException e) {
-                            throw new RuntimeException(e);
-                        }
 
                         try {
                             Logger.log("Pizza: " + pizza.getId() + " set status "+ pizza.getCurrentStatus().getStatusName());
@@ -346,6 +335,11 @@ public class Pizzeria {
                 while (iterator.hasNext())
                 {
                     Order order = iterator.next();
+
+                    if (LocalTime.now().isBefore(order.getCreated().plusSeconds(10)))
+                    {
+                        continue;
+                    }
 
                     if(order.getStatus() == OrderStatus.DONE)
                     {
@@ -422,13 +416,6 @@ public class Pizzeria {
                          {
                              pizza.getPizzaioloList().removeLast();
                              pizza.stopCookingStage();
-
-                             try {
-                                 Logger.log("Pizza: " + pizza.getId() + "pizzaiolo is on technical stop, searching available pizzaiolo ");
-                             } catch (IOException e) {
-                                 throw new RuntimeException(e);
-                             }
-
                              continue;
                          }
 
@@ -447,11 +434,6 @@ public class Pizzeria {
                          if(missingPizzaiolo == null)
                          {
                              pizza.stopCookingStage();
-                             try {
-                                 Logger.log("Pizza: " + pizza.getId() + " no pizzaiolo available");
-                             } catch (IOException e) {
-                                 throw new RuntimeException(e);
-                             }
                             continue;
                          }
 

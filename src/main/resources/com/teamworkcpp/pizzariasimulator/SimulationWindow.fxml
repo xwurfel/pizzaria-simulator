@@ -9,7 +9,7 @@
 
 <AnchorPane prefHeight="539.0" prefWidth="951.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.teamworkcpp.pizzariasimulator.SimulationController">
     <HBox prefHeight="539.0" prefWidth="951.0">
-        <VBox alignment="CENTER" prefHeight="445.0" prefWidth="326.0" spacing="20.0">
+        <VBox fx:id="chairsBox" alignment="CENTER" prefHeight="445.0" prefWidth="326.0" spacing="20.0">
             <HBox spacing="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0">
                 <Label style="-fx-font-size: 14.0; -fx-font-weight: bold;" text="00:00:00">
                     <padding>
@@ -23,24 +23,24 @@
             <HBox alignment="CENTER_LEFT" spacing="20.0" style="-fx-padding: 0 0 0 40;">
                 <Group>
                     <Circle fill="DODGERBLUE" radius="25.0" stroke="BLACK" strokeType="INSIDE" />
-                    <Circle fill="DODGERBLUE" layoutX="30" layoutY="-30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
-                    <Circle fill="DODGERBLUE" layoutX="30" layoutY="30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
-                    <Circle fill="DODGERBLUE" layoutX="-30" layoutY="30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
-                    <Circle fill="DODGERBLUE" layoutX="-30" layoutY="-30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                    <Circle fx:id="chair_1" fill="DODGERBLUE" layoutX="30" layoutY="-30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                    <Circle fx:id="chair_2" fill="DODGERBLUE" layoutX="30" layoutY="30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                    <Circle fx:id="chair_3" fill="DODGERBLUE" layoutX="-30" layoutY="30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                    <Circle fx:id="chair_4" fill="DODGERBLUE" layoutX="-30" layoutY="-30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
                 </Group>
                 <Group>
                     <Circle fill="DODGERBLUE" radius="25.0" stroke="BLACK" strokeType="INSIDE" />
-                    <Circle fill="DODGERBLUE" layoutX="30" layoutY="-30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
-                    <Circle fill="DODGERBLUE" layoutX="30" layoutY="30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
-                    <Circle fill="DODGERBLUE" layoutX="-30" layoutY="30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
-                    <Circle fill="DODGERBLUE" layoutX="-30" layoutY="-30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                    <Circle fx:id="chair_5" fill="DODGERBLUE" layoutX="30" layoutY="-30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                    <Circle fx:id="chair_6" fill="DODGERBLUE" layoutX="30" layoutY="30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                    <Circle fx:id="chair_7" fill="DODGERBLUE" layoutX="-30" layoutY="30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                    <Circle fx:id="chair_8" fill="DODGERBLUE" layoutX="-30" layoutY="-30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
                 </Group>
                 <Group>
                     <Circle fill="DODGERBLUE" radius="25.0" stroke="BLACK" strokeType="INSIDE" />
-                    <Circle fill="DODGERBLUE" layoutX="30" layoutY="-30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
-                    <Circle fill="DODGERBLUE" layoutX="30" layoutY="30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
-                    <Circle fill="DODGERBLUE" layoutX="-30" layoutY="30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
-                    <Circle fill="DODGERBLUE" layoutX="-30" layoutY="-30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                    <Circle fx:id="chair_9" fill="DODGERBLUE" layoutX="30" layoutY="-30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                    <Circle fx:id="chair_10" fill="DODGERBLUE" layoutX="30" layoutY="30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                    <Circle fx:id="chair_11" fill="DODGERBLUE" layoutX="-30" layoutY="30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                    <Circle fx:id="chair_12" fill="DODGERBLUE" layoutX="-30" layoutY="-30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
                 </Group>
                 <VBox.margin>
                     <Insets top="15.0" />
@@ -51,53 +51,26 @@
                 <Group>
                     <Circle fill="DODGERBLUE" radius="25.0" stroke="BLACK" strokeType="INSIDE" />
 
-                    <Circle fill="DODGERBLUE" layoutX="30" layoutY="-30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
-                    <Circle fill="DODGERBLUE" layoutX="30" layoutY="30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
-                    <Circle fill="DODGERBLUE" layoutX="-30" layoutY="30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
-                    <Circle fill="DODGERBLUE" layoutX="-30" layoutY="-30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                    <Circle fx:id="chair_13" fill="DODGERBLUE" layoutX="30" layoutY="-30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                    <Circle fx:id="chair_14" fill="DODGERBLUE" layoutX="30" layoutY="30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                    <Circle fx:id="chair_15" fill="DODGERBLUE" layoutX="-30" layoutY="30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                    <Circle fx:id="chair_16" fill="DODGERBLUE" layoutX="-30" layoutY="-30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
                 </Group>
                 <Group>
                     <Circle fill="DODGERBLUE" radius="25.0" stroke="BLACK" strokeType="INSIDE" />
 
-                    <Circle fill="DODGERBLUE" layoutX="30" layoutY="-30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
-                    <Circle fill="DODGERBLUE" layoutX="30" layoutY="30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
-                    <Circle fill="DODGERBLUE" layoutX="-30" layoutY="30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
-                    <Circle fill="DODGERBLUE" layoutX="-30" layoutY="-30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                    <Circle fx:id="chair_17" fill="DODGERBLUE" layoutX="30" layoutY="-30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                    <Circle fx:id="chair_18" fill="DODGERBLUE" layoutX="30" layoutY="30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                    <Circle fx:id="chair_19" fill="DODGERBLUE" layoutX="-30" layoutY="30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                    <Circle fx:id="chair_20" fill="DODGERBLUE" layoutX="-30" layoutY="-30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
                 </Group>
                 <Group>
                     <Circle fill="DODGERBLUE" radius="25.0" stroke="BLACK" strokeType="INSIDE" />
 
-                    <Circle fill="DODGERBLUE" layoutX="30" layoutY="-30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
-                    <Circle fill="DODGERBLUE" layoutX="30" layoutY="30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
-                    <Circle fill="DODGERBLUE" layoutX="-30" layoutY="30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
-                    <Circle fill="DODGERBLUE" layoutX="-30" layoutY="-30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
-                </Group>
-            </HBox>
-            <HBox alignment="CENTER_LEFT" spacing="20.0" style="-fx-padding: 0 0 0 40;">
-
-                <Group>
-                    <Circle fill="DODGERBLUE" radius="25.0" stroke="BLACK" strokeType="INSIDE" />
-
-                    <Circle fill="DODGERBLUE" layoutX="30" layoutY="-30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
-                    <Circle fill="DODGERBLUE" layoutX="30" layoutY="30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
-                    <Circle fill="DODGERBLUE" layoutX="-30" layoutY="30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
-                    <Circle fill="DODGERBLUE" layoutX="-30" layoutY="-30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
-                </Group>
-                <Group>
-                    <Circle fill="DODGERBLUE" radius="25.0" stroke="BLACK" strokeType="INSIDE" />
-
-                    <Circle fill="DODGERBLUE" layoutX="30" layoutY="-30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
-                    <Circle fill="DODGERBLUE" layoutX="30" layoutY="30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
-                    <Circle fill="DODGERBLUE" layoutX="-30" layoutY="30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
-                    <Circle fill="DODGERBLUE" layoutX="-30" layoutY="-30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
-                </Group>
-                <Group>
-                    <Circle fill="DODGERBLUE" radius="25.0" stroke="BLACK" strokeType="INSIDE" />
-
-                    <Circle fill="DODGERBLUE" layoutX="30" layoutY="-30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
-                    <Circle fill="DODGERBLUE" layoutX="30" layoutY="30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
-                    <Circle fill="DODGERBLUE" layoutX="-30" layoutY="30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
-                    <Circle fill="DODGERBLUE" layoutX="-30" layoutY="-30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                    <Circle fx:id="chair_21" fill="DODGERBLUE" layoutX="30" layoutY="-30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                    <Circle fx:id="chair_22" fill="DODGERBLUE" layoutX="30" layoutY="30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                    <Circle fx:id="chair_23" fill="DODGERBLUE" layoutX="-30" layoutY="30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                    <Circle fx:id="chair_24" fill="DODGERBLUE" layoutX="-30" layoutY="-30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
                 </Group>
             </HBox>
             <HBox alignment="CENTER_LEFT" spacing="20.0" style="-fx-padding: 0 0 0 40;">
@@ -105,26 +78,53 @@
                 <Group>
                     <Circle fill="DODGERBLUE" radius="25.0" stroke="BLACK" strokeType="INSIDE" />
 
-                    <Circle fill="DODGERBLUE" layoutX="30" layoutY="-30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
-                    <Circle fill="DODGERBLUE" layoutX="30" layoutY="30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
-                    <Circle fill="DODGERBLUE" layoutX="-30" layoutY="30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
-                    <Circle fill="DODGERBLUE" layoutX="-30" layoutY="-30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                    <Circle fx:id="chair_25" fill="DODGERBLUE" layoutX="30" layoutY="-30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                    <Circle fx:id="chair_26" fill="DODGERBLUE" layoutX="30" layoutY="30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                    <Circle fx:id="chair_27" fill="DODGERBLUE" layoutX="-30" layoutY="30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                    <Circle fx:id="chair_28" fill="DODGERBLUE" layoutX="-30" layoutY="-30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
                 </Group>
                 <Group>
                     <Circle fill="DODGERBLUE" radius="25.0" stroke="BLACK" strokeType="INSIDE" />
 
-                    <Circle fill="DODGERBLUE" layoutX="30" layoutY="-30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
-                    <Circle fill="DODGERBLUE" layoutX="30" layoutY="30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
-                    <Circle fill="DODGERBLUE" layoutX="-30" layoutY="30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
-                    <Circle fill="DODGERBLUE" layoutX="-30" layoutY="-30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                    <Circle fx:id="chair_29" fill="DODGERBLUE" layoutX="30" layoutY="-30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                    <Circle fx:id="chair_30" fill="DODGERBLUE" layoutX="30" layoutY="30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                    <Circle fx:id="chair_31" fill="DODGERBLUE" layoutX="-30" layoutY="30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                    <Circle fx:id="chair_32" fill="DODGERBLUE" layoutX="-30" layoutY="-30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
                 </Group>
                 <Group>
                     <Circle fill="DODGERBLUE" radius="25.0" stroke="BLACK" strokeType="INSIDE" />
 
-                    <Circle fill="DODGERBLUE" layoutX="30" layoutY="-30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
-                    <Circle fill="DODGERBLUE" layoutX="30" layoutY="30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
-                    <Circle fill="DODGERBLUE" layoutX="-30" layoutY="30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
-                    <Circle fill="DODGERBLUE" layoutX="-30" layoutY="-30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                    <Circle fx:id="chair_33" fill="DODGERBLUE" layoutX="30" layoutY="-30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                    <Circle fx:id="chair_34" fill="DODGERBLUE" layoutX="30" layoutY="30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                    <Circle fx:id="chair_35" fill="DODGERBLUE" layoutX="-30" layoutY="30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                    <Circle fx:id="chair_36" fill="DODGERBLUE" layoutX="-30" layoutY="-30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                </Group>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" spacing="20.0" style="-fx-padding: 0 0 0 40;">
+
+                <Group>
+                    <Circle fill="DODGERBLUE" radius="25.0" stroke="BLACK" strokeType="INSIDE" />
+
+                    <Circle fx:id="chair_37" fill="DODGERBLUE" layoutX="30" layoutY="-30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                    <Circle fx:id="chair_38" fill="DODGERBLUE" layoutX="30" layoutY="30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                    <Circle fx:id="chair_39" fill="DODGERBLUE" layoutX="-30" layoutY="30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                    <Circle fx:id="chair_40" fill="DODGERBLUE" layoutX="-30" layoutY="-30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                </Group>
+                <Group>
+                    <Circle fill="DODGERBLUE" radius="25.0" stroke="BLACK" strokeType="INSIDE" />
+
+                    <Circle fx:id="chair_41" fill="DODGERBLUE" layoutX="30" layoutY="-30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                    <Circle fx:id="chair_42" fill="DODGERBLUE" layoutX="30" layoutY="30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                    <Circle fx:id="chair_43" fill="DODGERBLUE" layoutX="-30" layoutY="30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                    <Circle fx:id="chair_44" fill="DODGERBLUE" layoutX="-30" layoutY="-30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                </Group>
+                <Group>
+                    <Circle fill="DODGERBLUE" radius="25.0" stroke="BLACK" strokeType="INSIDE" />
+
+                    <Circle fx:id="chair_45" fill="DODGERBLUE" layoutX="30" layoutY="-30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                    <Circle fx:id="chair_46" fill="DODGERBLUE" layoutX="30" layoutY="30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                    <Circle fx:id="chair_47" fill="DODGERBLUE" layoutX="-30" layoutY="30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                    <Circle fx:id="chair_48" fill="DODGERBLUE" layoutX="-30" layoutY="-30" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
                 </Group>
             </HBox>
             <HBox.margin>
@@ -141,24 +141,8 @@
                         <Insets />
                     </VBox.margin>
                 </Label>
-                <HBox alignment="CENTER">
-                    <Circle fill="TURQUOISE" radius="10" />
-                </HBox>
             </VBox>
             <VBox fx:id="checkoutBox" alignment="CENTER_RIGHT" prefHeight="153.0" prefWidth="313.0" spacing="20.0" style="-fx-padding: 0 0 0 40;" VBox.vgrow="ALWAYS">
-<!--                <HBox alignment="CENTER_RIGHT">-->
-<!--&lt;!&ndash;                    <Circle fill="TURQUOISE" radius="10">&ndash;&gt;-->
-<!--&lt;!&ndash;                        <HBox.margin>&ndash;&gt;-->
-<!--&lt;!&ndash;                            <Insets right="10.0"/>&ndash;&gt;-->
-<!--&lt;!&ndash;                        </HBox.margin>&ndash;&gt;-->
-<!--&lt;!&ndash;                    </Circle>&ndash;&gt;-->
-<!--                    <Rectangle fill="DODGERBLUE" height="30" width="30"/>-->
-<!--                </HBox>-->
-
-<!--                <Rectangle fill="DODGERBLUE" height="30" width="30"/>-->
-<!--                <Rectangle fill="DODGERBLUE" height="30" width="30"/>-->
-<!--                <Rectangle fill="DODGERBLUE" height="30" width="30"/>-->
-<!--                <Rectangle fill="DODGERBLUE" height="30" width="30"/>-->
                 <VBox.margin>
                     <Insets bottom="80.0" right="20.0" />
                 </VBox.margin>
