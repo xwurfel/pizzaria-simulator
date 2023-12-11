@@ -64507,3 +64507,1993 @@ packagingTime: 9824
 [2023-12-08 21:23:23] Pizza: 51 set pizzaiolo 5
 [2023-12-08 21:23:23] Simulation ended
 orders done: 8money earned: 256.0
+[2023-12-11 21:45:16]  BUILDER: Pizza added: name: Margaritaprice: 32.0cookingTime PT1M
+knittingTime: 17000
+fillingTime: 8760
+bakingTime: 7495
+afterTime: 11377
+packagingTime: 9253
+[2023-12-11 21:45:16]  BUILDER: Checkouts were built
+[2023-12-11 21:45:16]  BUILDER: Pizzaiolos were built
+[2023-12-11 21:45:16]  BUILDER: Pizzeria were built
+[2023-12-11 21:45:16] BUILDER: Starting new simulation.
+[2023-12-11 21:45:21]  Order: 3 generated/ pizza count: 3/ pizza name: Margarita/ checkout id: 2
+[2023-12-11 21:45:21]  Order: 1 generated/ pizza count: 2/ pizza name: Margarita/ checkout id: 4
+[2023-12-11 21:45:21]  Order: 4 generated/ pizza count: 2/ pizza name: Margarita/ checkout id: 3
+[2023-12-11 21:45:21]  Order: 2 generated/ pizza count: 4/ pizza name: Margarita/ checkout id: 5
+[2023-12-11 21:45:21]  Order: 0 generated/ pizza count: 2/ pizza name: Margarita/ checkout id: 1
+[2023-12-11 21:45:31] New simulation started, simulation mode: CONVEYOR
+[2023-12-11 21:45:31] Pizziolo 3 on technical stop 1
+[2023-12-11 21:45:31] Order: 2set status: In progress
+[2023-12-11 21:45:31] Pizziolo 1 reserved
+[2023-12-11 21:45:31] Pizza: 20cooking by pizzaiolo: 1
+[2023-12-11 21:45:31] Pizziolo 2 reserved
+[2023-12-11 21:45:31] Pizza: 21cooking by pizzaiolo: 2
+[2023-12-11 21:45:31] Pizziolo 4 reserved
+[2023-12-11 21:45:31] Pizza: 22cooking by pizzaiolo: 4
+[2023-12-11 21:45:31] Pizziolo 5 reserved
+[2023-12-11 21:45:31] Pizza: 23cooking by pizzaiolo: 5
+[2023-12-11 21:45:36] Order: 4set status: In progress
+[2023-12-11 21:45:36] Pizziolo 1 reserved
+[2023-12-11 21:45:36] Pizza: 40cooking by pizzaiolo: 1
+[2023-12-11 21:45:36] Order: 1set status: In progress
+[2023-12-11 21:45:36] Pizziolo 2 reserved
+[2023-12-11 21:45:36] Pizza: 10cooking by pizzaiolo: 2
+[2023-12-11 21:45:36] Pizziolo 4 reserved
+[2023-12-11 21:45:36] Pizza: 11cooking by pizzaiolo: 4
+[2023-12-11 21:45:36] Order: 0set status: In progress
+[2023-12-11 21:45:36] Pizziolo 5 reserved
+[2023-12-11 21:45:36] Pizza: 00cooking by pizzaiolo: 5
+[2023-12-11 21:45:41] Pizziolo 1 reserved
+[2023-12-11 21:45:41] Pizza: 01cooking by pizzaiolo: 1
+[2023-12-11 21:45:41] Pizziolo 2 reserved
+[2023-12-11 21:45:41] Pizza: 41cooking by pizzaiolo: 2
+[2023-12-11 21:45:41] Order: 3set status: In progress
+[2023-12-11 21:45:41] Pizziolo 4 reserved
+[2023-12-11 21:45:41] Pizza: 30cooking by pizzaiolo: 4
+[2023-12-11 21:45:41] Pizziolo 5 reserved
+[2023-12-11 21:45:41] Pizza: 31cooking by pizzaiolo: 5
+[2023-12-11 21:45:46] Pizziolo 1 reserved
+[2023-12-11 21:45:46] Pizza: 32cooking by pizzaiolo: 1
+[2023-12-11 21:45:46] Pizziolo 4 on technical stop 1
+[2023-12-11 21:45:46] Pizziolo 2 reserved
+[2023-12-11 21:45:46] Pizza: 11cooking by pizzaiolo: 2
+[2023-12-11 21:45:46] Pizziolo 5 reserved
+[2023-12-11 21:45:46] Pizza: 22cooking by pizzaiolo: 5
+[2023-12-11 21:45:51] Pizziolo 1 reserved
+[2023-12-11 21:45:51] Pizza: 20cooking by pizzaiolo: 1
+[2023-12-11 21:45:51] Pizziolo 2 reserved
+[2023-12-11 21:45:51] Pizza: 30cooking by pizzaiolo: 2
+[2023-12-11 21:45:51] Pizziolo 5 reserved
+[2023-12-11 21:45:51] Pizza: 20cooking by pizzaiolo: 5
+[2023-12-11 21:45:53] Pizziolo 3 reserved
+[2023-12-11 21:45:53] Pizza: 20cooking by pizzaiolo: 3
+[2023-12-11 21:45:56] Pizziolo 1 reserved
+[2023-12-11 21:45:56] Pizza: 40cooking by pizzaiolo: 1
+[2023-12-11 21:45:56] Pizziolo 2 reserved
+[2023-12-11 21:45:56] Pizza: 10cooking by pizzaiolo: 2
+[2023-12-11 21:45:56] Pizziolo 5 reserved
+[2023-12-11 21:45:56] Pizza: 11cooking by pizzaiolo: 5
+[2023-12-11 21:45:58] Pizziolo 3 reserved
+[2023-12-11 21:45:58] Pizza: 23cooking by pizzaiolo: 3
+[2023-12-11 21:46:01] Pizziolo 1 reserved
+[2023-12-11 21:46:01] Pizza: 11cooking by pizzaiolo: 1
+[2023-12-11 21:46:01] Pizziolo 2 reserved
+[2023-12-11 21:46:01] Pizza: 31cooking by pizzaiolo: 2
+[2023-12-11 21:46:01] Pizziolo 5 reserved
+[2023-12-11 21:46:01] Pizza: 10cooking by pizzaiolo: 5
+[2023-12-11 21:46:03] Pizziolo 3 reserved
+[2023-12-11 21:46:03] Pizza: 40cooking by pizzaiolo: 3
+[2023-12-11 22:15:58]  BUILDER: Pizza added: name: Маргаритаprice: 32.0cookingTime PT1M
+knittingTime: 17000
+fillingTime: 7282
+bakingTime: 5055
+afterTime: 9880
+packagingTime: 12499
+[2023-12-11 22:15:58]  BUILDER: Pizza added: name: Пепероніprice: 35.0cookingTime PT2M
+knittingTime: 29000
+fillingTime: 7286
+bakingTime: 7066
+afterTime: 13003
+packagingTime: 7331
+[2023-12-11 22:15:58]  BUILDER: Pizza added: name: Гавайськаprice: 40.0cookingTime PT1M
+knittingTime: 17000
+fillingTime: 5683
+bakingTime: 12487
+afterTime: 11795
+packagingTime: 16886
+[2023-12-11 22:15:58]  BUILDER: Pizza added: name: Чотири сириprice: 38.0cookingTime PT2M
+knittingTime: 29000
+fillingTime: 11684
+bakingTime: 16252
+afterTime: 20992
+packagingTime: 15618
+[2023-12-11 22:15:58]  BUILDER: Checkouts were built
+[2023-12-11 22:15:58]  BUILDER: Pizzaiolos were built
+[2023-12-11 22:15:58]  BUILDER: Pizzeria were built
+[2023-12-11 22:15:58] BUILDER: Starting new simulation.
+[2023-12-11 22:16:03]  Order: 1 generated/ pizza count: 3/ pizza name: Пепероні/ checkout id: 2
+[2023-12-11 22:16:03]  Order: 0 generated/ pizza count: 2/ pizza name: Гавайська/ checkout id: 1
+[2023-12-11 22:16:03]  Order: 2 generated/ pizza count: 2/ pizza name: Пепероні/ checkout id: 3
+[2023-12-11 22:16:03]  Order: 4 generated/ pizza count: 4/ pizza name: Пепероні/ checkout id: 5
+[2023-12-11 22:16:03]  Order: 3 generated/ pizza count: 3/ pizza name: Гавайська/ checkout id: 4
+[2023-12-11 22:16:13] New simulation started, simulation mode: SINGLE
+[2023-12-11 22:16:13] Order: 2set status: In progress
+[2023-12-11 22:16:13] Pizziolo 1 reserved
+[2023-12-11 22:16:13] Pizziolo 2 reserved
+[2023-12-11 22:16:13] Order: 0set status: In progress
+[2023-12-11 22:16:13] Pizziolo 3 reserved
+[2023-12-11 22:16:13] Pizziolo 4 reserved
+[2023-12-11 22:16:13] Order: 1set status: In progress
+[2023-12-11 22:16:13] Pizziolo 5 reserved
+[2023-12-11 22:16:13] Pizziolo 6 reserved
+[2023-12-11 22:16:13] Pizziolo 7 reserved
+[2023-12-11 22:16:13] Order: 4set status: In progress
+[2023-12-11 22:16:13] Pizziolo 8 reserved
+[2023-12-11 22:16:13] Pizziolo 9 reserved
+[2023-12-11 22:16:13] Pizziolo 10 reserved
+[2023-12-11 22:16:18] Pizziolo 1 reserved
+[2023-12-11 22:16:18] Order: 3set status: In progress
+[2023-12-11 22:16:18] Pizziolo 2 reserved
+[2023-12-11 22:16:18] Pizziolo 3 reserved
+[2023-12-11 22:16:18] Pizziolo 4 reserved
+[2023-12-11 22:16:23] Pizziolo 9 on technical stop 1
+[2023-12-11 22:16:24] Pizziolo 2 on technical stop 1
+[2023-12-11 22:16:29] Pizziolo 3 on technical stop 1
+[2023-12-11 22:16:30] Pizziolo 1 reserved
+[2023-12-11 22:16:31] Pizziolo 7 reserved
+[2023-12-11 22:16:31] Pizza: 12 set status Filling Before Baking
+[2023-12-11 22:16:32] Pizziolo 6 reserved
+[2023-12-11 22:16:32] Pizza: 11 set status Filling Before Baking
+[2023-12-11 22:16:34]  Order: 5 generated/ pizza count: 1/ pizza name: Маргарита/ checkout id: 2
+[2023-12-11 22:16:35]  Order: 6 generated/ pizza count: 3/ pizza name: Маргарита/ checkout id: 5
+[2023-12-11 22:16:35] Pizziolo 1 reserved
+[2023-12-11 22:16:35] Pizza: 00 set status Filling Before Baking
+[2023-12-11 22:16:35] Pizziolo 4 reserved
+[2023-12-11 22:16:36] Pizziolo 4 reserved
+[2023-12-11 22:16:36] Pizza: 32 set status Filling Before Baking
+[2023-12-11 22:16:37]  Order: 7 generated/ pizza count: 4/ pizza name: Чотири сири/ checkout id: 1
+[2023-12-11 22:16:37] Pizziolo 5 reserved
+[2023-12-11 22:16:40]  Order: 8 generated/ pizza count: 1/ pizza name: Гавайська/ checkout id: 4
+[2023-12-11 22:16:40]  Order: 9 generated/ pizza count: 3/ pizza name: Гавайська/ checkout id: 3
+[2023-12-11 22:16:42] Pizziolo 5 reserved
+[2023-12-11 22:16:42] Pizza: 30 set status Filling Before Baking
+[2023-12-11 22:16:43] Pizziolo 5 reserved
+[2023-12-11 22:16:43] Pizza: 10 set status Filling Before Baking
+[2023-12-11 22:16:44] Order: 5set status: In progress
+[2023-12-11 22:16:44] Pizziolo 8 reserved
+[2023-12-11 22:16:44] Pizziolo 1 reserved
+[2023-12-11 22:16:44] Pizza: 20 set status Filling Before Baking
+[2023-12-11 22:16:44] Pizziolo 4 reserved
+[2023-12-11 22:16:44] Pizza: 01 set status Filling Before Baking
+[2023-12-11 22:16:44] Pizziolo 8 reserved
+[2023-12-11 22:16:44] Pizza: 40 set status Filling Before Baking
+[2023-12-11 22:16:44] Pizziolo 9 reserved
+[2023-12-11 22:16:44] Pizza: 41 set status Filling Before Baking
+[2023-12-11 22:16:45] Pizziolo 10 reserved
+[2023-12-11 22:16:45] Pizza: 42 set status Filling Before Baking
+[2023-12-11 22:16:45] Order: 6set status: In progress
+[2023-12-11 22:16:45] Pizziolo 2 reserved
+[2023-12-11 22:16:46] Pizziolo 2 reserved
+[2023-12-11 22:16:46] Pizza: 21 set status Filling Before Baking
+[2023-12-11 22:16:48] Pizziolo 7 reserved
+[2023-12-11 22:16:48] Pizza: 12 set status Baking
+[2023-12-11 22:16:49] Pizziolo 6 reserved
+[2023-12-11 22:16:49] Pizza: 11 set status Baking
+[2023-12-11 22:16:50] Pizziolo 1 reserved
+[2023-12-11 22:16:50] Pizza: 43 set status Filling Before Baking
+[2023-12-11 22:16:54] Pizziolo 7 reserved
+[2023-12-11 22:16:55] Pizziolo 6 reserved
+[2023-12-11 22:16:58] Order: 7set status: In progress
+[2023-12-11 22:16:58] Pizziolo 3 reserved
+[2023-12-11 22:16:59] Pizziolo 7 reserved
+[2023-12-11 22:17:00] Pizziolo 6 reserved
+[2023-12-11 22:17:00] Pizziolo 7 reserved
+[2023-12-11 22:17:00] Pizza: 12 set status Filling After Baking
+[2023-12-11 22:17:01] Pizziolo 6 reserved
+[2023-12-11 22:17:01] Pizza: 11 set status Filling After Baking
+[2023-12-11 22:17:03] Pizziolo 3 reserved
+[2023-12-11 22:17:08] Order: 8set status: In progress
+[2023-12-11 22:17:08] Pizziolo 3 reserved
+[2023-12-11 22:17:12]  Order: 10 generated/ pizza count: 2/ pizza name: Маргарита/ checkout id: 2
+[2023-12-11 22:17:12] Pizziolo 5 reserved
+[2023-12-11 22:17:12] Pizza: 10 set status Baking
+[2023-12-11 22:17:12]  Order: 11 generated/ pizza count: 3/ pizza name: Чотири сири/ checkout id: 4
+[2023-12-11 22:17:12]  Order: 12 generated/ pizza count: 2/ pizza name: Чотири сири/ checkout id: 1
+[2023-12-11 22:17:13] Pizziolo 7 reserved
+[2023-12-11 22:17:13] Pizza: 12 set status Packaging
+[2023-12-11 22:17:13] Order: 9set status: In progress
+[2023-12-11 22:17:13] Pizziolo 3 reserved
+[2023-12-11 22:17:13] Pizziolo 6 reserved
+[2023-12-11 22:17:13] Pizza: 62 set status Filling Before Baking
+[2023-12-11 22:17:13] Pizziolo 4 reserved
+[2023-12-11 22:17:13] Pizza: 01 set status Baking
+[2023-12-11 22:17:13] Pizziolo 8 reserved
+[2023-12-11 22:17:13] Pizza: 40 set status Baking
+[2023-12-11 22:17:13] Pizziolo 9 reserved
+[2023-12-11 22:17:13] Pizza: 41 set status Baking
+[2023-12-11 22:17:13]  Order: 13 generated/ pizza count: 5/ pizza name: Пепероні/ checkout id: 5
+[2023-12-11 22:17:14]  Order: 14 generated/ pizza count: 3/ pizza name: Чотири сири/ checkout id: 3
+[2023-12-11 22:17:14] Pizziolo 10 reserved
+[2023-12-11 22:17:14] Pizza: 42 set status Baking
+[2023-12-11 22:17:15] Pizziolo 2 reserved
+[2023-12-11 22:17:15] Pizza: 21 set status Baking
+[2023-12-11 22:19:22]  BUILDER: Pizza added: name: Маргаритаprice: 32.0cookingTime PT1M
+knittingTime: 17000
+fillingTime: 9629
+bakingTime: 10553
+afterTime: 13134
+packagingTime: 16272
+[2023-12-11 22:19:22]  BUILDER: Pizza added: name: Пепероніprice: 35.0cookingTime PT2M
+knittingTime: 29000
+fillingTime: 27033
+bakingTime: 15118
+afterTime: 15885
+packagingTime: 24645
+[2023-12-11 22:19:22]  BUILDER: Pizza added: name: Гавайськаprice: 40.0cookingTime PT1M
+knittingTime: 17000
+fillingTime: 6839
+bakingTime: 15107
+afterTime: 9229
+packagingTime: 11859
+[2023-12-11 22:19:22]  BUILDER: Pizza added: name: Чотири сириprice: 38.0cookingTime PT2M
+knittingTime: 29000
+fillingTime: 8009
+bakingTime: 12438
+afterTime: 12626
+packagingTime: 12041
+[2023-12-11 22:19:22]  BUILDER: Checkouts were built
+[2023-12-11 22:19:23]  BUILDER: Pizzaiolos were built
+[2023-12-11 22:19:23]  BUILDER: Pizzeria were built
+[2023-12-11 22:19:23] BUILDER: Starting new simulation.
+[2023-12-11 22:19:28]  Order: 3 generated/ pizza count: 5/ pizza name: Чотири сири/ checkout id: 3
+[2023-12-11 22:19:28]  Order: 1 generated/ pizza count: 5/ pizza name: Гавайська/ checkout id: 2
+[2023-12-11 22:19:28]  Order: 4 generated/ pizza count: 3/ pizza name: Пепероні/ checkout id: 4
+[2023-12-11 22:19:28]  Order: 2 generated/ pizza count: 2/ pizza name: Пепероні/ checkout id: 5
+[2023-12-11 22:19:28]  Order: 0 generated/ pizza count: 2/ pizza name: Чотири сири/ checkout id: 1
+[2023-12-11 22:19:38] New simulation started, simulation mode: CONVEYOR
+[2023-12-11 22:19:38] Pizziolo 10 on technical stop 1
+[2023-12-11 22:19:38] Order: 1set status: In progress
+[2023-12-11 22:19:38] Pizziolo 1 reserved
+[2023-12-11 22:19:38] Pizza: 10cooking by pizzaiolo: 1
+[2023-12-11 22:19:38] Pizziolo 2 reserved
+[2023-12-11 22:19:38] Pizza: 11cooking by pizzaiolo: 2
+[2023-12-11 22:19:38] Pizziolo 3 reserved
+[2023-12-11 22:19:38] Pizza: 12cooking by pizzaiolo: 3
+[2023-12-11 22:19:38] Pizziolo 4 reserved
+[2023-12-11 22:19:38] Pizza: 13cooking by pizzaiolo: 4
+[2023-12-11 22:19:38] Pizziolo 5 reserved
+[2023-12-11 22:19:38] Pizza: 14cooking by pizzaiolo: 5
+[2023-12-11 22:19:38] Order: 3set status: In progress
+[2023-12-11 22:19:38] Pizziolo 6 reserved
+[2023-12-11 22:19:38] Pizza: 30cooking by pizzaiolo: 6
+[2023-12-11 22:19:38] Pizziolo 7 reserved
+[2023-12-11 22:19:38] Pizza: 31cooking by pizzaiolo: 7
+[2023-12-11 22:19:38] Pizziolo 8 reserved
+[2023-12-11 22:19:38] Pizza: 32cooking by pizzaiolo: 8
+[2023-12-11 22:19:38] Pizziolo 9 reserved
+[2023-12-11 22:19:38] Pizza: 33cooking by pizzaiolo: 9
+[2023-12-11 22:19:43] Order: 4set status: In progress
+[2023-12-11 22:19:43] Pizziolo 1 reserved
+[2023-12-11 22:19:43] Pizza: 40cooking by pizzaiolo: 1
+[2023-12-11 22:19:43] Pizziolo 2 reserved
+[2023-12-11 22:19:43] Pizza: 41cooking by pizzaiolo: 2
+[2023-12-11 22:19:43] Pizziolo 3 reserved
+[2023-12-11 22:19:43] Pizza: 34cooking by pizzaiolo: 3
+[2023-12-11 22:19:43] Pizziolo 4 reserved
+[2023-12-11 22:19:43] Pizza: 42cooking by pizzaiolo: 4
+[2023-12-11 22:19:43] Order: 2set status: In progress
+[2023-12-11 22:19:43] Pizziolo 5 reserved
+[2023-12-11 22:19:43] Pizza: 20cooking by pizzaiolo: 5
+[2023-12-11 22:19:43] Pizziolo 6 reserved
+[2023-12-11 22:19:43] Pizza: 21cooking by pizzaiolo: 6
+[2023-12-11 22:19:43] Order: 0set status: In progress
+[2023-12-11 22:19:43] Pizziolo 7 reserved
+[2023-12-11 22:19:43] Pizza: 00cooking by pizzaiolo: 7
+[2023-12-11 22:19:43] Pizziolo 8 reserved
+[2023-12-11 22:19:43] Pizza: 01cooking by pizzaiolo: 8
+[2023-12-11 22:19:43] Pizziolo 9 on technical stop 1
+[2023-12-11 22:19:48] Pizziolo 1 reserved
+[2023-12-11 22:19:48] Pizza: 33cooking by pizzaiolo: 1
+[2023-12-11 22:19:48] Pizziolo 2 on technical stop 1
+[2023-12-11 22:19:48] Pizziolo 3 reserved
+[2023-12-11 22:19:48] Pizza: 11cooking by pizzaiolo: 3
+[2023-12-11 22:19:48] Pizziolo 4 reserved
+[2023-12-11 22:19:48] Pizza: 41cooking by pizzaiolo: 4
+[2023-12-11 22:19:48] Pizziolo 6 on technical stop 1
+[2023-12-11 22:19:48] Pizziolo 5 reserved
+[2023-12-11 22:19:48] Pizza: 21cooking by pizzaiolo: 5
+[2023-12-11 22:19:48] Pizziolo 7 reserved
+[2023-12-11 22:19:48] Pizza: 30cooking by pizzaiolo: 7
+[2023-12-11 22:19:48] Pizziolo 8 on technical stop 1
+[2023-12-11 22:20:02]  BUILDER: Pizza added: name: Маргаритаprice: 32.0cookingTime PT1M
+knittingTime: 17000
+fillingTime: 6686
+bakingTime: 12643
+afterTime: 15395
+packagingTime: 11347
+[2023-12-11 22:20:02]  BUILDER: Pizza added: name: Пепероніprice: 35.0cookingTime PT2M
+knittingTime: 29000
+fillingTime: 18599
+bakingTime: 13756
+afterTime: 28487
+packagingTime: 9727
+[2023-12-11 22:20:02]  BUILDER: Pizza added: name: Гавайськаprice: 40.0cookingTime PT1M
+knittingTime: 17000
+fillingTime: 12750
+bakingTime: 10486
+afterTime: 16773
+packagingTime: 12165
+[2023-12-11 22:20:02]  BUILDER: Pizza added: name: Чотири сириprice: 38.0cookingTime PT2M
+knittingTime: 29000
+fillingTime: 17215
+bakingTime: 7720
+afterTime: 5839
+packagingTime: 7077
+[2023-12-11 22:20:02]  BUILDER: Checkouts were built
+[2023-12-11 22:20:02]  BUILDER: Pizzaiolos were built
+[2023-12-11 22:20:02]  BUILDER: Pizzeria were built
+[2023-12-11 22:20:02] BUILDER: Starting new simulation.
+[2023-12-11 22:20:07]  Order: 4 generated/ pizza count: 1/ pizza name: Гавайська/ checkout id: 3
+[2023-12-11 22:20:07]  Order: 3 generated/ pizza count: 2/ pizza name: Чотири сири/ checkout id: 2
+[2023-12-11 22:20:07]  Order: 2 generated/ pizza count: 3/ pizza name: Гавайська/ checkout id: 5
+[2023-12-11 22:20:07]  Order: 1 generated/ pizza count: 3/ pizza name: Чотири сири/ checkout id: 4
+[2023-12-11 22:20:07]  Order: 0 generated/ pizza count: 4/ pizza name: Пепероні/ checkout id: 1
+[2023-12-11 22:20:17] New simulation started, simulation mode: CONVEYOR
+[2023-12-11 22:20:17] Order: 4set status: In progress
+[2023-12-11 22:20:17] Pizziolo 1 reserved
+[2023-12-11 22:20:17] Pizza: 40cooking by pizzaiolo: 1
+[2023-12-11 22:20:17] Order: 3set status: In progress
+[2023-12-11 22:20:17] Pizziolo 2 reserved
+[2023-12-11 22:20:17] Pizza: 30cooking by pizzaiolo: 2
+[2023-12-11 22:20:17] Pizziolo 3 reserved
+[2023-12-11 22:20:17] Pizza: 31cooking by pizzaiolo: 3
+[2023-12-11 22:20:17] Order: 1set status: In progress
+[2023-12-11 22:20:17] Pizziolo 4 reserved
+[2023-12-11 22:20:17] Pizza: 10cooking by pizzaiolo: 4
+[2023-12-11 22:20:17] Pizziolo 5 reserved
+[2023-12-11 22:20:17] Pizza: 11cooking by pizzaiolo: 5
+[2023-12-11 22:20:17] Pizziolo 6 reserved
+[2023-12-11 22:20:17] Pizza: 12cooking by pizzaiolo: 6
+[2023-12-11 22:20:17] Order: 2set status: In progress
+[2023-12-11 22:20:17] Pizziolo 7 reserved
+[2023-12-11 22:20:17] Pizza: 20cooking by pizzaiolo: 7
+[2023-12-11 22:20:17] Pizziolo 8 reserved
+[2023-12-11 22:20:17] Pizza: 21cooking by pizzaiolo: 8
+[2023-12-11 22:20:17] Pizziolo 9 reserved
+[2023-12-11 22:20:17] Pizza: 22cooking by pizzaiolo: 9
+[2023-12-11 22:20:17] Order: 0set status: In progress
+[2023-12-11 22:20:17] Pizziolo 10 reserved
+[2023-12-11 22:20:17] Pizza: 00cooking by pizzaiolo: 10
+[2023-12-11 22:20:22] Pizziolo 1 reserved
+[2023-12-11 22:20:22] Pizza: 03cooking by pizzaiolo: 1
+[2023-12-11 22:20:22] Pizziolo 2 reserved
+[2023-12-11 22:20:22] Pizza: 01cooking by pizzaiolo: 2
+[2023-12-11 22:20:22] Pizziolo 3 reserved
+[2023-12-11 22:20:22] Pizza: 02cooking by pizzaiolo: 3
+[2023-12-11 22:20:22] Pizziolo 6 on technical stop 1
+[2023-12-11 22:20:22] Pizziolo 8 on technical stop 1
+[2023-12-11 22:20:22] Pizziolo 4 reserved
+[2023-12-11 22:20:22] Pizza: 12cooking by pizzaiolo: 4
+[2023-12-11 22:20:22] Pizziolo 5 reserved
+[2023-12-11 22:20:22] Pizza: 21cooking by pizzaiolo: 5
+[2023-12-11 22:20:22] Pizziolo 10 on technical stop 1
+[2023-12-11 22:20:22] Pizziolo 7 reserved
+[2023-12-11 22:20:22] Pizza: 00cooking by pizzaiolo: 7
+[2023-12-11 22:20:22] Pizziolo 9 on technical stop 1
+[2023-12-11 22:20:27] Pizziolo 1 reserved
+[2023-12-11 22:20:27] Pizza: 22cooking by pizzaiolo: 1
+[2023-12-11 22:20:27] Pizziolo 3 on technical stop 1
+[2023-12-11 22:20:27] Pizziolo 2 reserved
+[2023-12-11 22:20:27] Pizza: 02cooking by pizzaiolo: 2
+[2023-12-11 22:20:27] Pizziolo 4 reserved
+[2023-12-11 22:20:27] Pizza: 31cooking by pizzaiolo: 4
+[2023-12-11 22:20:27] Pizziolo 5 on technical stop 1
+[2023-12-11 22:20:27] Pizziolo 7 reserved
+[2023-12-11 22:20:27] Pizza: 21cooking by pizzaiolo: 7
+[2023-12-11 22:20:32] Pizziolo 1 reserved
+[2023-12-11 22:20:32] Pizza: 11cooking by pizzaiolo: 1
+[2023-12-11 22:20:32] Pizziolo 2 on technical stop 1
+[2023-12-11 22:20:32] Pizziolo 4 reserved
+[2023-12-11 22:20:32] Pizza: 01cooking by pizzaiolo: 4
+[2023-12-11 22:20:32] Pizziolo 7 reserved
+[2023-12-11 22:20:32] Pizza: 02cooking by pizzaiolo: 7
+[2023-12-11 22:20:58]  BUILDER: Pizza added: name: Маргаритаprice: 32.0cookingTime PT1M
+knittingTime: 17000
+fillingTime: 11187
+bakingTime: 5219
+afterTime: 11277
+packagingTime: 15747
+[2023-12-11 22:20:58]  BUILDER: Pizza added: name: Пепероніprice: 35.0cookingTime PT2M
+knittingTime: 29000
+fillingTime: 28601
+bakingTime: 15959
+afterTime: 26442
+packagingTime: 8847
+[2023-12-11 22:20:58]  BUILDER: Pizza added: name: Гавайськаprice: 40.0cookingTime PT1M
+knittingTime: 17000
+fillingTime: 12008
+bakingTime: 8883
+afterTime: 12696
+packagingTime: 6692
+[2023-12-11 22:20:58]  BUILDER: Pizza added: name: Чотири сириprice: 38.0cookingTime PT2M
+knittingTime: 29000
+fillingTime: 10783
+bakingTime: 27457
+afterTime: 25975
+packagingTime: 11801
+[2023-12-11 22:20:58]  BUILDER: Checkouts were built
+[2023-12-11 22:20:58]  BUILDER: Pizzaiolos were built
+[2023-12-11 22:20:58]  BUILDER: Pizzeria were built
+[2023-12-11 22:20:58] BUILDER: Starting new simulation.
+[2023-12-11 22:21:03]  Order: 1 generated/ pizza count: 3/ pizza name: Пепероні/ checkout id: 3
+[2023-12-11 22:21:03]  Order: 0 generated/ pizza count: 3/ pizza name: Гавайська/ checkout id: 2
+[2023-12-11 22:21:03]  Order: 3 generated/ pizza count: 4/ pizza name: Гавайська/ checkout id: 4
+[2023-12-11 22:21:03]  Order: 2 generated/ pizza count: 1/ pizza name: Гавайська/ checkout id: 1
+[2023-12-11 22:21:03]  Order: 4 generated/ pizza count: 3/ pizza name: Гавайська/ checkout id: 5
+[2023-12-11 22:21:13] New simulation started, simulation mode: CONVEYOR
+[2023-12-11 22:21:13] Order: 1set status: In progress
+[2023-12-11 22:21:13] Pizziolo 1 reserved
+[2023-12-11 22:21:13] Pizza: 10cooking by pizzaiolo: 1
+[2023-12-11 22:21:13] Pizziolo 2 reserved
+[2023-12-11 22:21:13] Pizza: 11cooking by pizzaiolo: 2
+[2023-12-11 22:21:13] Pizziolo 3 reserved
+[2023-12-11 22:21:13] Pizza: 12cooking by pizzaiolo: 3
+[2023-12-11 22:21:13] Order: 3set status: In progress
+[2023-12-11 22:21:13] Pizziolo 4 reserved
+[2023-12-11 22:21:13] Pizza: 30cooking by pizzaiolo: 4
+[2023-12-11 22:21:13] Pizziolo 5 reserved
+[2023-12-11 22:21:13] Pizza: 31cooking by pizzaiolo: 5
+[2023-12-11 22:21:13] Pizziolo 6 reserved
+[2023-12-11 22:21:13] Pizza: 32cooking by pizzaiolo: 6
+[2023-12-11 22:21:13] Pizziolo 7 reserved
+[2023-12-11 22:21:13] Pizza: 33cooking by pizzaiolo: 7
+[2023-12-11 22:21:13] Order: 0set status: In progress
+[2023-12-11 22:21:13] Pizziolo 8 reserved
+[2023-12-11 22:21:13] Pizza: 00cooking by pizzaiolo: 8
+[2023-12-11 22:21:13] Pizziolo 9 reserved
+[2023-12-11 22:21:13] Pizza: 01cooking by pizzaiolo: 9
+[2023-12-11 22:21:13] Pizziolo 10 reserved
+[2023-12-11 22:21:13] Pizza: 02cooking by pizzaiolo: 10
+[2023-12-11 22:21:40]  BUILDER: Pizza added: name: Маргаритаprice: 32.0cookingTime PT1M
+knittingTime: 17000
+fillingTime: 7047
+bakingTime: 15416
+afterTime: 12322
+packagingTime: 8249
+[2023-12-11 22:21:40]  BUILDER: Pizza added: name: Пепероніprice: 35.0cookingTime PT2M
+knittingTime: 29000
+fillingTime: 15484
+bakingTime: 13642
+afterTime: 20372
+packagingTime: 14320
+[2023-12-11 22:21:40]  BUILDER: Pizza added: name: Гавайськаprice: 40.0cookingTime PT1M
+knittingTime: 17000
+fillingTime: 14973
+bakingTime: 6353
+afterTime: 8330
+packagingTime: 8464
+[2023-12-11 22:21:40]  BUILDER: Pizza added: name: Чотири сириprice: 38.0cookingTime PT2M
+knittingTime: 29000
+fillingTime: 13862
+bakingTime: 6322
+afterTime: 6753
+packagingTime: 10601
+[2023-12-11 22:21:40]  BUILDER: Checkouts were built
+[2023-12-11 22:21:40]  BUILDER: Pizzaiolos were built
+[2023-12-11 22:21:40]  BUILDER: Pizzeria were built
+[2023-12-11 22:21:40] BUILDER: Starting new simulation.
+[2023-12-11 22:21:45]  Order: 2 generated/ pizza count: 2/ pizza name: Гавайська/ checkout id: 3
+[2023-12-11 22:21:45]  Order: 0 generated/ pizza count: 1/ pizza name: Чотири сири/ checkout id: 1
+[2023-12-11 22:21:45]  Order: 3 generated/ pizza count: 3/ pizza name: Гавайська/ checkout id: 4
+[2023-12-11 22:21:45]  Order: 4 generated/ pizza count: 2/ pizza name: Чотири сири/ checkout id: 5
+[2023-12-11 22:21:45]  Order: 1 generated/ pizza count: 3/ pizza name: Маргарита/ checkout id: 2
+[2023-12-11 22:21:55] New simulation started, simulation mode: CONVEYOR
+[2023-12-11 22:21:55] Pizziolo 6 on technical stop 1
+[2023-12-11 22:21:55] Order: 2set status: In progress
+[2023-12-11 22:21:55] Pizziolo 1 reserved
+[2023-12-11 22:21:55] Pizza: 20cooking by pizzaiolo: 1
+[2023-12-11 22:21:55] Pizziolo 2 reserved
+[2023-12-11 22:21:55] Pizza: 21cooking by pizzaiolo: 2
+[2023-12-11 22:21:55] Order: 3set status: In progress
+[2023-12-11 22:21:55] Pizziolo 3 reserved
+[2023-12-11 22:21:55] Pizza: 30cooking by pizzaiolo: 3
+[2023-12-11 22:21:55] Pizziolo 4 reserved
+[2023-12-11 22:21:55] Pizza: 31cooking by pizzaiolo: 4
+[2023-12-11 22:21:55] Pizziolo 5 reserved
+[2023-12-11 22:21:55] Pizza: 32cooking by pizzaiolo: 5
+[2023-12-11 22:21:55] Order: 0set status: In progress
+[2023-12-11 22:21:55] Pizziolo 7 reserved
+[2023-12-11 22:21:55] Pizza: 00cooking by pizzaiolo: 7
+[2023-12-11 22:21:55] Order: 4set status: In progress
+[2023-12-11 22:21:55] Pizziolo 8 reserved
+[2023-12-11 22:21:55] Pizza: 40cooking by pizzaiolo: 8
+[2023-12-11 22:21:55] Pizziolo 9 reserved
+[2023-12-11 22:21:55] Pizza: 41cooking by pizzaiolo: 9
+[2023-12-11 22:21:55] Order: 1set status: In progress
+[2023-12-11 22:21:55] Pizziolo 10 reserved
+[2023-12-11 22:21:55] Pizza: 10cooking by pizzaiolo: 10
+[2023-12-11 22:22:00] Pizziolo 1 reserved
+[2023-12-11 22:22:00] Pizza: 11cooking by pizzaiolo: 1
+[2023-12-11 22:22:00] Pizziolo 2 reserved
+[2023-12-11 22:22:00] Pizza: 12cooking by pizzaiolo: 2
+[2023-12-11 22:22:00] Pizziolo 3 on technical stop 1
+[2023-12-11 22:22:00] Pizziolo 4 reserved
+[2023-12-11 22:22:00] Pizza: 30cooking by pizzaiolo: 4
+[2023-12-11 22:22:00] Pizziolo 8 on technical stop 1
+[2023-12-11 22:22:00] Pizziolo 5 reserved
+[2023-12-11 22:22:00] Pizza: 40cooking by pizzaiolo: 5
+[2023-12-11 22:22:00] Pizziolo 7 on technical stop 1
+[2023-12-11 22:22:00] Pizziolo 9 reserved
+[2023-12-11 22:22:00] Pizza: 00cooking by pizzaiolo: 9
+[2023-12-11 22:22:00] Pizziolo 10 on technical stop 1
+[2023-12-11 22:22:27]  BUILDER: Pizza added: name: Маргаритаprice: 32.0cookingTime PT1M
+knittingTime: 17000
+fillingTime: 6453
+bakingTime: 12671
+afterTime: 11097
+packagingTime: 7778
+[2023-12-11 22:22:27]  BUILDER: Pizza added: name: Пепероніprice: 35.0cookingTime PT2M
+knittingTime: 29000
+fillingTime: 10251
+bakingTime: 20028
+afterTime: 21940
+packagingTime: 18905
+[2023-12-11 22:22:27]  BUILDER: Pizza added: name: Гавайськаprice: 40.0cookingTime PT1M
+knittingTime: 17000
+fillingTime: 10847
+bakingTime: 13561
+afterTime: 13430
+packagingTime: 11369
+[2023-12-11 22:22:27]  BUILDER: Pizza added: name: Чотири сириprice: 38.0cookingTime PT2M
+knittingTime: 29000
+fillingTime: 27708
+bakingTime: 22648
+afterTime: 14640
+packagingTime: 18827
+[2023-12-11 22:22:27]  BUILDER: Checkouts were built
+[2023-12-11 22:22:27]  BUILDER: Pizzaiolos were built
+[2023-12-11 22:22:27]  BUILDER: Pizzeria were built
+[2023-12-11 22:22:27] BUILDER: Starting new simulation.
+[2023-12-11 22:22:32]  Order: 5 generated/ pizza count: 5/ pizza name: Пепероні/ checkout id: 6
+[2023-12-11 22:22:32]  Order: 2 generated/ pizza count: 5/ pizza name: Гавайська/ checkout id: 3
+[2023-12-11 22:22:32]  Order: 6 generated/ pizza count: 4/ pizza name: Чотири сири/ checkout id: 7
+[2023-12-11 22:22:32]  Order: 3 generated/ pizza count: 5/ pizza name: Пепероні/ checkout id: 4
+[2023-12-11 22:22:32]  Order: 0 generated/ pizza count: 2/ pizza name: Гавайська/ checkout id: 1
+[2023-12-11 22:22:32]  Order: 4 generated/ pizza count: 3/ pizza name: Маргарита/ checkout id: 5
+[2023-12-11 22:22:32]  Order: 1 generated/ pizza count: 1/ pizza name: Чотири сири/ checkout id: 2
+[2023-12-11 22:22:42] New simulation started, simulation mode: CONVEYOR
+[2023-12-11 22:22:42] Pizziolo 6 on technical stop 1
+[2023-12-11 22:22:42] Order: 5set status: In progress
+[2023-12-11 22:22:42] Pizziolo 1 reserved
+[2023-12-11 22:22:42] Pizza: 50cooking by pizzaiolo: 1
+[2023-12-11 22:22:42] Pizziolo 2 reserved
+[2023-12-11 22:22:42] Pizza: 51cooking by pizzaiolo: 2
+[2023-12-11 22:22:42] Pizziolo 3 reserved
+[2023-12-11 22:22:42] Pizza: 52cooking by pizzaiolo: 3
+[2023-12-11 22:22:42] Pizziolo 4 reserved
+[2023-12-11 22:22:42] Pizza: 53cooking by pizzaiolo: 4
+[2023-12-11 22:22:42] Pizziolo 5 reserved
+[2023-12-11 22:22:42] Pizza: 54cooking by pizzaiolo: 5
+[2023-12-11 22:22:42] Order: 2set status: In progress
+[2023-12-11 22:22:42] Pizziolo 7 reserved
+[2023-12-11 22:22:42] Pizza: 20cooking by pizzaiolo: 7
+[2023-12-11 22:22:42] Pizziolo 8 reserved
+[2023-12-11 22:22:42] Pizza: 21cooking by pizzaiolo: 8
+[2023-12-11 22:22:42] Pizziolo 9 reserved
+[2023-12-11 22:22:42] Pizza: 22cooking by pizzaiolo: 9
+[2023-12-11 22:22:42] Pizziolo 10 reserved
+[2023-12-11 22:22:42] Pizza: 23cooking by pizzaiolo: 10
+[2023-12-11 22:22:47] Pizziolo 1 reserved
+[2023-12-11 22:22:47] Pizza: 24cooking by pizzaiolo: 1
+[2023-12-11 22:22:47] Order: 3set status: In progress
+[2023-12-11 22:22:47] Pizziolo 2 reserved
+[2023-12-11 22:22:47] Pizza: 30cooking by pizzaiolo: 2
+[2023-12-11 22:22:47] Pizziolo 3 reserved
+[2023-12-11 22:22:47] Pizza: 31cooking by pizzaiolo: 3
+[2023-12-11 22:22:47] Pizziolo 4 reserved
+[2023-12-11 22:22:47] Pizza: 32cooking by pizzaiolo: 4
+[2023-12-11 22:22:47] Pizziolo 5 reserved
+[2023-12-11 22:22:47] Pizza: 33cooking by pizzaiolo: 5
+[2023-12-11 22:22:47] Pizziolo 7 reserved
+[2023-12-11 22:22:47] Pizza: 34cooking by pizzaiolo: 7
+[2023-12-11 22:22:47] Order: 6set status: In progress
+[2023-12-11 22:22:47] Pizziolo 8 reserved
+[2023-12-11 22:22:47] Pizza: 62cooking by pizzaiolo: 8
+[2023-12-11 22:22:47] Pizziolo 9 reserved
+[2023-12-11 22:22:47] Pizza: 63cooking by pizzaiolo: 9
+[2023-12-11 22:22:47] Order: 0set status: In progress
+[2023-12-11 22:22:47] Pizziolo 10 reserved
+[2023-12-11 22:22:47] Pizza: 00cooking by pizzaiolo: 10
+[2023-12-11 22:22:52] Pizziolo 1 reserved
+[2023-12-11 22:22:52] Pizza: 01cooking by pizzaiolo: 1
+[2023-12-11 22:22:52] Order: 4set status: In progress
+[2023-12-11 22:22:52] Pizziolo 2 reserved
+[2023-12-11 22:22:52] Pizza: 40cooking by pizzaiolo: 2
+[2023-12-11 22:22:52] Pizziolo 3 reserved
+[2023-12-11 22:22:52] Pizza: 41cooking by pizzaiolo: 3
+[2023-12-11 22:22:52] Pizziolo 4 reserved
+[2023-12-11 22:22:52] Pizza: 42cooking by pizzaiolo: 4
+[2023-12-11 22:22:52] Order: 1set status: In progress
+[2023-12-11 22:22:52] Pizziolo 5 reserved
+[2023-12-11 22:22:52] Pizza: 10cooking by pizzaiolo: 5
+[2023-12-11 22:22:52] Pizziolo 7 reserved
+[2023-12-11 22:22:52] Pizza: 60cooking by pizzaiolo: 7
+[2023-12-11 22:22:52] Pizziolo 9 on technical stop 1
+[2023-12-11 22:22:52] Pizziolo 8 reserved
+[2023-12-11 22:22:52] Pizza: 61cooking by pizzaiolo: 8
+[2023-12-11 22:22:52] Pizziolo 10 reserved
+[2023-12-11 22:22:52] Pizza: 63cooking by pizzaiolo: 10
+[2023-12-11 22:22:57] Pizziolo 1 reserved
+[2023-12-11 22:22:57] Pizza: 22cooking by pizzaiolo: 1
+[2023-12-11 22:22:57] Pizziolo 2 on technical stop 1
+[2023-12-11 22:22:57] Pizziolo 3 reserved
+[2023-12-11 22:22:57] Pizza: 51cooking by pizzaiolo: 3
+[2023-12-11 22:22:57] Pizziolo 4 reserved
+[2023-12-11 22:22:57] Pizza: 30cooking by pizzaiolo: 4
+[2023-12-11 22:22:57] Pizziolo 5 reserved
+[2023-12-11 22:22:57] Pizza: 40cooking by pizzaiolo: 5
+[2023-12-11 22:22:57] Pizziolo 7 on technical stop 1
+[2023-12-11 22:22:57] Pizziolo 8 reserved
+[2023-12-11 22:22:57] Pizza: 34cooking by pizzaiolo: 8
+[2023-12-11 22:22:57] Pizziolo 10 reserved
+[2023-12-11 22:22:57] Pizza: 60cooking by pizzaiolo: 10
+[2023-12-11 22:23:02] Pizziolo 1 reserved
+[2023-12-11 22:23:02] Pizza: 53cooking by pizzaiolo: 1
+[2023-12-11 22:23:02] Pizziolo 3 reserved
+[2023-12-11 22:23:02] Pizza: 53cooking by pizzaiolo: 3
+[2023-12-11 22:23:02] Pizziolo 4 reserved
+[2023-12-11 22:23:02] Pizza: 20cooking by pizzaiolo: 4
+[2023-12-11 22:23:02] Pizziolo 5 reserved
+[2023-12-11 22:23:02] Pizza: 53cooking by pizzaiolo: 5
+[2023-12-11 22:23:02] Pizziolo 8 reserved
+[2023-12-11 22:23:02] Pizza: 53cooking by pizzaiolo: 8
+[2023-12-11 22:23:02] Pizziolo 10 reserved
+[2023-12-11 22:23:02] Pizza: 53 set status Filling Before Baking
+[2023-12-11 22:23:03]  Order: 7 generated/ pizza count: 5/ pizza name: Гавайська/ checkout id: 1
+[2023-12-11 22:23:45]  BUILDER: Pizza added: name: Маргаритаprice: 32.0cookingTime PT1M
+knittingTime: 17000
+fillingTime: 10573
+bakingTime: 15785
+afterTime: 5174
+packagingTime: 7314
+[2023-12-11 22:23:45]  BUILDER: Pizza added: name: Пепероніprice: 35.0cookingTime PT2M
+knittingTime: 29000
+fillingTime: 27846
+bakingTime: 25426
+afterTime: 18185
+packagingTime: 20953
+[2023-12-11 22:23:45]  BUILDER: Pizza added: name: Гавайськаprice: 40.0cookingTime PT1M
+knittingTime: 17000
+fillingTime: 13036
+bakingTime: 11732
+afterTime: 13295
+packagingTime: 5891
+[2023-12-11 22:23:45]  BUILDER: Pizza added: name: Чотири сириprice: 38.0cookingTime PT2M
+knittingTime: 29000
+fillingTime: 18078
+bakingTime: 19032
+afterTime: 6721
+packagingTime: 14339
+[2023-12-11 22:23:45]  BUILDER: Checkouts were built
+[2023-12-11 22:23:45]  BUILDER: Pizzaiolos were built
+[2023-12-11 22:23:45]  BUILDER: Pizzeria were built
+[2023-12-11 22:23:45] BUILDER: Starting new simulation.
+[2023-12-11 22:23:50]  Order: 7 generated/ pizza count: 3/ pizza name: Чотири сири/ checkout id: 8
+[2023-12-11 22:23:50]  Order: 5 generated/ pizza count: 3/ pizza name: Пепероні/ checkout id: 7
+[2023-12-11 22:23:50]  Order: 6 generated/ pizza count: 3/ pizza name: Чотири сири/ checkout id: 5
+[2023-12-11 22:23:50]  Order: 3 generated/ pizza count: 2/ pizza name: Маргарита/ checkout id: 4
+[2023-12-11 22:23:50]  Order: 4 generated/ pizza count: 2/ pizza name: Пепероні/ checkout id: 6
+[2023-12-11 22:23:50]  Order: 1 generated/ pizza count: 4/ pizza name: Пепероні/ checkout id: 2
+[2023-12-11 22:23:50]  Order: 2 generated/ pizza count: 2/ pizza name: Маргарита/ checkout id: 3
+[2023-12-11 22:23:50]  Order: 0 generated/ pizza count: 2/ pizza name: Чотири сири/ checkout id: 1
+[2023-12-11 22:24:00] New simulation started, simulation mode: CONVEYOR
+[2023-12-11 22:24:00] Pizziolo 5 on technical stop 1
+[2023-12-11 22:24:00] Order: 6set status: In progress
+[2023-12-11 22:24:00] Pizziolo 1 reserved
+[2023-12-11 22:24:00] Pizza: 60cooking by pizzaiolo: 1
+[2023-12-11 22:24:00] Pizziolo 2 reserved
+[2023-12-11 22:24:00] Pizza: 61cooking by pizzaiolo: 2
+[2023-12-11 22:24:00] Pizziolo 3 reserved
+[2023-12-11 22:24:00] Pizza: 62cooking by pizzaiolo: 3
+[2023-12-11 22:24:00] Order: 3set status: In progress
+[2023-12-11 22:24:00] Pizziolo 4 reserved
+[2023-12-11 22:24:00] Pizza: 30cooking by pizzaiolo: 4
+[2023-12-11 22:24:00] Pizziolo 6 reserved
+[2023-12-11 22:24:00] Pizza: 31cooking by pizzaiolo: 6
+[2023-12-11 22:24:00] Order: 5set status: In progress
+[2023-12-11 22:24:00] Pizziolo 7 reserved
+[2023-12-11 22:24:00] Pizza: 50cooking by pizzaiolo: 7
+[2023-12-11 22:24:00] Pizziolo 8 reserved
+[2023-12-11 22:24:00] Pizza: 51cooking by pizzaiolo: 8
+[2023-12-11 22:24:00] Pizziolo 9 reserved
+[2023-12-11 22:24:00] Pizza: 52cooking by pizzaiolo: 9
+[2023-12-11 22:24:00] Order: 7set status: In progress
+[2023-12-11 22:24:00] Pizziolo 10 reserved
+[2023-12-11 22:24:00] Pizza: 70cooking by pizzaiolo: 10
+[2023-12-11 22:24:05] Pizziolo 1 reserved
+[2023-12-11 22:24:05] Pizza: 71cooking by pizzaiolo: 1
+[2023-12-11 22:24:05] Order: 4set status: In progress
+[2023-12-11 22:24:05] Pizziolo 2 reserved
+[2023-12-11 22:24:05] Pizza: 40cooking by pizzaiolo: 2
+[2023-12-11 22:24:05] Pizziolo 3 reserved
+[2023-12-11 22:24:05] Pizza: 41cooking by pizzaiolo: 3
+[2023-12-11 22:24:05] Order: 1set status: In progress
+[2023-12-11 22:24:05] Pizziolo 4 reserved
+[2023-12-11 22:24:05] Pizza: 10cooking by pizzaiolo: 4
+[2023-12-11 22:24:05] Pizziolo 6 reserved
+[2023-12-11 22:24:05] Pizza: 11cooking by pizzaiolo: 6
+[2023-12-11 22:24:05] Pizziolo 7 reserved
+[2023-12-11 22:24:05] Pizza: 13cooking by pizzaiolo: 7
+[2023-12-11 22:24:05] Order: 2set status: In progress
+[2023-12-11 22:24:05] Pizziolo 8 reserved
+[2023-12-11 22:24:05] Pizza: 20cooking by pizzaiolo: 8
+[2023-12-11 22:24:05] Pizziolo 9 reserved
+[2023-12-11 22:24:05] Pizza: 12cooking by pizzaiolo: 9
+[2023-12-11 22:24:05] Pizziolo 10 reserved
+[2023-12-11 22:24:05] Pizza: 21cooking by pizzaiolo: 10
+[2023-12-11 22:24:10] Order: 0set status: In progress
+[2023-12-11 22:24:10] Pizziolo 1 reserved
+[2023-12-11 22:24:10] Pizza: 00cooking by pizzaiolo: 1
+[2023-12-11 22:24:10] Pizziolo 2 reserved
+[2023-12-11 22:24:10] Pizza: 01cooking by pizzaiolo: 2
+[2023-12-11 22:24:10] Pizziolo 3 reserved
+[2023-12-11 22:24:10] Pizza: 72cooking by pizzaiolo: 3
+[2023-12-11 22:24:10] Pizziolo 4 on technical stop 1
+[2023-12-11 22:24:10] Pizziolo 6 reserved
+[2023-12-11 22:24:10] Pizza: 30cooking by pizzaiolo: 6
+[2023-12-11 22:24:10] Pizziolo 7 reserved
+[2023-12-11 22:24:10] Pizza: 10cooking by pizzaiolo: 7
+[2023-12-11 22:24:10] Pizziolo 9 on technical stop 1
+[2023-12-11 22:24:10] Pizziolo 8 reserved
+[2023-12-11 22:24:10] Pizza: 52cooking by pizzaiolo: 8
+[2023-12-11 22:24:10] Pizziolo 10 reserved
+[2023-12-11 22:24:10] Pizza: 12cooking by pizzaiolo: 10
+[2023-12-11 22:24:15] Pizziolo 2 on technical stop 1
+[2023-12-11 22:24:15] Pizziolo 1 reserved
+[2023-12-11 22:24:15] Pizza: 01cooking by pizzaiolo: 1
+[2023-12-11 22:24:15] Pizziolo 3 reserved
+[2023-12-11 22:24:15] Pizza: 61cooking by pizzaiolo: 3
+[2023-12-11 22:24:15] Pizziolo 6 reserved
+[2023-12-11 22:24:15] Pizza: 40cooking by pizzaiolo: 6
+[2023-12-11 22:24:15] Pizziolo 10 on technical stop 1
+[2023-12-11 22:24:15] Pizziolo 7 reserved
+[2023-12-11 22:24:15] Pizza: 70cooking by pizzaiolo: 7
+[2023-12-11 22:24:15] Pizziolo 8 reserved
+[2023-12-11 22:24:15] Pizza: 12cooking by pizzaiolo: 8
+[2023-12-11 22:24:20] Pizziolo 1 reserved
+[2023-12-11 22:24:20] Pizza: 52cooking by pizzaiolo: 1
+[2023-12-11 22:24:20] Pizziolo 3 reserved
+[2023-12-11 22:24:20] Pizza: 21cooking by pizzaiolo: 3
+[2023-12-11 22:24:20] Pizziolo 6 reserved
+[2023-12-11 22:24:20] Pizza: 62cooking by pizzaiolo: 6
+[2023-12-11 22:24:20] Pizziolo 7 reserved
+[2023-12-11 22:24:20] Pizza: 62cooking by pizzaiolo: 7
+[2023-12-11 22:24:20] Pizziolo 8 reserved
+[2023-12-11 22:24:20] Pizza: 30cooking by pizzaiolo: 8
+[2023-12-11 22:24:25] Pizziolo 1 reserved
+[2023-12-11 22:24:25] Pizza: 62cooking by pizzaiolo: 1
+[2023-12-11 22:24:25] Pizziolo 3 reserved
+[2023-12-11 22:24:25] Pizza: 30cooking by pizzaiolo: 3
+[2023-12-11 22:24:25] Pizziolo 6 reserved
+[2023-12-11 22:24:25] Pizza: 31cooking by pizzaiolo: 6
+[2023-12-11 22:24:25] Pizziolo 7 reserved
+[2023-12-11 22:24:25] Pizza: 12cooking by pizzaiolo: 7
+[2023-12-11 22:24:25] Pizziolo 8 reserved
+[2023-12-11 22:24:25] Pizza: 13cooking by pizzaiolo: 8
+[2023-12-11 22:24:26] Pizziolo 9 reserved
+[2023-12-11 22:24:26] Pizza: 12cooking by pizzaiolo: 9
+[2023-12-11 22:24:27] Pizziolo 5 reserved
+[2023-12-11 22:24:27] Pizza: 12cooking by pizzaiolo: 5
+[2023-12-11 22:24:30] Pizziolo 1 reserved
+[2023-12-11 22:24:30] Pizza: 62cooking by pizzaiolo: 1
+[2023-12-11 22:24:30] Pizziolo 3 reserved
+[2023-12-11 22:24:30] Pizza: 52cooking by pizzaiolo: 3
+[2023-12-11 22:24:30] Pizziolo 6 reserved
+[2023-12-11 22:24:30] Pizza: 72cooking by pizzaiolo: 6
+[2023-12-11 22:24:30] Pizziolo 7 reserved
+[2023-12-11 22:24:30] Pizza: 72cooking by pizzaiolo: 7
+[2023-12-11 22:24:30] Pizziolo 8 reserved
+[2023-12-11 22:24:30] Pizza: 12cooking by pizzaiolo: 8
+[2023-12-11 22:24:31] Pizziolo 4 reserved
+[2023-12-11 22:24:31] Pizza: 61cooking by pizzaiolo: 4
+[2023-12-11 22:24:31] Pizziolo 9 reserved
+[2023-12-11 22:24:31] Pizza: 61cooking by pizzaiolo: 9
+[2023-12-11 22:24:32] Pizziolo 5 reserved
+[2023-12-11 22:24:32] Pizza: 60 set status Filling Before Baking
+[2023-12-11 22:24:35] Pizziolo 1 reserved
+[2023-12-11 22:24:35] Pizza: 72cooking by pizzaiolo: 1
+[2023-12-11 22:24:35] Pizziolo 6 reserved
+[2023-12-11 22:24:35] Pizza: 10cooking by pizzaiolo: 6
+[2023-12-11 22:24:35] Pizziolo 3 reserved
+[2023-12-11 22:24:35] Pizza: 12cooking by pizzaiolo: 3
+[2023-12-11 22:24:35] Pizziolo 8 reserved
+[2023-12-11 22:24:35] Pizza: 41cooking by pizzaiolo: 8
+[2023-12-11 22:24:35] Pizziolo 7 reserved
+[2023-12-11 22:24:35] Pizza: 10cooking by pizzaiolo: 7
+[2023-12-11 22:24:36]  Order: 8 generated/ pizza count: 2/ pizza name: Пепероні/ checkout id: 5
+[2023-12-11 22:24:36]  Order: 9 generated/ pizza count: 4/ pizza name: Гавайська/ checkout id: 7
+[2023-12-11 22:24:36] Pizziolo 4 reserved
+[2023-12-11 22:24:36] Pizza: 40cooking by pizzaiolo: 4
+[2023-12-11 22:24:36] Pizziolo 9 reserved
+[2023-12-11 22:24:36] Pizza: 12cooking by pizzaiolo: 9
+[2023-12-11 22:24:38]  Order: 10 generated/ pizza count: 3/ pizza name: Маргарита/ checkout id: 8
+[2023-12-11 22:24:38] Pizziolo 2 reserved
+[2023-12-11 22:24:38] Pizza: 61cooking by pizzaiolo: 2
+[2023-12-11 22:24:39]  Order: 11 generated/ pizza count: 7/ pizza name: Пепероні/ checkout id: 4
+[2023-12-11 22:24:39]  Order: 12 generated/ pizza count: 3/ pizza name: Чотири сири/ checkout id: 2
+[2023-12-11 22:24:39] Pizziolo 10 reserved
+[2023-12-11 22:24:39] Pizza: 61cooking by pizzaiolo: 10
+[2023-12-11 22:24:40]  Order: 13 generated/ pizza count: 5/ pizza name: Маргарита/ checkout id: 3
+[2023-12-11 22:24:40] Pizziolo 1 reserved
+[2023-12-11 22:24:40] Pizza: 61cooking by pizzaiolo: 1
+[2023-12-11 22:24:40] Pizziolo 3 reserved
+[2023-12-11 22:24:40] Pizza: 61cooking by pizzaiolo: 3
+[2023-12-11 22:24:40] Pizziolo 6 reserved
+[2023-12-11 22:24:40] Pizza: 62cooking by pizzaiolo: 6
+[2023-12-11 22:24:40] Pizziolo 7 reserved
+[2023-12-11 22:24:40] Pizza: 12cooking by pizzaiolo: 7
+[2023-12-11 22:24:40] Pizziolo 8 reserved
+[2023-12-11 22:24:40] Pizza: 13cooking by pizzaiolo: 8
+[2023-12-11 22:24:41] Pizziolo 4 reserved
+[2023-12-11 22:24:41] Pizza: 41cooking by pizzaiolo: 4
+[2023-12-11 22:24:41] Pizziolo 9 reserved
+[2023-12-11 22:24:41] Pizza: 30cooking by pizzaiolo: 9
+[2023-12-11 22:24:42]  Order: 14 generated/ pizza count: 1/ pizza name: Чотири сири/ checkout id: 1
+[2023-12-11 22:24:43] Pizziolo 2 reserved
+[2023-12-11 22:24:43] Pizza: 51cooking by pizzaiolo: 2
+[2023-12-11 22:24:44] Pizziolo 10 reserved
+[2023-12-11 22:24:44] Pizza: 10cooking by pizzaiolo: 10
+[2023-12-11 22:24:45]  Order: 15 generated/ pizza count: 1/ pizza name: Пепероні/ checkout id: 6
+[2023-12-11 22:24:45] Pizziolo 1 reserved
+[2023-12-11 22:24:45] Pizza: 62cooking by pizzaiolo: 1
+[2023-12-11 22:24:45] Pizziolo 3 reserved
+[2023-12-11 22:24:45] Pizza: 50cooking by pizzaiolo: 3
+[2023-12-11 22:24:45] Pizziolo 6 reserved
+[2023-12-11 22:24:45] Pizza: 51cooking by pizzaiolo: 6
+[2023-12-11 22:24:45] Pizziolo 7 reserved
+[2023-12-11 22:24:45] Pizza: 20cooking by pizzaiolo: 7
+[2023-12-11 22:24:45] Pizziolo 8 reserved
+[2023-12-11 22:24:45] Pizza: 21cooking by pizzaiolo: 8
+[2023-12-11 22:24:46] Order: 9set status: In progress
+[2023-12-11 22:24:46] Pizziolo 4 reserved
+[2023-12-11 22:24:46] Pizza: 92cooking by pizzaiolo: 4
+[2023-12-11 22:24:46] Pizziolo 9 reserved
+[2023-12-11 22:24:46] Pizza: 40cooking by pizzaiolo: 9
+[2023-12-11 22:24:48] Order: 8set status: In progress
+[2023-12-11 22:24:48] Pizziolo 2 reserved
+[2023-12-11 22:24:48] Pizza: 81cooking by pizzaiolo: 2
+[2023-12-11 22:24:49] Pizziolo 10 reserved
+[2023-12-11 22:24:49] Pizza: 93cooking by pizzaiolo: 10
+[2023-12-11 22:24:50] Order: 10set status: In progress
+[2023-12-11 22:24:50] Pizziolo 1 reserved
+[2023-12-11 22:24:50] Pizza: 100cooking by pizzaiolo: 1
+[2023-12-11 22:24:50] Order: 11set status: In progress
+[2023-12-11 22:24:50] Pizziolo 3 reserved
+[2023-12-11 22:24:50] Pizza: 110cooking by pizzaiolo: 3
+[2023-12-11 22:24:50] Pizziolo 6 reserved
+[2023-12-11 22:24:50] Pizza: 111cooking by pizzaiolo: 6
+[2023-12-11 22:24:50] Pizziolo 7 reserved
+[2023-12-11 22:24:50] Pizza: 31cooking by pizzaiolo: 7
+[2023-12-11 22:24:50] Pizziolo 8 reserved
+[2023-12-11 22:24:50] Pizza: 50cooking by pizzaiolo: 8
+[2023-12-11 22:24:51] Order: 13set status: In progress
+[2023-12-11 22:24:51] Pizziolo 4 reserved
+[2023-12-11 22:24:51] Pizza: 134cooking by pizzaiolo: 4
+[2023-12-11 22:24:51] Pizziolo 9 reserved
+[2023-12-11 22:24:51] Pizza: 80cooking by pizzaiolo: 9
+[2023-12-11 22:24:53] Pizziolo 2 reserved
+[2023-12-11 22:24:53] Pizza: 51cooking by pizzaiolo: 2
+[2023-12-11 22:24:54] Pizziolo 10 reserved
+[2023-12-11 22:24:54] Pizza: 90cooking by pizzaiolo: 10
+[2023-12-11 22:24:55] Order: 15set status: In progress
+[2023-12-11 22:24:55] Pizziolo 1 reserved
+[2023-12-11 22:24:55] Pizza: 150cooking by pizzaiolo: 1
+[2023-12-11 22:24:55] Pizziolo 3 reserved
+[2023-12-11 22:24:55] Pizza: 60cooking by pizzaiolo: 3
+[2023-12-11 22:24:55] Pizziolo 6 reserved
+[2023-12-11 22:24:55] Pizza: 61cooking by pizzaiolo: 6
+[2023-12-11 22:24:55] Pizziolo 7 reserved
+[2023-12-11 22:24:55] Pizza: 00cooking by pizzaiolo: 7
+[2023-12-11 22:24:55] Pizziolo 8 reserved
+[2023-12-11 22:24:55] Pizza: 01cooking by pizzaiolo: 8
+[2023-12-11 22:24:56] Pizziolo 4 reserved
+[2023-12-11 22:24:56] Pizza: 70cooking by pizzaiolo: 4
+[2023-12-11 22:24:56] Pizziolo 9 reserved
+[2023-12-11 22:24:56] Pizza: 101cooking by pizzaiolo: 9
+[2023-12-11 22:24:58] Pizziolo 2 reserved
+[2023-12-11 22:24:58] Pizza: 70cooking by pizzaiolo: 2
+[2023-12-11 22:24:59] Pizziolo 10 reserved
+[2023-12-11 22:24:59] Pizza: 91cooking by pizzaiolo: 10
+[2023-12-11 22:25:00] Pizziolo 1 reserved
+[2023-12-11 22:25:00] Pizza: 01cooking by pizzaiolo: 1
+[2023-12-11 22:25:00] Pizziolo 3 reserved
+[2023-12-11 22:25:00] Pizza: 112cooking by pizzaiolo: 3
+[2023-12-11 22:25:00] Pizziolo 6 reserved
+[2023-12-11 22:25:00] Pizza: 113cooking by pizzaiolo: 6
+[2023-12-11 22:25:00] Pizziolo 7 reserved
+[2023-12-11 22:25:00] Pizza: 11cooking by pizzaiolo: 7
+[2023-12-11 22:25:00] Pizziolo 8 reserved
+[2023-12-11 22:25:00] Pizza: 12cooking by pizzaiolo: 8
+[2023-12-11 22:25:01] Pizziolo 5 reserved
+[2023-12-11 22:25:01] Pizza: 60cooking by pizzaiolo: 5
+[2023-12-11 22:25:01] Pizziolo 4 reserved
+[2023-12-11 22:25:01] Pizza: 41cooking by pizzaiolo: 4
+[2023-12-11 22:25:01] Pizziolo 9 reserved
+[2023-12-11 22:25:01] Pizza: 61cooking by pizzaiolo: 9
+[2023-12-11 22:57:12]  BUILDER: Pizza added: name: Маргаритаprice: 32.0cookingTime PT1M
+knittingTime: 17000
+fillingTime: 12583
+bakingTime: 8837
+afterTime: 8640
+packagingTime: 8492
+[2023-12-11 22:57:12]  BUILDER: Pizza added: name: Пепероніprice: 35.0cookingTime PT2M
+knittingTime: 29000
+fillingTime: 23610
+bakingTime: 25317
+afterTime: 10043
+packagingTime: 13963
+[2023-12-11 22:57:12]  BUILDER: Pizza added: name: Гавайськаprice: 40.0cookingTime PT1M
+knittingTime: 17000
+fillingTime: 8011
+bakingTime: 10905
+afterTime: 13203
+packagingTime: 8226
+[2023-12-11 22:57:12]  BUILDER: Pizza added: name: Чотири сириprice: 38.0cookingTime PT2M
+knittingTime: 29000
+fillingTime: 16629
+bakingTime: 18385
+afterTime: 26064
+packagingTime: 17218
+[2023-12-11 22:57:12]  BUILDER: Checkouts were built
+[2023-12-11 22:57:12]  BUILDER: Pizzaiolos were built
+[2023-12-11 22:57:12]  BUILDER: Pizzeria were built
+[2023-12-11 22:57:12] BUILDER: Starting new simulation.
+[2023-12-11 22:57:17]  Order: 2 generated/ pizza count: 4/ pizza name: Гавайська/ checkout id: 2
+[2023-12-11 22:57:17]  Order: 1 generated/ pizza count: 2/ pizza name: Гавайська/ checkout id: 3
+[2023-12-11 22:57:17]  Order: 4 generated/ pizza count: 4/ pizza name: Маргарита/ checkout id: 4
+[2023-12-11 22:57:17]  Order: 0 generated/ pizza count: 3/ pizza name: Пепероні/ checkout id: 1
+[2023-12-11 22:57:17]  Order: 3 generated/ pizza count: 5/ pizza name: Пепероні/ checkout id: 5
+[2023-12-11 22:57:27] New simulation started, simulation mode: SINGLE
+[2023-12-11 22:57:27] Order: 1set status: In progress
+[2023-12-11 22:57:27] Pizziolo 1 reserved
+[2023-12-11 22:57:27] Pizziolo 2 reserved
+[2023-12-11 22:57:27] Order: 4set status: In progress
+[2023-12-11 22:57:27] Pizziolo 3 reserved
+[2023-12-11 22:57:27] Pizziolo 4 reserved
+[2023-12-11 22:57:27] Pizziolo 5 reserved
+[2023-12-11 22:57:27] Pizziolo 6 reserved
+[2023-12-11 22:57:27] Order: 2set status: In progress
+[2023-12-11 22:57:27] Pizziolo 7 reserved
+[2023-12-11 22:57:27] Pizziolo 8 reserved
+[2023-12-11 22:57:27] Pizziolo 9 reserved
+[2023-12-11 22:57:27] Pizziolo 10 reserved
+[2023-12-11 22:57:32] Order: 0set status: In progress
+[2023-12-11 22:57:32] Pizziolo 1 reserved
+[2023-12-11 22:57:32] Pizziolo 2 reserved
+[2023-12-11 22:57:32] Pizziolo 3 reserved
+[2023-12-11 22:57:32] Order: 3set status: In progress
+[2023-12-11 22:57:32] Pizziolo 4 reserved
+[2023-12-11 22:57:32] Pizziolo 5 reserved
+[2023-12-11 22:57:32] Pizziolo 6 reserved
+[2023-12-11 22:57:32] Pizziolo 7 reserved
+[2023-12-11 22:57:32] Pizziolo 8 reserved
+[2023-12-11 22:57:38] Pizziolo 5 on technical stop 1
+[2023-12-11 22:59:29]  BUILDER: Pizza added: name: Маргаритаprice: 32.0cookingTime PT1M
+knittingTime: 17000
+fillingTime: 15336
+bakingTime: 10125
+afterTime: 13326
+packagingTime: 6857
+[2023-12-11 22:59:29]  BUILDER: Pizza added: name: Пепероніprice: 35.0cookingTime PT2M
+knittingTime: 29000
+fillingTime: 23059
+bakingTime: 25075
+afterTime: 18678
+packagingTime: 15719
+[2023-12-11 22:59:29]  BUILDER: Pizza added: name: Гавайськаprice: 40.0cookingTime PT1M
+knittingTime: 17000
+fillingTime: 7877
+bakingTime: 10359
+afterTime: 14030
+packagingTime: 12266
+[2023-12-11 22:59:29]  BUILDER: Pizza added: name: Чотири сириprice: 38.0cookingTime PT2M
+knittingTime: 29000
+fillingTime: 6662
+bakingTime: 7563
+afterTime: 27676
+packagingTime: 23532
+[2023-12-11 22:59:29]  BUILDER: Checkouts were built
+[2023-12-11 22:59:29]  BUILDER: Pizzaiolos were built
+[2023-12-11 22:59:29]  BUILDER: Pizzeria were built
+[2023-12-11 22:59:29] BUILDER: Starting new simulation.
+[2023-12-11 22:59:34]  Order: 0 generated/ pizza count: 3/ pizza name: Маргарита/ checkout id: 1
+[2023-12-11 22:59:34]  Order: 1 generated/ pizza count: 2/ pizza name: Маргарита/ checkout id: 2
+[2023-12-11 22:59:34]  Order: 3 generated/ pizza count: 3/ pizza name: Пепероні/ checkout id: 5
+[2023-12-11 22:59:34]  Order: 2 generated/ pizza count: 2/ pizza name: Маргарита/ checkout id: 3
+[2023-12-11 22:59:34]  Order: 4 generated/ pizza count: 2/ pizza name: Чотири сири/ checkout id: 4
+[2023-12-11 22:59:44] New simulation started, simulation mode: CONVEYOR
+[2023-12-11 22:59:44] Order: 4set status: In progress
+[2023-12-11 22:59:44] Pizziolo 1 reserved
+[2023-12-11 22:59:44] Pizza: 40cooking by pizzaiolo: 1
+[2023-12-11 22:59:44] Pizziolo 2 reserved
+[2023-12-11 22:59:44] Pizza: 41cooking by pizzaiolo: 2
+[2023-12-11 22:59:44] Order: 1set status: In progress
+[2023-12-11 22:59:44] Pizziolo 3 reserved
+[2023-12-11 22:59:44] Pizza: 10cooking by pizzaiolo: 3
+[2023-12-11 22:59:44] Pizziolo 4 reserved
+[2023-12-11 22:59:44] Pizza: 11cooking by pizzaiolo: 4
+[2023-12-11 22:59:44] Order: 3set status: In progress
+[2023-12-11 22:59:44] Pizziolo 5 reserved
+[2023-12-11 22:59:44] Pizza: 30cooking by pizzaiolo: 5
+[2023-12-11 22:59:44] Pizziolo 6 reserved
+[2023-12-11 22:59:44] Pizza: 31cooking by pizzaiolo: 6
+[2023-12-11 22:59:44] Pizziolo 7 reserved
+[2023-12-11 22:59:44] Pizza: 32cooking by pizzaiolo: 7
+[2023-12-11 22:59:44] Order: 2set status: In progress
+[2023-12-11 22:59:44] Pizziolo 8 reserved
+[2023-12-11 22:59:44] Pizza: 20cooking by pizzaiolo: 8
+[2023-12-11 22:59:44] Pizziolo 9 reserved
+[2023-12-11 22:59:44] Pizza: 21cooking by pizzaiolo: 9
+[2023-12-11 22:59:44] Order: 0set status: In progress
+[2023-12-11 22:59:44] Pizziolo 10 reserved
+[2023-12-11 22:59:44] Pizza: 00cooking by pizzaiolo: 10
+[2023-12-11 22:59:49] Pizziolo 1 reserved
+[2023-12-11 22:59:49] Pizza: 01cooking by pizzaiolo: 1
+[2023-12-11 22:59:49] Pizziolo 2 reserved
+[2023-12-11 22:59:49] Pizza: 02cooking by pizzaiolo: 2
+[2023-12-11 22:59:49] Pizziolo 4 on technical stop 1
+[2023-12-11 22:59:49] Pizziolo 3 reserved
+[2023-12-11 22:59:49] Pizza: 11cooking by pizzaiolo: 3
+[2023-12-11 22:59:49] Pizziolo 9 on technical stop 1
+[2023-12-11 22:59:49] Pizziolo 5 reserved
+[2023-12-11 22:59:49] Pizza: 21cooking by pizzaiolo: 5
+[2023-12-11 22:59:49] Pizziolo 8 on technical stop 1
+[2023-12-11 22:59:49] Pizziolo 6 reserved
+[2023-12-11 22:59:49] Pizza: 20cooking by pizzaiolo: 6
+[2023-12-11 22:59:49] Pizziolo 10 on technical stop 1
+[2023-12-11 22:59:49] Pizziolo 7 reserved
+[2023-12-11 22:59:49] Pizza: 00cooking by pizzaiolo: 7
+[2023-12-11 22:59:54] Pizziolo 1 on technical stop 1
+[2023-12-11 22:59:54] Pizziolo 2 reserved
+[2023-12-11 22:59:54] Pizza: 01cooking by pizzaiolo: 2
+[2023-12-11 22:59:54] Pizziolo 3 reserved
+[2023-12-11 22:59:54] Pizza: 40cooking by pizzaiolo: 3
+[2023-12-11 22:59:54] Pizziolo 5 on technical stop 1
+[2023-12-11 22:59:54] Pizziolo 6 reserved
+[2023-12-11 22:59:54] Pizza: 30cooking by pizzaiolo: 6
+[2023-12-11 22:59:54] Pizziolo 7 reserved
+[2023-12-11 22:59:54] Pizza: 21cooking by pizzaiolo: 7
+[2023-12-11 22:59:59] Pizziolo 2 on technical stop 1
+[2023-12-11 22:59:59] Pizziolo 3 reserved
+[2023-12-11 22:59:59] Pizza: 01cooking by pizzaiolo: 3
+[2023-12-11 22:59:59] Pizziolo 6 reserved
+[2023-12-11 22:59:59] Pizza: 02cooking by pizzaiolo: 6
+[2023-12-11 22:59:59] Pizziolo 7 reserved
+[2023-12-11 22:59:59] Pizza: 41cooking by pizzaiolo: 7
+[2023-12-11 23:03:16]  BUILDER: Pizza added: name: Маргаритаprice: 32.0cookingTime PT1M
+knittingTime: 17000
+fillingTime: 5022
+bakingTime: 9719
+afterTime: 12229
+packagingTime: 11964
+[2023-12-11 23:03:16]  BUILDER: Pizza added: name: Пепероніprice: 35.0cookingTime PT2M
+knittingTime: 29000
+fillingTime: 10084
+bakingTime: 18651
+afterTime: 28205
+packagingTime: 8041
+[2023-12-11 23:03:16]  BUILDER: Pizza added: name: Гавайськаprice: 40.0cookingTime PT1M
+knittingTime: 17000
+fillingTime: 16380
+bakingTime: 9260
+afterTime: 11619
+packagingTime: 13248
+[2023-12-11 23:03:16]  BUILDER: Pizza added: name: Чотири сириprice: 38.0cookingTime PT2M
+knittingTime: 29000
+fillingTime: 8121
+bakingTime: 6904
+afterTime: 21204
+packagingTime: 25190
+[2023-12-11 23:03:16]  BUILDER: Checkouts were built
+[2023-12-11 23:03:16]  BUILDER: Pizzaiolos were built
+[2023-12-11 23:03:16]  BUILDER: Pizzeria were built
+[2023-12-11 23:03:16] BUILDER: Starting new simulation.
+[2023-12-11 23:03:21]  Order: 2 generated/ pizza count: 2/ pizza name: Пепероні/ checkout id: 3
+[2023-12-11 23:03:21]  Order: 1 generated/ pizza count: 3/ pizza name: Гавайська/ checkout id: 2
+[2023-12-11 23:03:21]  Order: 3 generated/ pizza count: 1/ pizza name: Пепероні/ checkout id: 4
+[2023-12-11 23:03:21]  Order: 4 generated/ pizza count: 3/ pizza name: Гавайська/ checkout id: 5
+[2023-12-11 23:03:21]  Order: 0 generated/ pizza count: 1/ pizza name: Маргарита/ checkout id: 1
+[2023-12-11 23:03:31] New simulation started, simulation mode: CONVEYOR
+[2023-12-11 23:03:31] Pizziolo 2 on technical stop 1
+[2023-12-11 23:03:31] Order: 2set status: In progress
+[2023-12-11 23:03:31] Pizziolo 1 reserved
+[2023-12-11 23:03:31] Pizza: 20cooking by pizzaiolo: 1
+[2023-12-11 23:03:31] Pizziolo 3 reserved
+[2023-12-11 23:03:31] Pizza: 21cooking by pizzaiolo: 3
+[2023-12-11 23:03:31] Order: 3set status: In progress
+[2023-12-11 23:03:31] Pizziolo 4 reserved
+[2023-12-11 23:03:31] Pizza: 30cooking by pizzaiolo: 4
+[2023-12-11 23:03:31] Order: 1set status: In progress
+[2023-12-11 23:03:31] Pizziolo 5 reserved
+[2023-12-11 23:03:31] Pizza: 10cooking by pizzaiolo: 5
+[2023-12-11 23:03:31] Pizziolo 6 reserved
+[2023-12-11 23:03:31] Pizza: 11cooking by pizzaiolo: 6
+[2023-12-11 23:03:31] Pizziolo 7 reserved
+[2023-12-11 23:03:31] Pizza: 12cooking by pizzaiolo: 7
+[2023-12-11 23:03:31] Order: 4set status: In progress
+[2023-12-11 23:03:31] Pizziolo 8 reserved
+[2023-12-11 23:03:31] Pizza: 40cooking by pizzaiolo: 8
+[2023-12-11 23:03:31] Pizziolo 9 reserved
+[2023-12-11 23:03:31] Pizza: 41cooking by pizzaiolo: 9
+[2023-12-11 23:03:31] Pizziolo 10 reserved
+[2023-12-11 23:03:31] Pizza: 42cooking by pizzaiolo: 10
+[2023-12-11 23:03:36] Order: 0set status: In progress
+[2023-12-11 23:03:36] Pizziolo 1 reserved
+[2023-12-11 23:03:36] Pizza: 00cooking by pizzaiolo: 1
+[2023-12-11 23:03:36] Pizziolo 3 on technical stop 1
+[2023-12-11 23:03:36] Pizziolo 4 reserved
+[2023-12-11 23:03:36] Pizza: 21cooking by pizzaiolo: 4
+[2023-12-11 23:03:36] Pizziolo 9 on technical stop 1
+[2023-12-11 23:03:36] Pizziolo 5 reserved
+[2023-12-11 23:03:36] Pizza: 41cooking by pizzaiolo: 5
+[2023-12-11 23:03:36] Pizziolo 7 on technical stop 1
+[2023-12-11 23:03:36] Pizziolo 6 reserved
+[2023-12-11 23:03:36] Pizza: 12cooking by pizzaiolo: 6
+[2023-12-11 23:03:36] Pizziolo 8 on technical stop 1
+[2023-12-11 23:03:36] Pizziolo 10 reserved
+[2023-12-11 23:03:36] Pizza: 40cooking by pizzaiolo: 10
+[2023-12-11 23:03:41] Pizziolo 1 on technical stop 1
+[2023-12-11 23:03:41] Pizziolo 4 reserved
+[2023-12-11 23:03:41] Pizza: 00cooking by pizzaiolo: 4
+[2023-12-11 23:03:41] Pizziolo 5 reserved
+[2023-12-11 23:03:41] Pizza: 20cooking by pizzaiolo: 5
+[2023-12-11 23:03:41] Pizziolo 6 on technical stop 1
+[2023-12-11 23:03:41] Pizziolo 10 reserved
+[2023-12-11 23:03:41] Pizza: 11cooking by pizzaiolo: 10
+[2023-12-11 23:03:46] Pizziolo 4 reserved
+[2023-12-11 23:03:46] Pizza: 12cooking by pizzaiolo: 4
+[2023-12-11 23:03:46] Pizziolo 10 on technical stop 1
+[2023-12-11 23:03:46] Pizziolo 5 reserved
+[2023-12-11 23:03:46] Pizza: 11cooking by pizzaiolo: 5
+[2023-12-11 23:06:44]  BUILDER: Pizza added: name: Маргаритаprice: 32.0cookingTime PT1M
+knittingTime: 17000
+fillingTime: 10403
+bakingTime: 13665
+afterTime: 6624
+packagingTime: 15512
+[2023-12-11 23:06:44]  BUILDER: Pizza added: name: Пепероніprice: 35.0cookingTime PT2M
+knittingTime: 29000
+fillingTime: 15765
+bakingTime: 19720
+afterTime: 9602
+packagingTime: 14542
+[2023-12-11 23:06:44]  BUILDER: Pizza added: name: Гавайськаprice: 40.0cookingTime PT1M
+knittingTime: 17000
+fillingTime: 14111
+bakingTime: 13259
+afterTime: 6236
+packagingTime: 11290
+[2023-12-11 23:06:44]  BUILDER: Pizza added: name: Чотири сириprice: 38.0cookingTime PT2M
+knittingTime: 29000
+fillingTime: 23913
+bakingTime: 15065
+afterTime: 25562
+packagingTime: 28491
+[2023-12-11 23:06:44]  BUILDER: Checkouts were built
+[2023-12-11 23:06:44]  BUILDER: Pizzaiolos were built
+[2023-12-11 23:06:44]  BUILDER: Pizzeria were built
+[2023-12-11 23:06:44] BUILDER: Starting new simulation.
+[2023-12-11 23:06:49]  Order: 3 generated/ pizza count: 1/ pizza name: Чотири сири/ checkout id: 4
+[2023-12-11 23:06:49]  Order: 2 generated/ pizza count: 2/ pizza name: Гавайська/ checkout id: 3
+[2023-12-11 23:06:49]  Order: 1 generated/ pizza count: 1/ pizza name: Пепероні/ checkout id: 2
+[2023-12-11 23:06:49]  Order: 0 generated/ pizza count: 1/ pizza name: Маргарита/ checkout id: 1
+[2023-12-11 23:06:49]  Order: 4 generated/ pizza count: 1/ pizza name: Гавайська/ checkout id: 5
+[2023-12-11 23:06:59] New simulation started, simulation mode: CONVEYOR
+[2023-12-11 23:06:59] Pizziolo 10 on technical stop 1
+[2023-12-11 23:06:59] Order: 2set status: In progress
+[2023-12-11 23:06:59] Pizziolo 1 reserved
+[2023-12-11 23:06:59] Pizza: 20cooking by pizzaiolo: 1
+[2023-12-11 23:06:59] Pizziolo 2 reserved
+[2023-12-11 23:06:59] Pizza: 21cooking by pizzaiolo: 2
+[2023-12-11 23:06:59] Order: 1set status: In progress
+[2023-12-11 23:06:59] Pizziolo 3 reserved
+[2023-12-11 23:06:59] Pizza: 10cooking by pizzaiolo: 3
+[2023-12-11 23:06:59] Order: 0set status: In progress
+[2023-12-11 23:06:59] Pizziolo 4 reserved
+[2023-12-11 23:06:59] Pizza: 00cooking by pizzaiolo: 4
+[2023-12-11 23:06:59] Order: 3set status: In progress
+[2023-12-11 23:06:59] Pizziolo 5 reserved
+[2023-12-11 23:06:59] Pizza: 30cooking by pizzaiolo: 5
+[2023-12-11 23:06:59] Order: 4set status: In progress
+[2023-12-11 23:06:59] Pizziolo 6 reserved
+[2023-12-11 23:06:59] Pizza: 40cooking by pizzaiolo: 6
+[2023-12-11 23:06:59] Pizziolo 8 on technical stop 1
+[2023-12-11 23:06:59] Pizziolo 9 on technical stop 1
+[2023-12-11 23:06:59] Pizziolo 7 on technical stop 1
+[2023-12-11 23:07:04] Pizziolo 4 on technical stop 1
+[2023-12-11 23:07:04] Pizziolo 1 reserved
+[2023-12-11 23:07:04] Pizza: 00cooking by pizzaiolo: 1
+[2023-12-11 23:07:04] Pizziolo 3 on technical stop 1
+[2023-12-11 23:07:04] Pizziolo 2 reserved
+[2023-12-11 23:07:04] Pizza: 10cooking by pizzaiolo: 2
+[2023-12-11 23:07:04] Pizziolo 6 on technical stop 1
+[2023-12-11 23:07:04] Pizziolo 5 reserved
+[2023-12-11 23:07:04] Pizza: 40cooking by pizzaiolo: 5
+[2023-12-11 23:07:09] Pizziolo 2 on technical stop 1
+[2023-12-11 23:07:09] Pizziolo 1 reserved
+[2023-12-11 23:07:09] Pizza: 21cooking by pizzaiolo: 1
+[2023-12-11 23:07:09] Pizziolo 5 reserved
+[2023-12-11 23:07:09] Pizza: 10cooking by pizzaiolo: 5
+[2023-12-11 23:07:14] Pizziolo 1 on technical stop 1
+[2023-12-11 23:07:14] Pizziolo 5 reserved
+[2023-12-11 23:07:14] Pizza: 20cooking by pizzaiolo: 5
+[2023-12-11 23:07:19] Pizziolo 5 reserved
+[2023-12-11 23:07:19] Pizza: 40cooking by pizzaiolo: 5
+[2023-12-11 23:07:19] Pizziolo 8 reserved
+[2023-12-11 23:07:19] Pizza: 21cooking by pizzaiolo: 8
+[2023-12-11 23:07:19] Pizziolo 7 reserved
+[2023-12-11 23:07:19] Pizza: 20cooking by pizzaiolo: 7
+[2023-12-11 23:07:20] Pizziolo 3 reserved
+[2023-12-11 23:07:20] Pizza: 40cooking by pizzaiolo: 3
+[2023-12-11 23:07:21] Pizziolo 10 reserved
+[2023-12-11 23:07:21] Pizza: 00cooking by pizzaiolo: 10
+[2023-12-11 23:07:24] Pizziolo 5 reserved
+[2023-12-11 23:07:24] Pizza: 40cooking by pizzaiolo: 5
+[2023-12-11 23:07:24] Pizziolo 8 reserved
+[2023-12-11 23:07:24] Pizza: 20cooking by pizzaiolo: 8
+[2023-12-11 23:07:24] Pizziolo 9 reserved
+[2023-12-11 23:07:24] Pizza: 21cooking by pizzaiolo: 9
+[2023-12-11 23:07:24] Pizziolo 7 reserved
+[2023-12-11 23:07:24] Pizza: 40cooking by pizzaiolo: 7
+[2023-12-11 23:07:25] Pizziolo 3 reserved
+[2023-12-11 23:07:25] Pizza: 20cooking by pizzaiolo: 3
+[2023-12-11 23:07:26] Pizziolo 10 reserved
+[2023-12-11 23:07:26] Pizza: 40cooking by pizzaiolo: 10
+[2023-12-11 23:07:27] Pizziolo 6 reserved
+[2023-12-11 23:07:27] Pizza: 20cooking by pizzaiolo: 6
+[2023-12-11 23:07:28] Pizziolo 2 reserved
+[2023-12-11 23:07:28] Pizza: 40cooking by pizzaiolo: 2
+[2023-12-11 23:07:29] Pizziolo 5 reserved
+[2023-12-11 23:07:29] Pizza: 20cooking by pizzaiolo: 5
+[2023-12-11 23:07:29] Pizziolo 8 reserved
+[2023-12-11 23:07:29] Pizza: 20cooking by pizzaiolo: 8
+[2023-12-11 23:07:29] Pizziolo 9 reserved
+[2023-12-11 23:07:29] Pizza: 21cooking by pizzaiolo: 9
+[2023-12-11 23:07:29] Pizziolo 7 reserved
+[2023-12-11 23:07:29] Pizza: 00cooking by pizzaiolo: 7
+[2023-12-11 23:07:30] Pizziolo 3 reserved
+[2023-12-11 23:07:30] Pizza: 30cooking by pizzaiolo: 3
+[2023-12-11 23:07:31] Pizziolo 10 reserved
+[2023-12-11 23:07:31] Pizza: 21cooking by pizzaiolo: 10
+[2023-12-11 23:07:32] Pizziolo 6 reserved
+[2023-12-11 23:07:32] Pizza: 10cooking by pizzaiolo: 6
+[2023-12-11 23:07:33] Pizziolo 4 reserved
+[2023-12-11 23:07:33] Pizza: 40cooking by pizzaiolo: 4
+[2023-12-11 23:07:33] Pizziolo 2 reserved
+[2023-12-11 23:07:33] Pizza: 20cooking by pizzaiolo: 2
+[2023-12-11 23:07:34] Pizziolo 5 reserved
+[2023-12-11 23:07:34] Pizza: 21cooking by pizzaiolo: 5
+[2023-12-11 23:07:34] Pizziolo 9 reserved
+[2023-12-11 23:07:34] Pizza: 40cooking by pizzaiolo: 9
+[2023-12-11 23:07:34] Pizziolo 8 reserved
+[2023-12-11 23:07:34] Pizza: 20cooking by pizzaiolo: 8
+[2023-12-11 23:07:34] Pizziolo 7 reserved
+[2023-12-11 23:07:34] Pizza: 10cooking by pizzaiolo: 7
+[2023-12-11 23:07:34]  Order: 5 generated/ pizza count: 2/ pizza name: Чотири сири/ checkout id: 2
+[2023-12-11 23:07:35] Pizziolo 3 reserved
+[2023-12-11 23:07:35] Pizza: 20cooking by pizzaiolo: 3
+[2023-12-11 23:07:36]  Order: 6 generated/ pizza count: 1/ pizza name: Чотири сири/ checkout id: 3
+[2023-12-11 23:07:36] Pizziolo 10 reserved
+[2023-12-11 23:07:36] Pizza: 20cooking by pizzaiolo: 10
+[2023-12-11 23:07:36] Pizziolo 1 reserved
+[2023-12-11 23:07:36] Pizza: 20cooking by pizzaiolo: 1
+[2023-12-11 23:07:37]  Order: 7 generated/ pizza count: 2/ pizza name: Гавайська/ checkout id: 4
+[2023-12-11 23:07:37] Pizziolo 6 reserved
+[2023-12-11 23:07:37] Pizza: 40cooking by pizzaiolo: 6
+[2023-12-11 23:07:38] Pizziolo 4 reserved
+[2023-12-11 23:07:38] Pizza: 21cooking by pizzaiolo: 4
+[2023-12-11 23:07:38] Pizziolo 2 reserved
+[2023-12-11 23:07:38] Pizza: 30cooking by pizzaiolo: 2
+[2023-12-11 23:07:39]  Order: 8 generated/ pizza count: 1/ pizza name: Гавайська/ checkout id: 5
+[2023-12-11 23:07:39] Pizziolo 5 reserved
+[2023-12-11 23:07:39] Pizza: 40cooking by pizzaiolo: 5
+[2023-12-11 23:07:39] Pizziolo 8 reserved
+[2023-12-11 23:07:39] Pizza: 40cooking by pizzaiolo: 8
+[2023-12-11 23:07:39] Pizziolo 9 reserved
+[2023-12-11 23:07:39] Pizza: 20cooking by pizzaiolo: 9
+[2023-12-11 23:07:39] Pizziolo 7 reserved
+[2023-12-11 23:07:39] Pizza: 40cooking by pizzaiolo: 7
+[2023-12-11 23:07:40] Pizziolo 3 reserved
+[2023-12-11 23:07:40] Pizza: 00cooking by pizzaiolo: 3
+[2023-12-11 23:07:41] Pizziolo 10 reserved
+[2023-12-11 23:07:41] Pizza: 00cooking by pizzaiolo: 10
+[2023-12-11 23:07:41] Pizziolo 1 reserved
+[2023-12-11 23:07:41] Pizza: 40cooking by pizzaiolo: 1
+[2023-12-11 23:07:41]  Order: 9 generated/ pizza count: 3/ pizza name: Чотири сири/ checkout id: 1
+[2023-12-11 23:07:42] Pizziolo 6 reserved
+[2023-12-11 23:07:42] Pizza: 00cooking by pizzaiolo: 6
+[2023-12-11 23:07:43] Pizziolo 4 reserved
+[2023-12-11 23:07:43] Pizza: 40cooking by pizzaiolo: 4
+[2023-12-11 23:07:43] Pizziolo 2 reserved
+[2023-12-11 23:07:43] Pizza: 20cooking by pizzaiolo: 2
+[2023-12-11 23:07:44] Pizziolo 5 reserved
+[2023-12-11 23:07:44] Pizza: 20cooking by pizzaiolo: 5
+[2023-12-11 23:07:44] Pizziolo 8 reserved
+[2023-12-11 23:07:44] Pizza: 10cooking by pizzaiolo: 8
+[2023-12-11 23:07:44] Pizziolo 9 reserved
+[2023-12-11 23:07:44] Pizza: 00cooking by pizzaiolo: 9
+[2023-12-11 23:07:44] Pizziolo 7 reserved
+[2023-12-11 23:07:44] Pizza: 21cooking by pizzaiolo: 7
+[2023-12-11 23:07:45] Pizziolo 3 reserved
+[2023-12-11 23:07:45] Pizza: 30cooking by pizzaiolo: 3
+[2023-12-11 23:07:46] Pizziolo 10 reserved
+[2023-12-11 23:07:46] Pizza: 30cooking by pizzaiolo: 10
+[2023-12-11 23:07:46] Pizziolo 1 reserved
+[2023-12-11 23:07:46] Pizza: 20cooking by pizzaiolo: 1
+[2023-12-11 23:07:47] Pizziolo 6 reserved
+[2023-12-11 23:07:47] Pizza: 10cooking by pizzaiolo: 6
+[2023-12-11 23:07:48] Pizziolo 4 reserved
+[2023-12-11 23:07:48] Pizza: 30cooking by pizzaiolo: 4
+[2023-12-11 23:07:48] Pizziolo 2 reserved
+[2023-12-11 23:07:48] Pizza: 30cooking by pizzaiolo: 2
+[2023-12-11 23:07:49] Order: 7set status: In progress
+[2023-12-11 23:07:49] Pizziolo 5 reserved
+[2023-12-11 23:07:49] Pizza: 71cooking by pizzaiolo: 5
+[2023-12-11 23:07:49] Order: 6set status: In progress
+[2023-12-11 23:07:49] Pizziolo 9 reserved
+[2023-12-11 23:07:49] Pizza: 60cooking by pizzaiolo: 9
+[2023-12-11 23:07:49] Pizziolo 8 reserved
+[2023-12-11 23:07:49] Pizza: 70cooking by pizzaiolo: 8
+[2023-12-11 23:07:49] Pizziolo 7 reserved
+[2023-12-11 23:07:49] Pizza: 10cooking by pizzaiolo: 7
+[2023-12-11 23:07:50] Pizziolo 3 reserved
+[2023-12-11 23:07:50] Pizza: 30cooking by pizzaiolo: 3
+[2023-12-11 23:07:51] Pizziolo 10 reserved
+[2023-12-11 23:07:51] Pizza: 00cooking by pizzaiolo: 10
+[2023-12-11 23:07:51] Order: 5set status: In progress
+[2023-12-11 23:07:51] Pizziolo 1 reserved
+[2023-12-11 23:07:51] Pizza: 51cooking by pizzaiolo: 1
+[2023-12-11 23:07:52] Order: 8set status: In progress
+[2023-12-11 23:07:52] Pizziolo 6 reserved
+[2023-12-11 23:07:52] Pizza: 80cooking by pizzaiolo: 6
+[2023-12-11 23:07:53] Pizziolo 4 reserved
+[2023-12-11 23:07:53] Pizza: 30cooking by pizzaiolo: 4
+[2023-12-11 23:07:53] Pizziolo 2 reserved
+[2023-12-11 23:07:53] Pizza: 30cooking by pizzaiolo: 2
+[2023-12-11 23:07:54] Pizziolo 5 reserved
+[2023-12-11 23:07:54] Pizza: 20cooking by pizzaiolo: 5
+[2023-12-11 23:07:54] Order: 9set status: In progress
+[2023-12-11 23:07:54] Pizziolo 8 reserved
+[2023-12-11 23:07:54] Pizza: 92cooking by pizzaiolo: 8
+[2023-12-11 23:07:54] Pizziolo 9 reserved
+[2023-12-11 23:07:54] Pizza: 20cooking by pizzaiolo: 9
+[2023-12-11 23:07:54] Pizziolo 7 reserved
+[2023-12-11 23:07:54] Pizza: 90cooking by pizzaiolo: 7
+[2023-12-11 23:07:55] Pizziolo 3 reserved
+[2023-12-11 23:07:55] Pizza: 21cooking by pizzaiolo: 3
+[2023-12-11 23:07:56] Pizziolo 10 reserved
+[2023-12-11 23:07:56] Pizza: 20cooking by pizzaiolo: 10
+[2023-12-11 23:07:56] Pizziolo 1 reserved
+[2023-12-11 23:07:56] Pizza: 20cooking by pizzaiolo: 1
+[2023-12-11 23:07:57] Pizziolo 6 reserved
+[2023-12-11 23:07:57] Pizza: 21cooking by pizzaiolo: 6
+[2023-12-11 23:07:58] Pizziolo 4 reserved
+[2023-12-11 23:07:58] Pizza: 20cooking by pizzaiolo: 4
+[2023-12-11 23:07:58] Pizziolo 2 reserved
+[2023-12-11 23:07:58] Pizza: 91cooking by pizzaiolo: 2
+[2023-12-11 23:07:59] Pizziolo 5 reserved
+[2023-12-11 23:07:59] Pizza: 20cooking by pizzaiolo: 5
+[2023-12-11 23:07:59] Pizziolo 8 reserved
+[2023-12-11 23:07:59] Pizza: 50cooking by pizzaiolo: 8
+[2023-12-11 23:07:59] Pizziolo 9 reserved
+[2023-12-11 23:07:59] Pizza: 20cooking by pizzaiolo: 9
+[2023-12-11 23:07:59] Pizziolo 7 reserved
+[2023-12-11 23:07:59] Pizza: 40cooking by pizzaiolo: 7
+[2023-12-11 23:08:00] Pizziolo 3 reserved
+[2023-12-11 23:08:00] Pizza: 20cooking by pizzaiolo: 3
+[2023-12-11 23:08:01] Pizziolo 10 reserved
+[2023-12-11 23:08:01] Pizza: 20cooking by pizzaiolo: 10
+[2023-12-11 23:08:01] Pizziolo 1 reserved
+[2023-12-11 23:08:01] Pizza: 20cooking by pizzaiolo: 1
+[2023-12-11 23:09:40]  BUILDER: Pizza added: name: Маргаритаprice: 32.0cookingTime PT1M
+knittingTime: 17000
+fillingTime: 10646
+bakingTime: 7990
+afterTime: 15020
+packagingTime: 7980
+[2023-12-11 23:09:40]  BUILDER: Pizza added: name: Пепероніprice: 35.0cookingTime PT2M
+knittingTime: 29000
+fillingTime: 17660
+bakingTime: 5056
+afterTime: 18486
+packagingTime: 22438
+[2023-12-11 23:09:40]  BUILDER: Pizza added: name: Гавайськаprice: 40.0cookingTime PT1M
+knittingTime: 17000
+fillingTime: 8152
+bakingTime: 16458
+afterTime: 6803
+packagingTime: 14721
+[2023-12-11 23:09:40]  BUILDER: Pizza added: name: Чотири сириprice: 38.0cookingTime PT2M
+knittingTime: 29000
+fillingTime: 17940
+bakingTime: 19534
+afterTime: 15259
+packagingTime: 13745
+[2023-12-11 23:09:40]  BUILDER: Checkouts were built
+[2023-12-11 23:09:40]  BUILDER: Pizzaiolos were built
+[2023-12-11 23:09:40]  BUILDER: Pizzeria were built
+[2023-12-11 23:09:40] BUILDER: Starting new simulation.
+[2023-12-11 23:09:45]  Order: 3 generated/ pizza count: 2/ pizza name: Пепероні/ checkout id: 3
+[2023-12-11 23:09:45]  Order: 2 generated/ pizza count: 2/ pizza name: Маргарита/ checkout id: 5
+[2023-12-11 23:09:45]  Order: 0 generated/ pizza count: 1/ pizza name: Маргарита/ checkout id: 1
+[2023-12-11 23:09:45]  Order: 1 generated/ pizza count: 2/ pizza name: Пепероні/ checkout id: 4
+[2023-12-11 23:09:45]  Order: 4 generated/ pizza count: 1/ pizza name: Чотири сири/ checkout id: 2
+[2023-12-11 23:09:55] New simulation started, simulation mode: CONVEYOR
+[2023-12-11 23:09:55] Pizziolo 3 on technical stop 1
+[2023-12-11 23:09:55] Order: 3set status: In progress
+[2023-12-11 23:09:55] Pizziolo 1 reserved
+[2023-12-11 23:09:55] Pizza: 30cooking by pizzaiolo: 1
+[2023-12-11 23:09:55] Pizziolo 2 reserved
+[2023-12-11 23:09:55] Pizza: 31cooking by pizzaiolo: 2
+[2023-12-11 23:09:55] Order: 0set status: In progress
+[2023-12-11 23:09:55] Pizziolo 4 reserved
+[2023-12-11 23:09:55] Pizza: 00cooking by pizzaiolo: 4
+[2023-12-11 23:09:55] Order: 2set status: In progress
+[2023-12-11 23:09:55] Pizziolo 5 reserved
+[2023-12-11 23:09:55] Pizza: 20cooking by pizzaiolo: 5
+[2023-12-11 23:09:55] Pizziolo 6 reserved
+[2023-12-11 23:09:55] Pizza: 21cooking by pizzaiolo: 6
+[2023-12-11 23:09:55] Order: 1set status: In progress
+[2023-12-11 23:09:55] Pizziolo 7 reserved
+[2023-12-11 23:09:55] Pizza: 10cooking by pizzaiolo: 7
+[2023-12-11 23:09:55] Pizziolo 8 reserved
+[2023-12-11 23:09:55] Pizza: 11cooking by pizzaiolo: 8
+[2023-12-11 23:09:55] Order: 4set status: In progress
+[2023-12-11 23:09:55] Pizziolo 9 reserved
+[2023-12-11 23:09:55] Pizza: 40cooking by pizzaiolo: 9
+[2023-12-11 23:09:55] Pizziolo 10 on technical stop 1
+[2023-12-11 23:10:00] Pizziolo 1 on technical stop 1
+[2023-12-11 23:10:00] Pizziolo 2 reserved
+[2023-12-11 23:10:00] Pizza: 30cooking by pizzaiolo: 2
+[2023-12-11 23:10:00] Pizziolo 4 on technical stop 1
+[2023-12-11 23:10:00] Pizziolo 5 reserved
+[2023-12-11 23:10:00] Pizza: 00cooking by pizzaiolo: 5
+[2023-12-11 23:10:00] Pizziolo 8 on technical stop 1
+[2023-12-11 23:10:00] Pizziolo 6 reserved
+[2023-12-11 23:10:00] Pizza: 11cooking by pizzaiolo: 6
+[2023-12-11 23:10:00] Pizziolo 9 on technical stop 1
+[2023-12-11 23:10:00] Pizziolo 7 reserved
+[2023-12-11 23:10:00] Pizza: 40cooking by pizzaiolo: 7
+[2023-12-11 23:10:05] Pizziolo 2 on technical stop 1
+[2023-12-11 23:10:05] Pizziolo 5 reserved
+[2023-12-11 23:10:05] Pizza: 30cooking by pizzaiolo: 5
+[2023-12-11 23:10:05] Pizziolo 6 reserved
+[2023-12-11 23:10:05] Pizza: 31cooking by pizzaiolo: 6
+[2023-12-11 23:10:05] Pizziolo 7 on technical stop 1
+[2023-12-11 23:10:10] Pizziolo 5 reserved
+[2023-12-11 23:10:10] Pizza: 10cooking by pizzaiolo: 5
+[2023-12-11 23:10:10] Pizziolo 6 reserved
+[2023-12-11 23:10:10] Pizza: 40cooking by pizzaiolo: 6
+[2023-12-11 23:10:12] Pizziolo 3 on technical stop 1
+[2023-12-11 23:10:15] Pizziolo 5 reserved
+[2023-12-11 23:10:15] Pizza: 00cooking by pizzaiolo: 5
+[2023-12-11 23:10:15] Pizziolo 6 reserved
+[2023-12-11 23:10:15] Pizza: 00cooking by pizzaiolo: 6
+[2023-12-11 23:10:15] Pizziolo 10 reserved
+[2023-12-11 23:10:15] Pizza: 00cooking by pizzaiolo: 10
+[2023-12-11 23:10:20] Pizziolo 5 reserved
+[2023-12-11 23:10:20] Pizza: 00cooking by pizzaiolo: 5
+[2023-12-11 23:10:20] Pizziolo 6 reserved
+[2023-12-11 23:10:20] Pizza: 21cooking by pizzaiolo: 6
+[2023-12-11 23:10:20] Pizziolo 10 reserved
+[2023-12-11 23:10:20] Pizza: 11cooking by pizzaiolo: 10
+[2023-12-11 23:10:21] Pizziolo 9 reserved
+[2023-12-11 23:10:21] Pizza: 00cooking by pizzaiolo: 9
+[2023-12-11 23:10:22] Pizziolo 2 reserved
+[2023-12-11 23:10:22] Pizza: 00cooking by pizzaiolo: 2
+[2023-12-11 23:10:24] Pizziolo 4 reserved
+[2023-12-11 23:10:24] Pizza: 00cooking by pizzaiolo: 4
+[2023-12-11 23:10:25] Pizziolo 5 reserved
+[2023-12-11 23:10:25] Pizza: 20cooking by pizzaiolo: 5
+[2023-12-11 23:10:25] Pizziolo 6 reserved
+[2023-12-11 23:10:25] Pizza: 21cooking by pizzaiolo: 6
+[2023-12-11 23:10:25] Pizziolo 10 reserved
+[2023-12-11 23:10:25] Pizza: 11cooking by pizzaiolo: 10
+[2023-12-11 23:10:26] Pizziolo 1 reserved
+[2023-12-11 23:10:26] Pizza: 31cooking by pizzaiolo: 1
+[2023-12-11 23:10:26] Pizziolo 9 reserved
+[2023-12-11 23:10:26] Pizza: 20cooking by pizzaiolo: 9
+[2023-12-11 23:10:27] Pizziolo 2 reserved
+[2023-12-11 23:10:27] Pizza: 20cooking by pizzaiolo: 2
+[2023-12-11 23:10:29] Pizziolo 4 reserved
+[2023-12-11 23:10:29] Pizza: 00cooking by pizzaiolo: 4
+[2023-12-11 23:10:29] Pizziolo 8 reserved
+[2023-12-11 23:10:29] Pizza: 20cooking by pizzaiolo: 8
+[2023-12-11 23:10:30] Pizziolo 5 reserved
+[2023-12-11 23:10:30] Pizza: 30cooking by pizzaiolo: 5
+[2023-12-11 23:10:30] Pizziolo 6 reserved
+[2023-12-11 23:10:30] Pizza: 30cooking by pizzaiolo: 6
+[2023-12-11 23:10:30] Pizziolo 10 reserved
+[2023-12-11 23:10:30] Pizza: 21cooking by pizzaiolo: 10
+[2023-12-11 23:10:30]  Order: 5 generated/ pizza count: 1/ pizza name: Маргарита/ checkout id: 5
+[2023-12-11 23:10:31]  Order: 6 generated/ pizza count: 2/ pizza name: Маргарита/ checkout id: 4
+[2023-12-11 23:10:31] Pizziolo 1 reserved
+[2023-12-11 23:10:31] Pizza: 20cooking by pizzaiolo: 1
+[2023-12-11 23:10:31] Pizziolo 9 reserved
+[2023-12-11 23:10:31] Pizza: 00cooking by pizzaiolo: 9
+[2023-12-11 23:10:32] Pizziolo 2 reserved
+[2023-12-11 23:10:32] Pizza: 30cooking by pizzaiolo: 2
+[2023-12-11 23:10:32] Pizziolo 7 reserved
+[2023-12-11 23:10:32] Pizza: 40cooking by pizzaiolo: 7
+[2023-12-11 23:10:34]  Order: 7 generated/ pizza count: 1/ pizza name: Маргарита/ checkout id: 3
+[2023-12-11 23:10:34] Pizziolo 4 reserved
+[2023-12-11 23:10:34] Pizza: 11cooking by pizzaiolo: 4
+[2023-12-11 23:10:34] Pizziolo 8 reserved
+[2023-12-11 23:10:34] Pizza: 40cooking by pizzaiolo: 8
+[2023-12-11 23:10:34]  Order: 8 generated/ pizza count: 2/ pizza name: Чотири сири/ checkout id: 1
+[2023-12-11 23:10:35] Pizziolo 3 reserved
+[2023-12-11 23:10:35] Pizza: 30cooking by pizzaiolo: 3
+[2023-12-11 23:10:35] Pizziolo 5 reserved
+[2023-12-11 23:10:35] Pizza: 40cooking by pizzaiolo: 5
+[2023-12-11 23:10:35] Pizziolo 6 reserved
+[2023-12-11 23:10:35] Pizza: 20cooking by pizzaiolo: 6
+[2023-12-11 23:10:35] Pizziolo 10 reserved
+[2023-12-11 23:10:35] Pizza: 00cooking by pizzaiolo: 10
+[2023-12-11 23:10:36] Pizziolo 1 reserved
+[2023-12-11 23:10:36] Pizza: 40cooking by pizzaiolo: 1
+[2023-12-11 23:10:36] Pizziolo 9 reserved
+[2023-12-11 23:10:36] Pizza: 00cooking by pizzaiolo: 9
+[2023-12-11 23:10:37] Pizziolo 2 reserved
+[2023-12-11 23:10:37] Pizza: 11cooking by pizzaiolo: 2
+[2023-12-11 23:10:37] Pizziolo 7 reserved
+[2023-12-11 23:10:37] Pizza: 40cooking by pizzaiolo: 7
+[2023-12-11 23:10:39] Pizziolo 8 reserved
+[2023-12-11 23:10:39] Pizza: 11cooking by pizzaiolo: 8
+[2023-12-11 23:10:39] Pizziolo 4 reserved
+[2023-12-11 23:10:39] Pizza: 40cooking by pizzaiolo: 4
+[2023-12-11 23:10:40]  Order: 9 generated/ pizza count: 1/ pizza name: Маргарита/ checkout id: 2
+[2023-12-11 23:10:40] Pizziolo 3 reserved
+[2023-12-11 23:10:40] Pizza: 21cooking by pizzaiolo: 3
+[2023-12-11 23:10:40] Pizziolo 5 reserved
+[2023-12-11 23:10:40] Pizza: 40cooking by pizzaiolo: 5
+[2023-12-11 23:10:40] Pizziolo 6 reserved
+[2023-12-11 23:10:40] Pizza: 20cooking by pizzaiolo: 6
+[2023-12-11 23:10:40] Pizziolo 10 reserved
+[2023-12-11 23:10:40] Pizza: 21cooking by pizzaiolo: 10
+[2023-12-11 23:10:41] Pizziolo 1 reserved
+[2023-12-11 23:10:41] Pizza: 20cooking by pizzaiolo: 1
+[2023-12-11 23:10:41] Pizziolo 9 reserved
+[2023-12-11 23:10:41] Pizza: 31cooking by pizzaiolo: 9
+[2023-12-11 23:10:42] Pizziolo 2 reserved
+[2023-12-11 23:10:42] Pizza: 11cooking by pizzaiolo: 2
+[2023-12-11 23:10:42] Pizziolo 7 reserved
+[2023-12-11 23:10:42] Pizza: 40cooking by pizzaiolo: 7
+[2023-12-11 23:10:44] Pizziolo 8 reserved
+[2023-12-11 23:10:44] Pizza: 10cooking by pizzaiolo: 8
+[2023-12-11 23:10:44] Pizziolo 4 reserved
+[2023-12-11 23:10:44] Pizza: 11cooking by pizzaiolo: 4
+[2023-12-11 23:10:45] Pizziolo 3 reserved
+[2023-12-11 23:10:45] Pizza: 10cooking by pizzaiolo: 3
+[2023-12-11 23:10:45] Order: 6set status: In progress
+[2023-12-11 23:10:45] Pizziolo 5 reserved
+[2023-12-11 23:10:45] Pizza: 60cooking by pizzaiolo: 5
+[2023-12-11 23:10:45] Order: 8set status: In progress
+[2023-12-11 23:10:45] Pizziolo 6 reserved
+[2023-12-11 23:10:45] Pizza: 80cooking by pizzaiolo: 6
+[2023-12-11 23:10:45] Pizziolo 10 reserved
+[2023-12-11 23:10:45] Pizza: 30cooking by pizzaiolo: 10
+[2023-12-11 23:10:46] Pizziolo 1 reserved
+[2023-12-11 23:10:46] Pizza: 21cooking by pizzaiolo: 1
+[2023-12-11 23:10:46] Order: 7set status: In progress
+[2023-12-11 23:10:46] Pizziolo 9 reserved
+[2023-12-11 23:10:46] Pizza: 70cooking by pizzaiolo: 9
+[2023-12-11 23:10:47] Pizziolo 2 reserved
+[2023-12-11 23:10:47] Pizza: 81cooking by pizzaiolo: 2
+[2023-12-11 23:10:47] Pizziolo 7 reserved
+[2023-12-11 23:10:47] Pizza: 00cooking by pizzaiolo: 7
+[2023-12-11 23:10:49] Pizziolo 4 reserved
+[2023-12-11 23:10:49] Pizza: 61cooking by pizzaiolo: 4
+[2023-12-11 23:10:49] Pizziolo 8 reserved
+[2023-12-11 23:10:49] Pizza: 30cooking by pizzaiolo: 8
+[2023-12-11 23:10:50] Order: 9set status: In progress
+[2023-12-11 23:10:50] Pizziolo 3 reserved
+[2023-12-11 23:10:50] Pizza: 90cooking by pizzaiolo: 3
+[2023-12-11 23:10:50] Pizziolo 5 reserved
+[2023-12-11 23:10:50] Pizza: 30cooking by pizzaiolo: 5
+[2023-12-11 23:10:50] Order: 5set status: In progress
+[2023-12-11 23:10:50] Pizziolo 6 reserved
+[2023-12-11 23:10:50] Pizza: 50cooking by pizzaiolo: 6
+[2023-12-11 23:10:50] Pizziolo 10 reserved
+[2023-12-11 23:10:50] Pizza: 30cooking by pizzaiolo: 10
+[2023-12-11 23:10:51] Pizziolo 1 reserved
+[2023-12-11 23:10:51] Pizza: 30cooking by pizzaiolo: 1
+[2023-12-11 23:10:51] Pizziolo 9 reserved
+[2023-12-11 23:10:51] Pizza: 30cooking by pizzaiolo: 9
+[2023-12-11 23:10:52] Pizziolo 2 reserved
+[2023-12-11 23:10:52] Pizza: 30cooking by pizzaiolo: 2
+[2023-12-11 23:10:52] Pizziolo 7 reserved
+[2023-12-11 23:10:52] Pizza: 30cooking by pizzaiolo: 7
+[2023-12-11 23:10:54] Pizziolo 4 reserved
+[2023-12-11 23:10:54] Pizza: 00cooking by pizzaiolo: 4
+[2023-12-11 23:10:54] Pizziolo 8 reserved
+[2023-12-11 23:10:54] Pizza: 20cooking by pizzaiolo: 8
+[2023-12-11 23:10:55] Pizziolo 3 reserved
+[2023-12-11 23:10:55] Pizza: 30cooking by pizzaiolo: 3
+[2023-12-11 23:10:55] Pizziolo 5 reserved
+[2023-12-11 23:10:55] Pizza: 30cooking by pizzaiolo: 5
+[2023-12-11 23:10:55] Pizziolo 6 reserved
+[2023-12-11 23:10:55] Pizza: 30cooking by pizzaiolo: 6
+[2023-12-11 23:10:55] Pizziolo 10 reserved
+[2023-12-11 23:10:55] Pizza: 40cooking by pizzaiolo: 10
+[2023-12-11 23:10:56] Pizziolo 1 reserved
+[2023-12-11 23:10:56] Pizza: 21cooking by pizzaiolo: 1
+[2023-12-11 23:10:56] Pizziolo 9 reserved
+[2023-12-11 23:10:56] Pizza: 30cooking by pizzaiolo: 9
+[2023-12-11 23:10:57] Pizziolo 2 reserved
+[2023-12-11 23:10:57] Pizza: 30cooking by pizzaiolo: 2
+[2023-12-11 23:10:57] Pizziolo 7 reserved
+[2023-12-11 23:10:57] Pizza: 30cooking by pizzaiolo: 7
+[2023-12-11 23:10:59] Pizziolo 8 reserved
+[2023-12-11 23:10:59] Pizza: 30cooking by pizzaiolo: 8
+[2023-12-11 23:10:59] Pizziolo 4 reserved
+[2023-12-11 23:10:59] Pizza: 31cooking by pizzaiolo: 4
+[2023-12-11 23:11:00] Pizziolo 3 reserved
+[2023-12-11 23:11:00] Pizza: 30cooking by pizzaiolo: 3
+[2023-12-11 23:11:00] Pizziolo 5 reserved
+[2023-12-11 23:11:00] Pizza: 30cooking by pizzaiolo: 5
+[2023-12-11 23:11:00] Pizziolo 6 reserved
+[2023-12-11 23:11:00] Pizza: 30cooking by pizzaiolo: 6
+[2023-12-11 23:11:00] Pizziolo 10 reserved
+[2023-12-11 23:11:00] Pizza: 30cooking by pizzaiolo: 10
+[2023-12-11 23:11:01] Pizziolo 1 reserved
+[2023-12-11 23:11:01] Pizza: 30cooking by pizzaiolo: 1
+[2023-12-11 23:11:01] Pizziolo 9 reserved
+[2023-12-11 23:11:01] Pizza: 11cooking by pizzaiolo: 9
+[2023-12-11 23:11:02] Pizziolo 2 reserved
+[2023-12-11 23:11:02] Pizza: 20cooking by pizzaiolo: 2
+[2023-12-11 23:11:02] Pizziolo 7 reserved
+[2023-12-11 23:11:02] Pizza: 11cooking by pizzaiolo: 7
+[2023-12-11 23:11:04] Pizziolo 8 reserved
+[2023-12-11 23:11:04] Pizza: 20cooking by pizzaiolo: 8
+[2023-12-11 23:11:04] Pizziolo 4 reserved
+[2023-12-11 23:11:04] Pizza: 21cooking by pizzaiolo: 4
+[2023-12-11 23:11:05] Pizziolo 3 reserved
+[2023-12-11 23:11:05] Pizza: 11cooking by pizzaiolo: 3
+[2023-12-11 23:11:05] Pizziolo 5 reserved
+[2023-12-11 23:11:05] Pizza: 60cooking by pizzaiolo: 5
+[2023-12-11 23:11:05] Pizziolo 6 reserved
+[2023-12-11 23:11:05] Pizza: 11cooking by pizzaiolo: 6
+[2023-12-11 23:11:05] Pizziolo 10 reserved
+[2023-12-11 23:11:05] Pizza: 30cooking by pizzaiolo: 10
+[2023-12-11 23:11:06] Pizziolo 1 reserved
+[2023-12-11 23:11:06] Pizza: 11cooking by pizzaiolo: 1
+[2023-12-11 23:11:06] Pizziolo 9 reserved
+[2023-12-11 23:11:06] Pizza: 70cooking by pizzaiolo: 9
+[2023-12-11 23:11:07] Pizziolo 2 reserved
+[2023-12-11 23:11:07] Pizza: 30cooking by pizzaiolo: 2
+[2023-12-11 23:11:07] Pizziolo 7 reserved
+[2023-12-11 23:11:07] Pizza: 60cooking by pizzaiolo: 7
+[2023-12-11 23:11:09] Pizziolo 4 reserved
+[2023-12-11 23:11:09] Pizza: 11cooking by pizzaiolo: 4
+[2023-12-11 23:11:09] Pizziolo 8 reserved
+[2023-12-11 23:11:09] Pizza: 40cooking by pizzaiolo: 8
+[2023-12-11 23:11:10] Pizziolo 3 reserved
+[2023-12-11 23:11:10] Pizza: 90cooking by pizzaiolo: 3
+[2023-12-11 23:11:10] Pizziolo 5 reserved
+[2023-12-11 23:11:10] Pizza: 60cooking by pizzaiolo: 5
+[2023-12-11 23:11:10] Pizziolo 6 reserved
+[2023-12-11 23:11:10] Pizza: 10cooking by pizzaiolo: 6
+[2023-12-11 23:11:10] Pizziolo 10 reserved
+[2023-12-11 23:11:10] Pizza: 90cooking by pizzaiolo: 10
+[2023-12-11 23:11:11] Pizziolo 1 reserved
+[2023-12-11 23:11:11] Pizza: 21cooking by pizzaiolo: 1
+[2023-12-11 23:11:11] Pizziolo 9 reserved
+[2023-12-11 23:11:11] Pizza: 90cooking by pizzaiolo: 9
+[2023-12-11 23:11:12] Pizziolo 2 reserved
+[2023-12-11 23:11:12] Pizza: 21cooking by pizzaiolo: 2
+[2023-12-11 23:11:12] Pizziolo 7 reserved
+[2023-12-11 23:11:12] Pizza: 40cooking by pizzaiolo: 7
+[2023-12-11 23:11:14] Pizziolo 4 reserved
+[2023-12-11 23:11:14] Pizza: 00cooking by pizzaiolo: 4
+[2023-12-11 23:11:14] Pizziolo 8 reserved
+[2023-12-11 23:11:14] Pizza: 10cooking by pizzaiolo: 8
+[2023-12-11 23:11:15] Pizziolo 3 reserved
+[2023-12-11 23:11:15] Pizza: 90cooking by pizzaiolo: 3
+[2023-12-11 23:11:15] Pizziolo 5 reserved
+[2023-12-11 23:11:15] Pizza: 70cooking by pizzaiolo: 5
+[2023-12-11 23:11:15] Pizziolo 6 reserved
+[2023-12-11 23:11:15] Pizza: 30cooking by pizzaiolo: 6
+[2023-12-11 23:11:15] Pizziolo 10 reserved
+[2023-12-11 23:11:15] Pizza: 30cooking by pizzaiolo: 10
+[2023-12-11 23:11:16] Pizziolo 1 reserved
+[2023-12-11 23:11:16] Pizza: 31cooking by pizzaiolo: 1
+[2023-12-11 23:11:16] Pizziolo 9 reserved
+[2023-12-11 23:11:16] Pizza: 90cooking by pizzaiolo: 9
+[2023-12-11 23:11:17] Pizziolo 2 reserved
+[2023-12-11 23:11:17] Pizza: 00cooking by pizzaiolo: 2
+[2023-12-11 23:11:17] Pizziolo 7 reserved
+[2023-12-11 23:11:17] Pizza: 10cooking by pizzaiolo: 7
+[2023-12-11 23:11:19] Pizziolo 4 reserved
+[2023-12-11 23:11:19] Pizza: 50cooking by pizzaiolo: 4
+[2023-12-11 23:11:19] Pizziolo 8 reserved
+[2023-12-11 23:11:19] Pizza: 80cooking by pizzaiolo: 8
+[2023-12-11 23:11:20] Pizziolo 3 reserved
+[2023-12-11 23:11:20] Pizza: 90cooking by pizzaiolo: 3
+[2023-12-11 23:11:20] Pizziolo 5 reserved
+[2023-12-11 23:11:20] Pizza: 90cooking by pizzaiolo: 5
+[2023-12-11 23:11:20] Pizziolo 6 reserved
+[2023-12-11 23:11:20] Pizza: 00cooking by pizzaiolo: 6
+[2023-12-11 23:11:20] Pizziolo 10 reserved
+[2023-12-11 23:11:20] Pizza: 21cooking by pizzaiolo: 10
+[2023-12-11 23:12:11]  BUILDER: Pizza added: name: Маргаритаprice: 32.0cookingTime PT1M
+knittingTime: 17000
+fillingTime: 14225
+bakingTime: 13919
+afterTime: 8448
+packagingTime: 13857
+[2023-12-11 23:12:11]  BUILDER: Pizza added: name: Пепероніprice: 35.0cookingTime PT2M
+knittingTime: 29000
+fillingTime: 16809
+bakingTime: 9605
+afterTime: 18539
+packagingTime: 11585
+[2023-12-11 23:12:11]  BUILDER: Pizza added: name: Гавайськаprice: 40.0cookingTime PT1M
+knittingTime: 17000
+fillingTime: 16046
+bakingTime: 6930
+afterTime: 5016
+packagingTime: 14335
+[2023-12-11 23:12:11]  BUILDER: Pizza added: name: Чотири сириprice: 38.0cookingTime PT2M
+knittingTime: 29000
+fillingTime: 26640
+bakingTime: 18106
+afterTime: 16067
+packagingTime: 11114
+[2023-12-11 23:12:11]  BUILDER: Checkouts were built
+[2023-12-11 23:12:11]  BUILDER: Pizzaiolos were built
+[2023-12-11 23:12:11]  BUILDER: Pizzeria were built
+[2023-12-11 23:12:11] BUILDER: Starting new simulation.
+[2023-12-11 23:12:16]  Order: 4 generated/ pizza count: 3/ pizza name: Чотири сири/ checkout id: 5
+[2023-12-11 23:12:16]  Order: 0 generated/ pizza count: 3/ pizza name: Чотири сири/ checkout id: 1
+[2023-12-11 23:12:16]  Order: 1 generated/ pizza count: 2/ pizza name: Гавайська/ checkout id: 3
+[2023-12-11 23:12:16]  Order: 3 generated/ pizza count: 1/ pizza name: Пепероні/ checkout id: 2
+[2023-12-11 23:12:16]  Order: 2 generated/ pizza count: 1/ pizza name: Гавайська/ checkout id: 4
+[2023-12-11 23:12:26] New simulation started, simulation mode: CONVEYOR
+[2023-12-11 23:12:26] Order: 0set status: In progress
+[2023-12-11 23:12:26] Pizziolo 1 reserved
+[2023-12-11 23:12:26] Pizza: 00cooking by pizzaiolo: 1
+[2023-12-11 23:12:26] Pizziolo 2 reserved
+[2023-12-11 23:12:26] Pizza: 01cooking by pizzaiolo: 2
+[2023-12-11 23:12:26] Pizziolo 3 reserved
+[2023-12-11 23:12:26] Pizza: 02cooking by pizzaiolo: 3
+[2023-12-11 23:12:26] Order: 1set status: In progress
+[2023-12-11 23:12:26] Pizziolo 4 reserved
+[2023-12-11 23:12:26] Pizza: 10cooking by pizzaiolo: 4
+[2023-12-11 23:12:26] Pizziolo 5 reserved
+[2023-12-11 23:12:26] Pizza: 11cooking by pizzaiolo: 5
+[2023-12-11 23:12:26] Order: 3set status: In progress
+[2023-12-11 23:12:26] Pizziolo 6 reserved
+[2023-12-11 23:12:26] Pizza: 30cooking by pizzaiolo: 6
+[2023-12-11 23:12:26] Order: 4set status: In progress
+[2023-12-11 23:12:26] Pizziolo 7 reserved
+[2023-12-11 23:12:26] Pizza: 40cooking by pizzaiolo: 7
+[2023-12-11 23:12:26] Pizziolo 8 reserved
+[2023-12-11 23:12:26] Pizza: 41cooking by pizzaiolo: 8
+[2023-12-11 23:12:26] Pizziolo 9 reserved
+[2023-12-11 23:12:26] Pizza: 42cooking by pizzaiolo: 9
+[2023-12-11 23:12:26] Order: 2set status: In progress
+[2023-12-11 23:12:26] Pizziolo 10 reserved
+[2023-12-11 23:12:26] Pizza: 20cooking by pizzaiolo: 10
+[2023-12-11 23:12:42]  BUILDER: Pizza added: name: Маргаритаprice: 32.0cookingTime PT1M
+knittingTime: 17000
+fillingTime: 9523
+bakingTime: 16400
+afterTime: 8048
+packagingTime: 14077
+[2023-12-11 23:12:42]  BUILDER: Pizza added: name: Пепероніprice: 35.0cookingTime PT2M
+knittingTime: 29000
+fillingTime: 7971
+bakingTime: 25779
+afterTime: 12461
+packagingTime: 23630
+[2023-12-11 23:12:42]  BUILDER: Pizza added: name: Гавайськаprice: 40.0cookingTime PT1M
+knittingTime: 17000
+fillingTime: 6160
+bakingTime: 16296
+afterTime: 10895
+packagingTime: 7421
+[2023-12-11 23:12:42]  BUILDER: Pizza added: name: Чотири сириprice: 38.0cookingTime PT2M
+knittingTime: 29000
+fillingTime: 23630
+bakingTime: 22342
+afterTime: 27911
+packagingTime: 20331
+[2023-12-11 23:12:42]  BUILDER: Checkouts were built
+[2023-12-11 23:12:43]  BUILDER: Pizzaiolos were built
+[2023-12-11 23:12:43]  BUILDER: Pizzeria were built
+[2023-12-11 23:12:43] BUILDER: Starting new simulation.
+[2023-12-11 23:12:48]  Order: 2 generated/ pizza count: 1/ pizza name: Чотири сири/ checkout id: 5
+[2023-12-11 23:12:48]  Order: 4 generated/ pizza count: 1/ pizza name: Пепероні/ checkout id: 4
+[2023-12-11 23:12:48]  Order: 1 generated/ pizza count: 1/ pizza name: Чотири сири/ checkout id: 2
+[2023-12-11 23:12:48]  Order: 3 generated/ pizza count: 3/ pizza name: Маргарита/ checkout id: 3
+[2023-12-11 23:12:48]  Order: 0 generated/ pizza count: 3/ pizza name: Маргарита/ checkout id: 1
+[2023-12-11 23:12:58] New simulation started, simulation mode: CONVEYOR
+[2023-12-11 23:12:58] Pizziolo 7 on technical stop 1
+[2023-12-11 23:12:58] Order: 2set status: In progress
+[2023-12-11 23:12:58] Pizziolo 1 reserved
+[2023-12-11 23:12:58] Pizza: 20cooking by pizzaiolo: 1
+[2023-12-11 23:12:58] Order: 1set status: In progress
+[2023-12-11 23:12:58] Pizziolo 2 reserved
+[2023-12-11 23:12:58] Pizza: 10cooking by pizzaiolo: 2
+[2023-12-11 23:12:58] Order: 4set status: In progress
+[2023-12-11 23:12:58] Pizziolo 3 reserved
+[2023-12-11 23:12:58] Pizza: 40cooking by pizzaiolo: 3
+[2023-12-11 23:12:58] Order: 3set status: In progress
+[2023-12-11 23:12:58] Pizziolo 4 reserved
+[2023-12-11 23:12:58] Pizza: 30cooking by pizzaiolo: 4
+[2023-12-11 23:12:58] Pizziolo 5 reserved
+[2023-12-11 23:12:58] Pizza: 31cooking by pizzaiolo: 5
+[2023-12-11 23:12:58] Pizziolo 6 reserved
+[2023-12-11 23:12:58] Pizza: 32cooking by pizzaiolo: 6
+[2023-12-11 23:12:58] Order: 0set status: In progress
+[2023-12-11 23:12:58] Pizziolo 8 reserved
+[2023-12-11 23:12:58] Pizza: 00cooking by pizzaiolo: 8
+[2023-12-11 23:12:58] Pizziolo 9 reserved
+[2023-12-11 23:12:58] Pizza: 01cooking by pizzaiolo: 9
+[2023-12-11 23:12:58] Pizziolo 10 reserved
+[2023-12-11 23:12:58] Pizza: 02cooking by pizzaiolo: 10
+[2023-12-11 23:13:03] Pizziolo 3 on technical stop 1
+[2023-12-11 23:13:03] Pizziolo 1 reserved
+[2023-12-11 23:13:03] Pizza: 40cooking by pizzaiolo: 1
+[2023-12-11 23:13:03] Pizziolo 2 on technical stop 1
+[2023-12-11 23:13:03] Pizziolo 4 reserved
+[2023-12-11 23:13:03] Pizza: 10cooking by pizzaiolo: 4
+[2023-12-11 23:13:03] Pizziolo 8 on technical stop 1
+[2023-12-11 23:13:03] Pizziolo 5 reserved
+[2023-12-11 23:13:03] Pizza: 00cooking by pizzaiolo: 5
+[2023-12-11 23:13:03] Pizziolo 6 on technical stop 1
+[2023-12-11 23:13:03] Pizziolo 9 reserved
+[2023-12-11 23:13:03] Pizza: 32cooking by pizzaiolo: 9
+[2023-12-11 23:13:03] Pizziolo 10 on technical stop 1
+[2023-12-11 23:13:08] Pizziolo 1 reserved
+[2023-12-11 23:13:08] Pizza: 02cooking by pizzaiolo: 1
+[2023-12-11 23:13:08] Pizziolo 5 on technical stop 1
+[2023-12-11 23:13:08] Pizziolo 4 reserved
+[2023-12-11 23:13:08] Pizza: 31cooking by pizzaiolo: 4
+[2023-12-11 23:13:08] Pizziolo 9 reserved
+[2023-12-11 23:13:08] Pizza: 00cooking by pizzaiolo: 9
+[2023-12-11 23:13:13] Pizziolo 1 on technical stop 1
+[2023-12-11 23:13:13] Pizziolo 4 reserved
+[2023-12-11 23:13:13] Pizza: 40cooking by pizzaiolo: 4
+[2023-12-11 23:13:13] Pizziolo 9 reserved
+[2023-12-11 23:13:13] Pizza: 02cooking by pizzaiolo: 9
+[2023-12-11 23:13:39]  BUILDER: Pizza added: name: Маргаритаprice: 32.0cookingTime PT1M
+knittingTime: 17000
+fillingTime: 9667
+bakingTime: 14918
+afterTime: 14247
+packagingTime: 12139
+[2023-12-11 23:13:39]  BUILDER: Pizza added: name: Пепероніprice: 35.0cookingTime PT2M
+knittingTime: 29000
+fillingTime: 7126
+bakingTime: 24973
+afterTime: 5764
+packagingTime: 8718
+[2023-12-11 23:13:39]  BUILDER: Pizza added: name: Гавайськаprice: 40.0cookingTime PT1M
+knittingTime: 17000
+fillingTime: 12239
+bakingTime: 9486
+afterTime: 10206
+packagingTime: 5991
+[2023-12-11 23:13:39]  BUILDER: Pizza added: name: Чотири сириprice: 38.0cookingTime PT2M
+knittingTime: 29000
+fillingTime: 10017
+bakingTime: 24517
+afterTime: 6255
+packagingTime: 16513
+[2023-12-11 23:13:39]  BUILDER: Checkouts were built
+[2023-12-11 23:13:39]  BUILDER: Pizzaiolos were built
+[2023-12-11 23:13:39]  BUILDER: Pizzeria were built
+[2023-12-11 23:13:39] BUILDER: Starting new simulation.
+[2023-12-11 23:13:44]  Order: 0 generated/ pizza count: 1/ pizza name: Чотири сири/ checkout id: 1
+[2023-12-11 23:13:44]  Order: 1 generated/ pizza count: 2/ pizza name: Чотири сири/ checkout id: 2
+[2023-12-11 23:13:44]  Order: 3 generated/ pizza count: 3/ pizza name: Чотири сири/ checkout id: 3
+[2023-12-11 23:13:44]  Order: 4 generated/ pizza count: 1/ pizza name: Маргарита/ checkout id: 4
+[2023-12-11 23:13:44]  Order: 2 generated/ pizza count: 2/ pizza name: Пепероні/ checkout id: 5
+[2023-12-11 23:13:54] New simulation started, simulation mode: CONVEYOR
+[2023-12-11 23:13:54] Pizziolo 1 on technical stop 1
+[2023-12-11 23:13:54] Order: 1set status: In progress
+[2023-12-11 23:13:54] Pizziolo 2 reserved
+[2023-12-11 23:13:54] Pizza: 10cooking by pizzaiolo: 2
+[2023-12-11 23:13:54] Pizziolo 3 reserved
+[2023-12-11 23:13:54] Pizza: 11cooking by pizzaiolo: 3
+[2023-12-11 23:13:54] Order: 0set status: In progress
+[2023-12-11 23:13:54] Pizziolo 4 reserved
+[2023-12-11 23:13:54] Pizza: 00cooking by pizzaiolo: 4
+[2023-12-11 23:13:54] Order: 3set status: In progress
+[2023-12-11 23:13:54] Pizziolo 5 reserved
+[2023-12-11 23:13:54] Pizza: 30cooking by pizzaiolo: 5
+[2023-12-11 23:13:54] Pizziolo 6 reserved
+[2023-12-11 23:13:54] Pizza: 31cooking by pizzaiolo: 6
+[2023-12-11 23:13:54] Pizziolo 7 reserved
+[2023-12-11 23:13:54] Pizza: 32cooking by pizzaiolo: 7
+[2023-12-11 23:13:54] Order: 4set status: In progress
+[2023-12-11 23:13:54] Pizziolo 8 reserved
+[2023-12-11 23:13:54] Pizza: 40cooking by pizzaiolo: 8
+[2023-12-11 23:13:54] Order: 2set status: In progress
+[2023-12-11 23:13:54] Pizziolo 9 reserved
+[2023-12-11 23:13:54] Pizza: 20cooking by pizzaiolo: 9
+[2023-12-11 23:13:54] Pizziolo 10 reserved
+[2023-12-11 23:13:54] Pizza: 21cooking by pizzaiolo: 10
+[2023-12-11 23:14:08]  BUILDER: Pizza added: name: Маргаритаprice: 32.0cookingTime PT1M
+knittingTime: 17000
+fillingTime: 8018
+bakingTime: 12013
+afterTime: 13679
+packagingTime: 12263
+[2023-12-11 23:14:08]  BUILDER: Pizza added: name: Пепероніprice: 35.0cookingTime PT2M
+knittingTime: 29000
+fillingTime: 12083
+bakingTime: 7070
+afterTime: 13323
+packagingTime: 12185
+[2023-12-11 23:14:08]  BUILDER: Pizza added: name: Гавайськаprice: 40.0cookingTime PT1M
+knittingTime: 17000
+fillingTime: 6870
+bakingTime: 11372
+afterTime: 10207
+packagingTime: 15994
+[2023-12-11 23:14:08]  BUILDER: Pizza added: name: Чотири сириprice: 38.0cookingTime PT2M
+knittingTime: 29000
+fillingTime: 25375
+bakingTime: 8005
+afterTime: 22104
+packagingTime: 13867
+[2023-12-11 23:14:08]  BUILDER: Checkouts were built
+[2023-12-11 23:14:08]  BUILDER: Pizzaiolos were built
+[2023-12-11 23:14:08]  BUILDER: Pizzeria were built
+[2023-12-11 23:14:08] BUILDER: Starting new simulation.
+[2023-12-11 23:14:13]  Order: 4 generated/ pizza count: 1/ pizza name: Гавайська/ checkout id: 4
+[2023-12-11 23:14:13]  Order: 2 generated/ pizza count: 1/ pizza name: Гавайська/ checkout id: 5
+[2023-12-11 23:14:13]  Order: 1 generated/ pizza count: 3/ pizza name: Гавайська/ checkout id: 2
+[2023-12-11 23:14:13]  Order: 0 generated/ pizza count: 3/ pizza name: Пепероні/ checkout id: 1
+[2023-12-11 23:14:13]  Order: 3 generated/ pizza count: 1/ pizza name: Маргарита/ checkout id: 3
+[2023-12-11 23:14:23] New simulation started, simulation mode: CONVEYOR
+[2023-12-11 23:14:23] Pizziolo 1 on technical stop 1
+[2023-12-11 23:14:23] Order: 4set status: In progress
+[2023-12-11 23:14:23] Pizziolo 2 reserved
+[2023-12-11 23:14:23] Pizza: 40cooking by pizzaiolo: 2
+[2023-12-11 23:14:23] Order: 2set status: In progress
+[2023-12-11 23:14:23] Pizziolo 3 reserved
+[2023-12-11 23:14:23] Pizza: 20cooking by pizzaiolo: 3
+[2023-12-11 23:14:23] Order: 1set status: In progress
+[2023-12-11 23:14:23] Pizziolo 4 reserved
+[2023-12-11 23:14:23] Pizza: 10cooking by pizzaiolo: 4
+[2023-12-11 23:14:23] Pizziolo 5 reserved
+[2023-12-11 23:14:23] Pizza: 11cooking by pizzaiolo: 5
+[2023-12-11 23:14:23] Pizziolo 6 reserved
+[2023-12-11 23:14:23] Pizza: 12cooking by pizzaiolo: 6
+[2023-12-11 23:14:23] Order: 0set status: In progress
+[2023-12-11 23:14:23] Pizziolo 7 reserved
+[2023-12-11 23:14:23] Pizza: 00cooking by pizzaiolo: 7
+[2023-12-11 23:14:23] Pizziolo 8 reserved
+[2023-12-11 23:14:23] Pizza: 01cooking by pizzaiolo: 8
+[2023-12-11 23:14:23] Pizziolo 9 reserved
+[2023-12-11 23:14:23] Pizza: 02cooking by pizzaiolo: 9
+[2023-12-11 23:14:23] Order: 3set status: In progress
+[2023-12-11 23:14:23] Pizziolo 10 reserved
+[2023-12-11 23:14:23] Pizza: 30cooking by pizzaiolo: 10
+[2023-12-11 23:14:28] Pizziolo 2 on technical stop 1
+[2023-12-11 23:14:28] Pizziolo 3 reserved
+[2023-12-11 23:14:28] Pizza: 40cooking by pizzaiolo: 3
+[2023-12-11 23:14:28] Pizziolo 6 on technical stop 1
+[2023-12-11 23:14:28] Pizziolo 4 reserved
+[2023-12-11 23:14:28] Pizza: 12cooking by pizzaiolo: 4
+[2023-12-11 23:14:28] Pizziolo 7 on technical stop 1
+[2023-12-11 23:14:28] Pizziolo 5 reserved
+[2023-12-11 23:14:28] Pizza: 00cooking by pizzaiolo: 5
+[2023-12-11 23:14:28] Pizziolo 8 on technical stop 1
+[2023-12-11 23:14:28] Pizziolo 9 reserved
+[2023-12-11 23:14:28] Pizza: 01cooking by pizzaiolo: 9
+[2023-12-11 23:14:28] Pizziolo 10 on technical stop 1

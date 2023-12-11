@@ -3,13 +3,13 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<BorderPane prefHeight="498.0" prefWidth="700.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.teamworkcpp.pizzariasimulator.SimulationStateController">
+<BorderPane prefHeight="498.0" prefWidth="695.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.teamworkcpp.pizzariasimulator.SimulationStateController">
     <center>
-        <TableView fx:id="tableView" prefHeight="496.0" prefWidth="636.0">
+        <TableView fx:id="tableView" prefHeight="498.0" prefWidth="682.0">
             <columns>
-                <TableColumn fx:id="orderIdColumn" text="№" />
-                <TableColumn fx:id="orderTimeColumn" prefWidth="106.0" text="Час" />
-                <TableColumn fx:id="orderAmountColumn" prefWidth="87.39997863769531" text="Сума" />
+                <TableColumn fx:id="orderIdColumn" prefWidth="81.39999544620514" text="№" />
+                <TableColumn fx:id="orderTimeColumn" prefWidth="120.20000457763672" text="Час" />
+                <TableColumn fx:id="orderAmountColumn" prefWidth="75.0" text="Сума" />
                 <TableColumn fx:id="pizzasInOrderColumn" prefWidth="179.0" text="Піци" />
                 <TableColumn fx:id="orderStatusColumn" prefWidth="130.5999755859375" text="Статус" />
                 <TableColumn fx:id="checkoutIdColumn" prefWidth="115.79998779296875" text="Номер каси" />

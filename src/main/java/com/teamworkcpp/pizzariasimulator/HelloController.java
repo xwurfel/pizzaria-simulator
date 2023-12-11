@@ -22,6 +22,7 @@ import java.util.Map;
 public class HelloController {
 
     public Button button_state;
+    public Button button_pinfo;
     @FXML
     private Button button_settings;
 
@@ -33,6 +34,7 @@ public class HelloController {
     private int numberOfCooks;
     private SimulationMode simulationMode;
     private CookingMode cookingMode;
+    private int maxPizzaCount;
 
     PizzeriaManager pizzeriaManager = new PizzeriaManager();
     private List<Map<String, Object>> pizzasToAdd;
@@ -49,13 +51,17 @@ public class HelloController {
 
     @FXML
     void Start_button_click(ActionEvent event) {
-        System.out.println("Start with settings: " + simulationDuration + ", " + numberOfCashiers + ", " + numberOfCooks + ", " + simulationMode);
+        System.out.println("Start with settings: " + simulationDuration + ", " + numberOfCashiers + ", " + numberOfCooks + ", " + simulationMode + ", " + maxPizzaCount);
         pizzeriaManager.AddSimulationDuration(Duration.ofMinutes(simulationDuration));
         pizzeriaManager.AddCheckoutCount(numberOfCashiers);
         pizzeriaManager.AddPizzaioloCount(numberOfCooks);
         pizzeriaManager.AddLevel(simulationMode);
         pizzeriaManager.AddCookingMode(cookingMode);
-        pizzeriaManager.AddPizza("Margarita", 32, Duration.ofMinutes(1));
+        pizzeriaManager.AddMaxPizzaCountInOrder(maxPizzaCount);
+        pizzeriaManager.AddPizza("Маргарита", 32, Duration.ofMinutes(1));
+        pizzeriaManager.AddPizza("Пепероні", 35, Duration.ofMinutes(2));
+        pizzeriaManager.AddPizza("Гавайська", 40, Duration.ofMinutes(1));
+        pizzeriaManager.AddPizza("Чотири сири", 38, Duration.ofMinutes(2));
         for (Map<String, Object> pizzaData : pizzasToAdd) {
             pizzeriaManager.AddPizza(
                     (String) pizzaData.get("name"),
@@ -94,12 +100,13 @@ public class HelloController {
         }
     }
 
-    public void setSimulationSettings(int duration, int cashiers, int cooks, SimulationMode mode, CookingMode cmode) {
+    public void setSimulationSettings(int duration, int cashiers, int cooks, SimulationMode mode, CookingMode cmode, int count) {
         simulationDuration = duration;
         numberOfCashiers = cashiers;
         numberOfCooks = cooks;
         simulationMode = mode;
         cookingMode = cmode;
+        maxPizzaCount = count;
     }
 
     public void setPizzasToAdd(List<Map<String, Object>> pizzasToAdd) {
@@ -112,6 +119,9 @@ public class HelloController {
 
     }
 
+    void openPizzaioloInfoWindow() {
+        
+    }
     public void State_button_click(ActionEvent actionEvent) {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("SimulationState.fxml"));
@@ -129,6 +139,26 @@ public class HelloController {
             stateStage.setScene(new Scene(root));
 
             stateStage.showAndWait();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void Pinfo_button_click(ActionEvent actionEvent) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("PizzaioloInfo.fxml"));
+            Parent root = loader.load();
+
+            PizzaioloInfoController pizzaioloInfoController = loader.getController();
+            pizzaioloInfoController.setPizzeriaManager(pizzeriaManager);
+            pizzaioloInfoController.updateTable(pizzeriaManager.getCurrentSimulationState().pizzaiolos);
+
+            Stage pizzaioloInfoStage = new Stage();
+            pizzaioloInfoStage.initModality(Modality.APPLICATION_MODAL);
+            pizzaioloInfoStage.setTitle("Інформація про кухарів");
+            pizzaioloInfoStage.setScene(new Scene(root));
+
+            pizzaioloInfoStage.showAndWait();
         } catch (IOException e) {
             e.printStackTrace();
         }
