@@ -7,19 +7,29 @@ import com.teamworkcpp.pizzariasimulator.backend.services.Checkout;
 import com.teamworkcpp.pizzariasimulator.backend.services.PizzeriaManager;
 import javafx.application.Platform;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
+import javafx.geometry.VPos;
 import javafx.scene.Group;
 import javafx.scene.Node;
 import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Rectangle;
-
+import javafx.scene.text.Text;
+import javafx.scene.text.TextAlignment;
+import javafx.scene.text.TextBoundsType;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
+import javafx.scene.layout.StackPane;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
@@ -27,6 +37,8 @@ import java.util.Random;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
+
+import static javafx.scene.text.TextAlignment.*;
 
 public class SimulationController {
     private PizzeriaManager pizzeriaManager;
@@ -108,7 +120,7 @@ public class SimulationController {
                         int randomIndex = random.nextInt(freeChairs.size());
                         int randomElement = freeChairs.get(randomIndex);
 
-                        placeClientInChair(randomElement);
+                        placeClientInChair(randomElement, order.getId());
                     }
                 } else if (Objects.equals(order.getStatus(), OrderStatus.NEW) && !newOrderIDs.contains(order.getId())) {
                     System.out.println("CHECKOUT ID: " + order.getСheckoutId());
@@ -117,16 +129,44 @@ public class SimulationController {
                     HBox checkoutHBox = findCheckoutHBox(checkoutId);
 
                     if (checkoutHBox != null) {
-                        // Додати круг на початок HBox
-                        Circle circle = new Circle(10, Color.TURQUOISE);
-                        circle.setId("client-" + order.getId());
-                        System.out.println("Order ID: " + order.getId());
+//                        Circle circle = new Circle(10, Color.TURQUOISE);
+//                        circle.setId("client-" + order.getId());
+//                        System.out.println("Order ID: " + order.getId());
+//                        newOrderIDs.add(order.getId());
+//                        HBox.setMargin(circle, new Insets(0, 0, 0, 10.0));
+//                        checkoutHBox.getChildren().add(0, circle);
+
+                        Circle circle = new Circle(15, Color.RED);
+
+                        Text orderIdText = new Text(String.valueOf(order.getId()));
+                        orderIdText.setFill(Color.WHITE);
+                        orderIdText.setBoundsType(TextBoundsType.VISUAL);
+
+// Set the text to be centered inside the circle
+                        orderIdText.setTextOrigin(VPos.CENTER);
+                        orderIdText.setTextAlignment(TextAlignment.CENTER);
+
+                        StackPane stackPane = new StackPane(circle, orderIdText);
+                        stackPane.setAlignment(Pos.CENTER);
+
+                        stackPane.setId("client-" + order.getId());
+
+// Calculate translation to center the text inside the circle
+                        double textCenterX = circle.getCenterX() - orderIdText.getBoundsInLocal().getWidth() / 2;
+                        double textCenterY = circle.getCenterY() - orderIdText.getBoundsInLocal().getHeight() / 4;
+
+                        orderIdText.setTranslateX(textCenterX);
+                        orderIdText.setTranslateY(textCenterY);
+
+                        checkoutHBox.getChildren().add(0, stackPane);
                         newOrderIDs.add(order.getId());
-                        HBox.setMargin(circle, new Insets(0, 0, 0, 10.0));
-                        checkoutHBox.getChildren().add(0, circle);
+
+
                     } else {
                         System.out.println("Checkout HBox not found for ID: " + checkoutId);
                     }
+                } else if (Objects.equals(order.getStatus(), OrderStatus.DONE)){
+                    removeClientGroupById(order.getId());
                 }
             }
         });
@@ -166,15 +206,30 @@ public class SimulationController {
         return false;
     }
 
-    private void placeClientInChair(int chairId) {
+
+    private void placeClientInChair(int chairId, int orderId) {
         Circle chair = (Circle) chairsBox.lookup("#chair_" + chairId);
 
         if (chair != null) {
-
-            Circle clientCircle = new Circle(10, Color.RED);
+            Circle clientCircle = new Circle(15, Color.RED);
+            clientCircle.setId("clientCircle_" + orderId);
 
             clientCircle.setTranslateX(chair.getLayoutX());
             clientCircle.setTranslateY(chair.getLayoutY());
+
+            // Додавання тексту з orderId
+            Text orderIdText = new Text(String.valueOf(orderId));
+            orderIdText.setFill(Color.WHITE); // Задайте колір тексту за потребою
+            orderIdText.setBoundsType(TextBoundsType.VISUAL);
+
+            // Розташування тексту всередині кола
+            orderIdText.setTranslateX(chair.getLayoutX() - orderIdText.getBoundsInLocal().getWidth() / 2);
+            orderIdText.setTranslateY(chair.getLayoutY() + orderIdText.getBoundsInLocal().getHeight() / 2);
+            orderIdText.setTextAlignment(CENTER);
+
+            // Група, яка об'єднує коло і текст
+            Group clientGroup = new Group(clientCircle, orderIdText);
+            clientGroup.setId("clientGroup_" + orderId);
 
             Parent parent = chair.getParent();
 
@@ -184,17 +239,49 @@ public class SimulationController {
 
             if (parent instanceof Group) {
                 Group parentGroup = (Group) parent;
-                parentGroup.getChildren().add(clientCircle);
+                parentGroup.getChildren().add(clientGroup);
             }
+
             freeChairs.remove(Integer.valueOf(chairId));
         }
     }
 
+    private void removeClientGroupById(int orderId) {
+        Group clientGroup = (Group) chairsBox.lookup("#clientGroup_" + orderId);
 
-    public static Rectangle createCheckoutRectangle(int checkoutId) {
-        Rectangle rectangle = new Rectangle(30, 30); // Задайте розміри за вашими потребами
-        rectangle.setFill(Color.DODGERBLUE);
-        rectangle.setId("checkout-" + checkoutId); // Встановіть унікальний ідентифікатор для прямокутника
-        return rectangle;
+        if (clientGroup != null) {
+            Parent parent = clientGroup.getParent();
+
+            while (parent != null && !(parent instanceof Group)) {
+                parent = parent.getParent();
+            }
+
+            if (parent instanceof Group) {
+                Group parentGroup = (Group) parent;
+                parentGroup.getChildren().remove(clientGroup);
+            }
+        }
+    }
+
+    public void State_button_click(ActionEvent actionEvent) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("SimulationState.fxml"));
+            Parent root = loader.load();
+
+            SimulationStateController stateController = loader.getController();
+            stateController.setPizzeriaManager(pizzeriaManager);
+
+            List<Order> orders = pizzeriaManager.getCurrentSimulationState().orders;
+            stateController.updateTable(orders);
+
+            Stage stateStage = new Stage();
+            stateStage.initModality(Modality.APPLICATION_MODAL);
+            stateStage.setTitle("Стан симуляції");
+            stateStage.setScene(new Scene(root));
+
+            stateStage.showAndWait();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }

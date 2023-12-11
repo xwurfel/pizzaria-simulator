@@ -2,6 +2,8 @@ package com.teamworkcpp.pizzariasimulator;
 
 import com.teamworkcpp.pizzariasimulator.backend.enums.CookingMode;
 import com.teamworkcpp.pizzariasimulator.backend.enums.SimulationMode;
+import com.teamworkcpp.pizzariasimulator.backend.models.Order;
+import com.teamworkcpp.pizzariasimulator.backend.models.SimplePizza;
 import com.teamworkcpp.pizzariasimulator.backend.services.PizzeriaManager;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -14,6 +16,8 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.time.Duration;
+import java.util.List;
+import java.util.Map;
 
 public class HelloController {
 
@@ -29,7 +33,8 @@ public class HelloController {
     private SimulationMode simulationMode;
     private CookingMode cookingMode;
 
-    private PizzeriaManager pizzeriaManager;
+    PizzeriaManager pizzeriaManager = new PizzeriaManager();
+    private List<Map<String, Object>> pizzasToAdd;
 
     @FXML
     void initialize() {
@@ -43,15 +48,20 @@ public class HelloController {
 
     @FXML
     void Start_button_click(ActionEvent event) {
-        int var10001 = this.simulationDuration;
-        System.out.println("Start with settings: " + var10001 + ", " + this.numberOfCashiers + ", " + this.numberOfCooks + ", " + String.valueOf(this.simulationMode));
-        this.pizzeriaManager = new PizzeriaManager();
-        this.pizzeriaManager.AddSimulationDuration(Duration.ofMinutes((long)this.simulationDuration));
-        this.pizzeriaManager.AddCheckoutCount(this.numberOfCashiers);
-        this.pizzeriaManager.AddPizzaioloCount(this.numberOfCooks);
-        this.pizzeriaManager.AddLevel(this.simulationMode);
-        this.pizzeriaManager.AddCookingMode(this.cookingMode);
+        System.out.println("Start with settings: " + simulationDuration + ", " + numberOfCashiers + ", " + numberOfCooks + ", " + simulationMode);
+        pizzeriaManager.AddSimulationDuration(Duration.ofMinutes(simulationDuration));
+        pizzeriaManager.AddCheckoutCount(numberOfCashiers);
+        pizzeriaManager.AddPizzaioloCount(numberOfCooks);
+        pizzeriaManager.AddLevel(simulationMode);
+        pizzeriaManager.AddCookingMode(cookingMode);
         pizzeriaManager.AddPizza("Margarita", 32, Duration.ofMinutes(1));
+        for (Map<String, Object> pizzaData : pizzasToAdd) {
+            pizzeriaManager.AddPizza(
+                    (String) pizzaData.get("name"),
+                    (Double) pizzaData.get("price"),
+                    (Duration) pizzaData.get("cookingTime")
+            );
+        }
 
         try {
             FXMLLoader simulationLoader = new FXMLLoader(this.getClass().getResource("SimulationWindow.fxml"));
@@ -72,7 +82,6 @@ public class HelloController {
             var3.printStackTrace();
         }
     }
-
 
     private void openSettingsWindow() {
         try {
@@ -103,5 +112,9 @@ public class HelloController {
         numberOfCooks = cooks;
         simulationMode = mode;
         cookingMode = cmode;
+    }
+
+    public void setPizzasToAdd(List<Map<String, Object>> pizzasToAdd) {
+        this.pizzasToAdd = pizzasToAdd;
     }
 }
