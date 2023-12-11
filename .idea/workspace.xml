@@ -7,7 +7,10 @@
     <list default="true" id="fbf8b445-f4fb-402b-900d-c28ac74ebb6f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/teamworkcpp/pizzariasimulator/backend/models/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/teamworkcpp/pizzariasimulator/backend/models/Order.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/teamworkcpp/pizzariasimulator/backend/models/Pizzaiolo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/teamworkcpp/pizzariasimulator/backend/models/Pizzaiolo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/teamworkcpp/pizzariasimulator/backend/models/Pizzeria.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/teamworkcpp/pizzariasimulator/backend/models/Pizzeria.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/teamworkcpp/pizzariasimulator/backend/services/Checkout.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/teamworkcpp/pizzariasimulator/backend/services/Checkout.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,7 +118,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/teamworkcpp/pizzariasimulator/backend/models/Pizzaiolo.java</url>
-          <line>29</line>
+          <line>27</line>
           <option name="timeStamp" value="39" />
         </line-breakpoint>
       </breakpoints>
