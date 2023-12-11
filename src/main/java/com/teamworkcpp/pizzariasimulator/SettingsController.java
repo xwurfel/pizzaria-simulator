@@ -127,7 +127,7 @@ public class SettingsController {
             int simulationDuration = Integer.parseInt(combobox_duration.getValue());
             int numberOfCashiers = Integer.parseInt(combobox_checkouts.getValue());
             int numberOfCooks = Integer.parseInt(combobox_pizzaiolos.getValue());
-            int cookingMode = Integer.parseInt(combobox_cooking_mode.getValue());
+            String cookingMode = combobox_cooking_mode.getValue();
             int maxPizzaCount = Integer.parseInt(combobox_count.getValue());
 
 
@@ -147,10 +147,10 @@ public class SettingsController {
 
             CookingMode cMode = null;
 
-            if (cookingMode == 1){
+            if ("1 кухар - 1 операція".equals(cookingMode)){
                 cMode = CookingMode.CONVEYOR_MODE;
             }
-            else if (cookingMode == 2){
+            else if ("1 кухар - 1 піца".equals(cookingMode)){
                 cMode = CookingMode.ONE_PIZZAIOLO_MODE;
             }
             helloController.setSimulationSettings(simulationDuration, numberOfCashiers, numberOfCooks, simulationMode, cMode, maxPizzaCount);
