@@ -7,7 +7,7 @@
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="539.0" prefWidth="951.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" stylesheets="@style.css" fx:controller="com.teamworkcpp.pizzariasimulator.SimulationController">
+<AnchorPane prefHeight="539.0" prefWidth="951.0" style="-fx-background-color: #fff;" stylesheets="@style.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.teamworkcpp.pizzariasimulator.SimulationController">
     <HBox prefHeight="539.0" prefWidth="951.0">
         <VBox fx:id="chairsBox" alignment="CENTER" prefHeight="445.0" prefWidth="326.0" spacing="20.0">
             <HBox spacing="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0">
@@ -130,16 +130,9 @@
             </padding>
         </VBox>
         <VBox spacing="10.0" HBox.hgrow="ALWAYS">
-            <VBox alignment="CENTER" spacing="20.0">
-                <Label style="-fx-font-size: 18.0; -fx-font-weight: bold;" text="Вхід">
-                    <VBox.margin>
-                        <Insets />
-                    </VBox.margin>
-                </Label>
-            </VBox>
             <VBox fx:id="checkoutBox" alignment="CENTER_RIGHT" prefHeight="153.0" prefWidth="313.0" spacing="20.0" style="-fx-padding: 0 0 0 40;" VBox.vgrow="ALWAYS">
                 <VBox.margin>
-                    <Insets bottom="80.0" right="20.0" />
+                    <Insets right="20.0" />
                 </VBox.margin>
             </VBox>
         </VBox>
@@ -159,9 +152,9 @@
                     <Font size="14.0" />
                 </font>
             </Label>
-            <Button text="Список замовлень" onAction="#State_button_click" />
-            <Button text="Список піц" onAction="#PizzaInfo_button_click" />
-            <Button text="Список кухарів" onAction="#Pinfo_button_click" />
+            <Button onAction="#State_button_click" text="Список замовлень" />
+            <Button onAction="#PizzaInfo_button_click" text="Список піц" />
+            <Button onAction="#Pinfo_button_click" text="Список кухарів" />
         </VBox>
     </HBox>
 </AnchorPane>
