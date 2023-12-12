@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane prefHeight="400.0" prefWidth="420.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.teamworkcpp.pizzariasimulator.PizzaInfoController">
+    <center>
+        <TableView fx:id="pizzaTableView" prefHeight="400.0" prefWidth="251.0">
+            <columns>
+                <TableColumn fx:id="pizzaIdColumn" prefWidth="90.40000915527344" text="ID" />
+                <TableColumn fx:id="pizzaNameColumn" prefWidth="157.5999755859375" text="Назва" />
+                <TableColumn fx:id="pizzaStatusColumn" minWidth="6.0" prefWidth="173.80003356933594" text="Статус" />
+            </columns>
+        </TableView>
+    </center>
+</BorderPane>
