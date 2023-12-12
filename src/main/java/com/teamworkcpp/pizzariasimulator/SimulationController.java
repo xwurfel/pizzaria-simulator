@@ -258,4 +258,24 @@ public class SimulationController {
         }
     }
 
+    public void PizzaInfo_button_click(ActionEvent actionEvent) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("PizzaInfo.fxml"));
+            Parent root = loader.load();
+
+            PizzaInfoController pizzaInfoController = loader.getController();
+            pizzaInfoController.setPizzeriaManager(pizzeriaManager);
+            pizzaInfoController.updateTable(pizzeriaManager.getCurrentSimulationState().orders);
+
+            Stage pizzaInfoStage = new Stage();
+            pizzaInfoStage.initModality(Modality.APPLICATION_MODAL);
+            pizzaInfoStage.setTitle("Інформація про піци");
+            pizzaInfoStage.setScene(new Scene(root));
+
+            pizzaInfoStage.showAndWait();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
 }

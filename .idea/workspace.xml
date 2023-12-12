@@ -5,16 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fbf8b445-f4fb-402b-900d-c28ac74ebb6f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/teamworkcpp/pizzariasimulator/PizzaioloInfoController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/teamworkcpp/pizzariasimulator/PizzaioloInfo.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/teamworkcpp/pizzariasimulator/PizzaInfoController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/teamworkcpp/pizzariasimulator/PizzaInfo.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/teamworkcpp/pizzariasimulator/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/teamworkcpp/pizzariasimulator/HelloController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/teamworkcpp/pizzariasimulator/SettingsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/teamworkcpp/pizzariasimulator/SettingsController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/teamworkcpp/pizzariasimulator/SimulationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/teamworkcpp/pizzariasimulator/SimulationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/teamworkcpp/pizzariasimulator/SimulationStateController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/teamworkcpp/pizzariasimulator/SimulationStateController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/teamworkcpp/pizzariasimulator/SettingsWindow.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/teamworkcpp/pizzariasimulator/SettingsWindow.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/teamworkcpp/pizzariasimulator/SimulationState.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/teamworkcpp/pizzariasimulator/SimulationState.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/teamworkcpp/pizzariasimulator/SimulationWindow.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/teamworkcpp/pizzariasimulator/SimulationWindow.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/teamworkcpp/pizzariasimulator/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/teamworkcpp/pizzariasimulator/style.css" afterDir="false" />
     </list>
@@ -27,6 +22,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
+        <option value="FxmlFile" />
         <option value="Class" />
       </list>
     </option>
@@ -57,26 +53,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "Merging simulation",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "D:/Univer/5 сем/КПП/kpp_lab_778_яшз",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;simulation&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Univer/5 сем/КПП/kpp_lab_778_яшз&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\misha\OneDrive\Desktop\uni\5\CPP\pizzaria-simulator\src\main\java\com\teamworkcpp\pizzariasimulator" />
