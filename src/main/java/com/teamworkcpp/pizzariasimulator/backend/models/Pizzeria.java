@@ -202,11 +202,6 @@ public class Pizzeria {
                                 .getCurrentStatus()
                                 .getStatusName(), "Done"))
                         {
-                            try {
-                                Logger.log("Pizza: " + pizza.getId() + " is ready");
-                            } catch (IOException e) {
-                                throw new RuntimeException(e);
-                            }
                             continue;
                         }
 
