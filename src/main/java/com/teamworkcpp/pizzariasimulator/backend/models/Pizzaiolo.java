@@ -56,11 +56,11 @@ public class Pizzaiolo {
     {
         if(isAvailable)
         {
-            if(r.nextInt(1000) == r.nextInt(100)*r.nextInt(10))
+            if(r.nextInt(1000) == (r.nextInt(100)*r.nextInt(10))+1)
             {
 
                 try {
-                    Logger.log("Pizziolo " + id + " on technical stop 1");
+                    Logger.log("Pizzaiolo " + id + " on technical stop");
                 } catch (IOException e) {
                     throw new RuntimeException(e);
                 }
