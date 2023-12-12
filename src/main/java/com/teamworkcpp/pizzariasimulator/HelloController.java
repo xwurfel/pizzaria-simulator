@@ -9,6 +9,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.layout.VBox;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
@@ -18,6 +19,7 @@ import java.util.List;
 import java.util.Map;
 
 public class HelloController {
+    public VBox startWindowID;
     @FXML
     private Button button_settings;
 

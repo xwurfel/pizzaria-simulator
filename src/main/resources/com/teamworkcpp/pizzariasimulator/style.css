@@ -1,5 +1,11 @@
 /* style.css */
 
+#startWindowID {
+    -fx-background-image: url('file:images/background.jpg');
+    -fx-background-size: cover;
+    -fx-background-repeat: no-repeat;
+}
+
 /* Apply styles to the entire application background */
 .root {
     -fx-background-color: #fff;
