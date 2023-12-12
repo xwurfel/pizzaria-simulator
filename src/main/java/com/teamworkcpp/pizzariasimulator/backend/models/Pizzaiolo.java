@@ -56,7 +56,7 @@ public class Pizzaiolo {
     {
         if(isAvailable)
         {
-            if(r.nextInt(1000) == (r.nextInt(100)*r.nextInt(10))+1)
+            if(r.nextInt(1000) == (r.nextInt(100)+1) * (r.nextInt(10)+1))
             {
 
                 try {
